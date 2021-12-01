@@ -19,7 +19,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.hfa_rapidsurvey.R;
-import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.FormsContract;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.core.DatabaseHelper;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.databinding.ActivitySectionH5Binding;

@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import edu.aku.hassannaqvi.hfa_rapidsurvey.R
-import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.FormsContract
 import edu.aku.hassannaqvi.hfa_rapidsurvey.databinding.PendingformLayoutBinding
 
 class PendingListAdapter(private val mContext: Context, private var mList: List<FormsContract>) :

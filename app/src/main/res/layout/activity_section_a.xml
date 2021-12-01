@@ -48,7 +48,7 @@
                 android:orientation="vertical">
 
 
-                <!-- a03  Date-Input   -->
+                <!-- a103  Date-Input   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVa03"
                     style="@style/cardView">
@@ -67,12 +67,12 @@
                                 style="@style/quesNum"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:text="@string/Q_a03" />
+                                android:text="@string/Q_a103" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="@string/a03" />
+                                android:text="@string/a103" />
 
                         </LinearLayout>
 
@@ -82,22 +82,25 @@
                             android:orientation="horizontal">
 
                             <TextView
-                                style="@style/textviewh"
+                                style="@style/textView"
                                 android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:text="@string/day" />
+                                android:text="@string/a103d" />
 
                             <TextView
-                                style="@style/textviewh"
+                                style="@style/textView"
                                 android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:text="@string/month" />
+                                android:text="@string/a103m" />
 
                             <TextView
-                                style="@style/textviewh"
+                                style="@style/textView"
                                 android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:text="@string/year" />
+                                android:text="@string/a103y" />
 
                         </LinearLayout>
 
@@ -107,7 +110,7 @@
                             android:orientation="horizontal">
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/a03d"
+                                android:id="@+id/a103d"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
@@ -120,7 +123,7 @@
                                 app:type="range" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/a03m"
+                                android:id="@+id/a103m"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
@@ -133,7 +136,7 @@
                                 app:type="range" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/a03y"
+                                android:id="@+id/a103y"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
@@ -152,9 +155,9 @@
                 </androidx.cardview.widget.CardView>
 
 
-                <!-- a07  SpinnerDistrict   -->
+                <!-- SpinnerDistrict   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVa07"
+                    android:id="@+id/fldGrpCVa107"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -164,18 +167,12 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            style="@style/quesNum"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:text="@string/Q_a07" />
-
-                        <TextView
                             android:layout_width="190dp"
                             android:layout_height="match_parent"
-                            android:text="@string/a07" />
+                            android:text="@string/districtName" />
 
                         <Spinner
-                            android:id="@+id/a07"
+                            android:id="@+id/districtName"
                             style="@style/spinner"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
@@ -186,9 +183,9 @@
                 </androidx.cardview.widget.CardView>
 
 
-                <!-- a08  SpinnerTehsil   -->
+                <!-- SpinnerTehsil   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVa08"
+                    android:id="@+id/fldGrpCVa108"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -198,18 +195,12 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            style="@style/quesNum"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:text="@string/Q_a08" />
-
-                        <TextView
                             android:layout_width="190dp"
                             android:layout_height="match_parent"
-                            android:text="@string/a08" />
+                            android:text="@string/tehsilName" />
 
                         <Spinner
-                            android:id="@+id/a08"
+                            android:id="@+id/tehsilName"
                             style="@style/spinner"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
@@ -220,7 +211,7 @@
                 </androidx.cardview.widget.CardView>
 
 
-                <!-- a09  SpinnerUC   -->
+                <!-- SpinnerUC   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVa09"
                     style="@style/cardView">
@@ -232,18 +223,12 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            style="@style/quesNum"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:text="@string/Q_a09" />
-
-                        <TextView
                             android:layout_width="190dp"
                             android:layout_height="match_parent"
-                            android:text="@string/a09" />
+                            android:text="@string/ucName" />
 
                         <Spinner
-                            android:id="@+id/a09"
+                            android:id="@+id/ucName"
                             style="@style/spinner"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
@@ -254,9 +239,9 @@
                 </androidx.cardview.widget.CardView>
 
 
-                <!-- a10  Radio   -->
+                <!-- a110  Radio   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVa10"
+                    android:id="@+id/fldGrpCVa110"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -269,33 +254,33 @@
                             style="@style/quesNum"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:text="@string/Q_a10" />
+                            android:text="@string/Q_a110" />
 
                         <TextView
                             android:layout_width="190dp"
                             android:layout_height="match_parent"
-                            android:text="@string/a10" />
+                            android:text="@string/a110" />
 
                         <RadioGroup
-                            android:id="@+id/a10"
+                            android:id="@+id/a110"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:orientation="horizontal">
 
                             <RadioButton
-                                android:id="@+id/a10a"
+                                android:id="@+id/a110a"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:text="@string/a10a" />
+                                android:text="@string/a110a" />
 
                             <RadioButton
-                                android:id="@+id/a10b"
+                                android:id="@+id/a110b"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:text="@string/a10b" />
+                                android:text="@string/a110b" />
 
                         </RadioGroup>
 
@@ -304,9 +289,9 @@
                 </androidx.cardview.widget.CardView>
 
 
-                <!-- a11  Radio   -->
+                <!-- a111  Radio   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVa11"
+                    android:id="@+id/fldGrpCVa111"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -319,33 +304,33 @@
                             style="@style/quesNum"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:text="@string/Q_a11" />
+                            android:text="@string/Q_a111" />
 
                         <TextView
                             android:layout_width="190dp"
                             android:layout_height="match_parent"
-                            android:text="@string/a11" />
+                            android:text="@string/a111" />
 
                         <RadioGroup
-                            android:id="@+id/a11"
+                            android:id="@+id/a111"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:orientation="horizontal">
 
                             <RadioButton
-                                android:id="@+id/a11a"
+                                android:id="@+id/a111a"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:text="@string/a11a" />
+                                android:text="@string/a111a" />
 
                             <RadioButton
-                                android:id="@+id/a11b"
+                                android:id="@+id/a111b"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:text="@string/a11b" />
+                                android:text="@string/a111b" />
 
                         </RadioGroup>
 
@@ -354,9 +339,9 @@
                 </androidx.cardview.widget.CardView>
 
 
-                <!-- a13  SpinnerUC   -->
+                <!-- SpinnerHF   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVa13"
+                    android:id="@+id/fldGrpCVhf"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -366,18 +351,12 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            style="@style/quesNum"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:text="@string/Q_a13" />
-
-                        <TextView
                             android:layout_width="190dp"
                             android:layout_height="match_parent"
-                            android:text="@string/a13" />
+                            android:text="@string/hfName" />
 
                         <Spinner
-                            android:id="@+id/a13"
+                            android:id="@+id/hfName"
                             style="@style/spinner"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"

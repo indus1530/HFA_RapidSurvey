@@ -6,7 +6,6 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import edu.aku.hassannaqvi.hfa_rapidsurvey.R
 import edu.aku.hassannaqvi.hfa_rapidsurvey.adapter.PendingListAdapter
-import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.FormsContract
 import edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp
 import edu.aku.hassannaqvi.hfa_rapidsurvey.databinding.ActivityPendingFormsBinding
 

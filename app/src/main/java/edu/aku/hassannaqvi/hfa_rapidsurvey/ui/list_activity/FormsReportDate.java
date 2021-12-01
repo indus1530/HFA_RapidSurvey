@@ -16,7 +16,6 @@ import java.util.List;
 
 import edu.aku.hassannaqvi.hfa_rapidsurvey.R;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.adapter.FormsAdapter;
-import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.FormsContract;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.core.DatabaseHelper;
 
 

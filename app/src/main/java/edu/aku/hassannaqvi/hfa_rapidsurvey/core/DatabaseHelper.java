@@ -23,6 +23,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
@@ -31,16 +32,16 @@ import java.util.Collection;
 import java.util.Date;
 
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.DistrictContract;
-import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.FormsContract;
-import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.FormsContract.FormsTable;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.HFContract;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.PatientsContract;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.PatientsContract.PatientsTable;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.StaffingContract;
+import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.Tables.FormsTable;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.TehsilsContract;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.UCsContract;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.UsersContract;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.VersionAppContract;
+import edu.aku.hassannaqvi.hfa_rapidsurvey.models.Forms;
 
 
 /**
@@ -567,7 +568,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public boolean CheckHF(String hfCode) throws SQLException {
         SQLiteDatabase db = this.getReadableDatabase();
 
-        Cursor mCursor = db.rawQuery("SELECT * FROM " + FormsTable.TABLE_NAME + " WHERE " + FormsTable.COLUMN_A12 + "=? AND " + FormsTable.COLUMN_ISTATUS + "=?", new String[]{hfCode, "1"});
+        Cursor mCursor = db.rawQuery("SELECT * FROM " + FormsTable.TABLE_NAME + " WHERE " + FormsTable.COLUMN_HF_CODE + "=? AND " + FormsTable.COLUMN_ISTATUS + "=?", new String[]{hfCode, "1"});
         if (mCursor != null) {
 
             /*if (mCursor.moveToFirst()) {
@@ -579,14 +580,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public FormsContract CheckHF(String hfCode, String status) throws SQLException {
+    public Forms CheckHF(String hfCode, String status) throws SQLException {
         SQLiteDatabase db = this.getReadableDatabase();
-        FormsContract form = null;
-        Cursor mCursor = db.rawQuery("SELECT * FROM " + FormsTable.TABLE_NAME + " WHERE " + FormsTable.COLUMN_A12 + "=? AND " + FormsTable.COLUMN_ISTATUS + " != ?", new String[]{hfCode, status});
+        Forms form = null;
+        Cursor mCursor = db.rawQuery("SELECT * FROM " + FormsTable.TABLE_NAME + " WHERE " + FormsTable.COLUMN_HF_CODE + "=? AND " + FormsTable.COLUMN_ISTATUS + " != ?", new String[]{hfCode, status});
         if (mCursor != null) {
-            if (mCursor.getCount() == 0) return new FormsContract();
+            if (mCursor.getCount() == 0) return new Forms();
             if (mCursor.moveToFirst()) {
-                form = new FormsContract().hydrate(mCursor);
+                try {
+                    form = new Forms().Hydrate(mCursor);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
             }
         }
         return form;
@@ -637,6 +642,52 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsTable.COLUMN_DEVICETAGID, fc.getDevicetagID());
         values.put(FormsTable.COLUMN_DEVICEID, fc.getDeviceID());
         values.put(FormsTable.COLUMN_APPVERSION, fc.getAppversion());
+        long newRowId;
+        newRowId = db.insert(
+                FormsTable.TABLE_NAME,
+                FormsTable.COLUMN_NAME_NULLABLE,
+                values);
+        return newRowId;
+    }
+
+
+    public Long addForms(Forms form) throws JSONException {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(FormsTable.COLUMN_PROJECT_NAME, form.getProjectName());
+        values.put(FormsTable.COLUMN_UID, form.getUid());
+        values.put(FormsTable.COLUMN_USERNAME, form.getUserName());
+        values.put(FormsTable.COLUMN_SYSDATE, form.getSysdate());
+        values.put(FormsTable.COLUMN_DISTRICT_CODE, form.getDistrictCode());
+        values.put(FormsTable.COLUMN_DISTRICT_TYPE, form.getDistrictType());
+        values.put(FormsTable.COLUMN_DISTRICT_NAME, form.getDistrictName());
+        values.put(FormsTable.COLUMN_TEHSIL_CODE, form.getTehsilCode());
+        values.put(FormsTable.COLUMN_TEHSIL_NAME, form.getTehsilName());
+        values.put(FormsTable.COLUMN_UC_CODE, form.getUcCode());
+        values.put(FormsTable.COLUMN_UC_NAME, form.getUcName());
+        values.put(FormsTable.COLUMN_HF_CODE, form.getHfCode());
+        values.put(FormsTable.COLUMN_HF_NAME, form.getHfName());
+        values.put(FormsTable.COLUMN_A103D, form.getA103d());
+        values.put(FormsTable.COLUMN_A103M, form.getA103m());
+        values.put(FormsTable.COLUMN_A103Y, form.getA103y());
+        values.put(FormsTable.COLUMN_A110, form.getA110());
+        values.put(FormsTable.COLUMN_A111, form.getA111());
+        values.put(FormsTable.COLUMN_SB, form.sBtoString());
+        values.put(FormsTable.COLUMN_SC, form.sCtoString());
+        /*values.put(FormTable.COLUMN_SD, form.getsD());
+        values.put(FormTable.COLUMN_SE, form.getsE());
+        values.put(FormTable.COLUMN_SF, form.getsF());
+        values.put(FormTable.COLUMN_SG, form.getsG());
+        values.put(FormTable.COLUMN_SH, form.getsH());
+        values.put(FormTable.COLUMN_SI, form.getsI());
+        values.put(FormTable.COLUMN_SJ, form.getsJ());
+        values.put(FormTable.COLUMN_SK, form.getsK());*/
+        values.put(FormsTable.COLUMN_ISTATUS, form.getIstatus());
+        values.put(FormsTable.COLUMN_ISTATUS96x, form.getIstatus96x());
+        values.put(FormsTable.COLUMN_ENDINGDATETIME, form.getEndingdatetime());
+        values.put(FormsTable.COLUMN_DEVICETAGID, form.getDevicetagID());
+        values.put(FormsTable.COLUMN_DEVICEID, form.getDeviceID());
+        values.put(FormsTable.COLUMN_APPVERSION, form.getAppversion());
         long newRowId;
         newRowId = db.insert(
                 FormsTable.TABLE_NAME,
@@ -1452,6 +1503,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         String selection = FormsTable._ID + " =? ";
         String[] selectionArgs = {String.valueOf(MainApp.fc.get_ID())};
+
+        return db.update(FormsTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+    }
+
+    public int updatesFormsColumn(String column, String value) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(column, value);
+
+        String selection = FormsTable._ID + " =? ";
+        String[] selectionArgs = {String.valueOf(MainApp.form.getId())};
 
         return db.update(FormsTable.TABLE_NAME,
                 values,

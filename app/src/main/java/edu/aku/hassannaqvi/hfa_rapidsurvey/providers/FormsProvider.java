@@ -22,7 +22,6 @@
  import android.database.sqlite.SQLiteDatabase;
  import android.net.Uri;
 
- import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.FormsContract;
  import edu.aku.hassannaqvi.hfa_rapidsurvey.core.DatabaseHelper;
 
  public class FormsProvider extends ContentProvider {

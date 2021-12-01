@@ -1,6 +1,6 @@
 package edu.aku.hassannaqvi.hfa_rapidsurvey.ui.sections;
 
-import static edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp.fc;
+import static edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp.form;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,6 +16,8 @@ import androidx.databinding.DataBindingUtil;
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
+import org.json.JSONException;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -27,13 +29,14 @@ import java.util.Map;
 
 import edu.aku.hassannaqvi.hfa_rapidsurvey.R;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.DistrictContract;
-import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.FormsContract;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.HFContract;
+import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.Tables.FormsTable;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.TehsilsContract;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.UCsContract;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.core.DatabaseHelper;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.databinding.ActivitySectionABinding;
+import edu.aku.hassannaqvi.hfa_rapidsurvey.models.Forms;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.ui.other.SectionMainActivity;
 
 public class SectionAActivity extends AppCompatActivity {
@@ -61,7 +64,7 @@ public class SectionAActivity extends AppCompatActivity {
 
     private void initializingComponents() {
         // Databinding Edit Mode (only in first activity for every contract)
-        fc = new FormsContract();
+        form = new Forms();
         db = MainApp.appInfo.getDbHelper();
         populateSpinner(this);
     }
@@ -101,9 +104,9 @@ public class SectionAActivity extends AppCompatActivity {
             districtTypes.add(d.getDistrictType());
         }
 
-        bi.a07.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, districtNames));
+        bi.districtName.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, districtNames));
 
-        bi.a07.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        bi.districtName.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
@@ -121,7 +124,7 @@ public class SectionAActivity extends AppCompatActivity {
                     tehsilCodes.add(p.getTehsilCode());
                 }
 
-                bi.a08.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, tehsilNames));
+                bi.tehsilName.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, tehsilNames));
 
             }
 
@@ -132,7 +135,7 @@ public class SectionAActivity extends AppCompatActivity {
             }
         });
 
-        bi.a08.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        bi.tehsilName.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
@@ -143,19 +146,19 @@ public class SectionAActivity extends AppCompatActivity {
 
                 ucNames.add("....");
                 ucCodes.add("....");
-                Clear.clearAllFields(bi.fldGrpCVa10);
+                Clear.clearAllFields(bi.fldGrpCVa110);
 
                 //For HF
                 initializeHF();
 
-                Collection<UCsContract> pc = db.getAllUCs(tehsilCodes.get(bi.a08.getSelectedItemPosition()));
+                Collection<UCsContract> pc = db.getAllUCs(tehsilCodes.get(bi.tehsilName.getSelectedItemPosition()));
                 for (UCsContract p : pc) {
                     ucCodes.add(p.getUc_code());
                     ucNames.add(p.getUc_name());
                 }
 
-                bi.a09.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, ucNames));
-                bi.a13.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, Collections.emptyList()));
+                bi.ucName.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, ucNames));
+                bi.hfName.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, Collections.emptyList()));
             }
 
             @Override
@@ -164,15 +167,15 @@ public class SectionAActivity extends AppCompatActivity {
             }
         });
 
-        bi.a09.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        bi.ucName.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-                Clear.clearAllFields(bi.fldGrpCVa10);
+                Clear.clearAllFields(bi.fldGrpCVa110);
 
                 if (position == 0) return;
                 if (hfMap.size() > 0) return;
-                Collection<HFContract> pc = db.getAllHFs(tehsilCodes.get(bi.a08.getSelectedItemPosition()));
+                Collection<HFContract> pc = db.getAllHFs(tehsilCodes.get(bi.tehsilName.getSelectedItemPosition()));
                 for (HFContract p : pc) {
                     if (p.getHf_type().equals("1")) hfNamesPub.add(p.getHf_name());
                     else hfNamesPrv.add(p.getHf_name());
@@ -186,16 +189,16 @@ public class SectionAActivity extends AppCompatActivity {
             }
         });
 
-        bi.a10.setOnCheckedChangeListener(((radioGroup, i) -> {
-            Clear.clearAllFields(bi.fldGrpCVa11);
-            if (i == bi.a10a.getId()) {
-                bi.a13.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, hfNamesPub));
-            } else if (i == bi.a10b.getId()) {
-                bi.a13.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, hfNamesPrv));
+        bi.a110.setOnCheckedChangeListener(((radioGroup, i) -> {
+            Clear.clearAllFields(bi.fldGrpCVa111);
+            if (i == bi.a110a.getId()) {
+                bi.hfName.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, hfNamesPub));
+            } else if (i == bi.a110b.getId()) {
+                bi.hfName.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, hfNamesPrv));
             }
         }));
 
-        bi.a13.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        bi.hfName.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 //                Toast.makeText(SectionAActivity.this, String.valueOf(hfCodes.get(bi.a13.getSelectedItemPosition())), Toast.LENGTH_SHORT).show();
@@ -224,13 +227,18 @@ public class SectionAActivity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-        if (!fc.get_ID().equals("")) return true;
+        if (!form.getId().equals("")) return true;
 
-        long updcount = db.addForm(fc);
-        fc.set_ID(String.valueOf(updcount));
+        long updcount = 0;
+        try {
+            updcount = db.addForms(form);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        form.setId(String.valueOf(updcount));
         if (updcount > 0) {
-            fc.set_UID(fc.getDeviceID() + fc.get_ID());
-            db.updatesFormColumn(FormsContract.FormsTable.COLUMN_UID, fc.get_UID());
+            form.setUid(form.getDeviceID() + form.getId());
+            db.updatesFormsColumn(FormsTable.COLUMN_UID, form.getUid());
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
@@ -242,50 +250,41 @@ public class SectionAActivity extends AppCompatActivity {
 
     private void SaveDraft() {
 
-        if (!fc.get_ID().equals("")) return;
+        if (!form.getId().equals("")) return;
 
-        fc = new FormsContract();
+        form = new Forms();
 
-        fc.setSysdate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
+        form.setSysdate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
+        form.setUserName(MainApp.userName);
+        form.setDeviceID(MainApp.appInfo.getDeviceID());
+        form.setDevicetagID(MainApp.appInfo.getTagName());
+        form.setAppversion(MainApp.appInfo.getAppVersion());
+        form.setA103d(bi.a103d.getText().toString().trim().isEmpty() ? "-1" : bi.a103d.getText().toString());
+        form.setA103m(bi.a103m.getText().toString().trim().isEmpty() ? "-1" : bi.a103m.getText().toString());
+        form.setA103y(bi.a103y.getText().toString().trim().isEmpty() ? "-1" : bi.a103y.getText().toString());
 
-        fc.setUserName(MainApp.userName);
+        form.setDistrictCode(districtCodes.get(bi.districtName.getSelectedItemPosition()));
+        form.setDistrictName(bi.districtName.getSelectedItem().toString());
+        form.setDistrictType(districtTypes.get(bi.districtName.getSelectedItemPosition()));
 
-        fc.setA01(MainApp.userName);
+        form.setTehsilCode(tehsilCodes.get(bi.tehsilName.getSelectedItemPosition()));
+        form.setTehsilName(bi.tehsilName.getSelectedItem().toString());
 
-        fc.setDeviceID(MainApp.appInfo.getDeviceID());
+        form.setUcCode(ucCodes.get(bi.ucName.getSelectedItemPosition()));
+        form.setUcName(bi.ucName.getSelectedItem().toString());
 
-        fc.setDevicetagID(MainApp.appInfo.getTagName());
+        form.setHfCode(hfMap.get(bi.hfName.getSelectedItem().toString()));
+        form.setHfName(bi.hfName.getSelectedItem().toString());
 
-        fc.setAppversion(MainApp.appInfo.getAppVersion());
-
-        fc.setA03d(bi.a03d.getText().toString().trim().isEmpty() ? "-1" : bi.a03d.getText().toString());
-        fc.setA03m(bi.a03m.getText().toString().trim().isEmpty() ? "-1" : bi.a03m.getText().toString());
-        fc.setA03y(bi.a03y.getText().toString().trim().isEmpty() ? "-1" : bi.a03y.getText().toString());
-
-        fc.setDistrictCode(districtCodes.get(bi.a07.getSelectedItemPosition()));
-        fc.setA07(districtCodes.get(bi.a07.getSelectedItemPosition()));
-        fc.setDistrictType(districtTypes.get(bi.a07.getSelectedItemPosition()));
-
-        fc.setUcCode(ucCodes.get(bi.a09.getSelectedItemPosition()));
-        fc.setA09(ucCodes.get(bi.a09.getSelectedItemPosition()));
-
-        fc.setTehsilCode(tehsilCodes.get(bi.a08.getSelectedItemPosition()));
-        fc.setA08(tehsilCodes.get(bi.a08.getSelectedItemPosition()));
-
-        fc.setHfCode(hfMap.get(bi.a13.getSelectedItem().toString()));
-        fc.setHfName(bi.a13.getSelectedItem().toString());
-        fc.setA12(hfMap.get(bi.a13.getSelectedItem().toString()));
-        fc.setA13(bi.a13.getSelectedItem().toString());
-
-        fc.setA10(bi.a10a.isChecked() ? "1"
-                : bi.a10b.isChecked() ? "2"
+        form.setA110(bi.a110a.isChecked() ? "1"
+                : bi.a110b.isChecked() ? "2"
                 : "-1");
 
-        fc.setA11(bi.a11a.isChecked() ? "1"
-                : bi.a11b.isChecked() ? "2"
+        form.setA111(bi.a111a.isChecked() ? "1"
+                : bi.a111b.isChecked() ? "2"
                 : "-1");
 
-        MainApp.setGPS(this); // Set GPS
+        //MainApp.setGPS(this); // Set GPS
     }
 
 
@@ -294,13 +293,13 @@ public class SectionAActivity extends AppCompatActivity {
             return false;
         }
 
-        if (db.CheckHF(String.valueOf(hfMap.get(bi.a13.getSelectedItem().toString())))) {
+        if (db.CheckHF(String.valueOf(hfMap.get(bi.hfName.getSelectedItem().toString())))) {
             Toast.makeText(this, "Facility Already filled ", Toast.LENGTH_LONG).show();
             return false;
         }
 
-        fc = db.CheckHF(String.valueOf(hfMap.get(bi.a13.getSelectedItem().toString())), "1");
-        if (fc == null) {
+        form = db.CheckHF(String.valueOf(hfMap.get(bi.hfName.getSelectedItem().toString())), "1");
+        if (form == null) {
             Toast.makeText(this, "Partially filled Facility ", Toast.LENGTH_LONG).show();
             return true;
         }

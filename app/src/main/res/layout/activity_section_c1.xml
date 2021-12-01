@@ -7,8 +7,8 @@
         <import type="android.view.View" />
 
         <variable
-            name="callback"
-            type="edu.aku.hassannaqvi.hfa_rapidsurvey.ui.sections.SectionC1Activity" />
+            name="form"
+            type="edu.aku.hassannaqvi.hfa_rapidsurvey.models.Forms" />
     </data>
 
 
@@ -28,7 +28,7 @@
             android:minHeight="?attr/actionBarSize"
             android:theme="@style/CustomToolbarTheme"
             app:popupTheme="@style/CustomPopupTheme"
-            app:subtitle="@string/c01"
+            app:subtitle="@string/c1"
             app:subtitleTextAppearance="@style/Toolbar.SubtitleText"
             app:title="@string/modctitle"
             app:titleTextAppearance="@style/Toolbar.TitleText" />
@@ -46,9 +46,9 @@
                 android:orientation="vertical">
 
 
-                <!-- c01a  5-EditTexts   -->
+                <!-- c101  5-EditTexts   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVc01a"
+                    android:id="@+id/fldGrpCVc101"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -66,12 +66,12 @@
                                 style="@style/quesNum"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:text="@string/Q_c01a" />
+                                android:text="@string/Q_c101" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="@string/c01a" />
+                                android:text="@string/c101" />
 
                         </LinearLayout>
 
@@ -90,31 +90,31 @@
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01aa" />
+                                    android:text="@string/c101a" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01ab" />
+                                    android:text="@string/c101b" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01ac" />
+                                    android:text="@string/c101c" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01ad" />
+                                    android:text="@string/c101d" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01ae" />
+                                    android:text="@string/c101e" />
 
 
                             </LinearLayout>
@@ -126,12 +126,13 @@
                                 android:orientation="vertical">
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01aa"
+                                    android:id="@+id/c101a"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
                                     android:gravity="center"
                                     android:hint="##"
+                                    android:text="@={form.c101a}"
                                     android:inputType="number"
                                     android:maxLength="2"
                                     app:maxValue="99"
@@ -139,12 +140,13 @@
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01ab"
+                                    android:id="@+id/c101b"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
                                     android:gravity="center"
                                     android:hint="##"
+                                    android:text="@={form.c101b}"
                                     android:inputType="number"
                                     android:maxLength="2"
                                     app:maxValue="0"
@@ -152,12 +154,13 @@
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01ac"
+                                    android:id="@+id/c101c"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
                                     android:gravity="center"
                                     android:hint="##"
+                                    android:text="@={form.c101c}"
                                     android:inputType="number"
                                     android:maxLength="2"
                                     app:maxValue="0"
@@ -165,12 +168,13 @@
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01ad"
+                                    android:id="@+id/c101d"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
                                     android:gravity="center"
                                     android:hint="##"
+                                    android:text="@={form.c101d}"
                                     android:inputType="number"
                                     android:maxLength="2"
                                     app:maxValue="0"
@@ -178,12 +182,13 @@
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01ae"
+                                    android:id="@+id/c101e"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
                                     android:gravity="center"
                                     android:hint="##"
+                                    android:text="@={form.c101e}"
                                     android:inputType="number"
                                     android:maxLength="2"
                                     app:maxValue="0"
@@ -199,8 +204,8 @@
                 </androidx.cardview.widget.CardView>
 
 
-                <!-- c01b  5-EditTexts   -->
-                <androidx.cardview.widget.CardView
+                <!-- c102  5-EditTexts   -->
+                <!--<androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVc01b"
                     style="@style/cardView">
 
@@ -219,12 +224,12 @@
                                 style="@style/quesNum"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:text="@string/Q_c01b" />
+                                android:text="@string/Q_c102" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="@string/c01b" />
+                                android:text="@string/c102" />
 
                         </LinearLayout>
 
@@ -352,7 +357,7 @@
                 </androidx.cardview.widget.CardView>
 
 
-                <!-- c01c  5-EditTexts   -->
+                &lt;!&ndash; c01c  5-EditTexts   &ndash;&gt;
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVc01c"
                     style="@style/cardView">
@@ -505,7 +510,7 @@
                 </androidx.cardview.widget.CardView>
 
 
-                <!-- c01d  5-EditTexts   -->
+                &lt;!&ndash; c01d  5-EditTexts   &ndash;&gt;
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVc01d"
                     style="@style/cardView">
@@ -658,7 +663,7 @@
                 </androidx.cardview.widget.CardView>
 
 
-                <!-- c01e  5-EditTexts   -->
+                &lt;!&ndash; c01e  5-EditTexts   &ndash;&gt;
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVc01e"
                     style="@style/cardView">
@@ -811,7 +816,7 @@
                 </androidx.cardview.widget.CardView>
 
 
-                <!-- c01f  5-EditTexts   -->
+                &lt;!&ndash; c01f  5-EditTexts   &ndash;&gt;
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVc01f"
                     style="@style/cardView">
@@ -964,7 +969,7 @@
                 </androidx.cardview.widget.CardView>
 
 
-                <!-- c01g  5-EditTexts   -->
+                &lt;!&ndash; c01g  5-EditTexts   &ndash;&gt;
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVc01g"
                     style="@style/cardView">
@@ -1117,7 +1122,7 @@
                 </androidx.cardview.widget.CardView>
 
 
-                <!-- c01h  5-EditTexts   -->
+                &lt;!&ndash; c01h  5-EditTexts   &ndash;&gt;
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVc01h"
                     style="@style/cardView">
@@ -1270,7 +1275,7 @@
                 </androidx.cardview.widget.CardView>
 
 
-                <!-- c01i  5-EditTexts   -->
+                &lt;!&ndash; c01i  5-EditTexts   &ndash;&gt;
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVc01i"
                     style="@style/cardView">
@@ -1423,7 +1428,7 @@
                 </androidx.cardview.widget.CardView>
 
 
-                <!-- c01j  5-EditTexts   -->
+                &lt;!&ndash; c01j  5-EditTexts   &ndash;&gt;
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVc01j"
                     style="@style/cardView">
@@ -1576,7 +1581,7 @@
                 </androidx.cardview.widget.CardView>
 
 
-                <!-- c01k  5-EditTexts   -->
+                &lt;!&ndash; c01k  5-EditTexts   &ndash;&gt;
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVc01k"
                     style="@style/cardView">
@@ -1729,7 +1734,7 @@
                 </androidx.cardview.widget.CardView>
 
 
-                <!-- c01l  5-EditTexts   -->
+                &lt;!&ndash; c01l  5-EditTexts   &ndash;&gt;
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVc01l"
                     style="@style/cardView">
@@ -1879,7 +1884,7 @@
 
                     </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>-->
 
 
                 <!--EndButton LinearLayout-->

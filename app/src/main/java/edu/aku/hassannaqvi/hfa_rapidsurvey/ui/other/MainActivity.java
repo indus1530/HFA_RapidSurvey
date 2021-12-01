@@ -43,7 +43,6 @@ import java.util.Map;
 import java.util.Objects;
 
 import edu.aku.hassannaqvi.hfa_rapidsurvey.R;
-import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.FormsContract;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.VersionAppContract;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.core.AndroidDatabaseManager;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.core.DatabaseHelper;

@@ -36,7 +36,6 @@ import edu.aku.hassannaqvi.hfa_rapidsurvey.CONSTANTS;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.R;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.adapter.SyncListAdapter;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.adapter.UploadListAdapter;
-import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.FormsContract;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.PatientsContract;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.StaffingContract;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.core.DatabaseHelper;
