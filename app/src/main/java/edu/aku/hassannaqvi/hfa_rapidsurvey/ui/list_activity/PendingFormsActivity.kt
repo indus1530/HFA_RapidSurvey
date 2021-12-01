@@ -8,6 +8,7 @@ import edu.aku.hassannaqvi.hfa_rapidsurvey.R
 import edu.aku.hassannaqvi.hfa_rapidsurvey.adapter.PendingListAdapter
 import edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp
 import edu.aku.hassannaqvi.hfa_rapidsurvey.databinding.ActivityPendingFormsBinding
+import edu.aku.hassannaqvi.hfa_rapidsurvey.models.Forms
 
 
 class PendingFormsActivity : AppCompatActivity() {
@@ -24,7 +25,7 @@ class PendingFormsActivity : AppCompatActivity() {
         setupRecyclerView(unclosedForms)
     }
 
-    private fun setupRecyclerView(forms_lst: MutableList<FormsContract>) {
+    private fun setupRecyclerView(forms_lst: MutableList<Forms>) {
         adapter = PendingListAdapter(this, forms_lst)
         bi.recyclerView.layoutManager = LinearLayoutManager(this)
         bi.recyclerView.adapter = adapter

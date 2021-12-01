@@ -53,17 +53,17 @@ class SectionC2Activity : AppCompatActivity() {
     private fun saveDraft() {
 
         tsc = StaffingContract()
-        tsc.sysdate = MainApp.fc.sysdate
-        tsc.userName = MainApp.fc.userName
+        tsc.sysdate = MainApp.form.sysdate
+        tsc.userName = MainApp.form.userName
         tsc.deviceID = MainApp.appInfo.deviceID
         tsc.devicetagID = MainApp.appInfo.tagName
         tsc.appversion = MainApp.appInfo.appVersion
-        tsc._UUID = MainApp.fc._UID
-        tsc.districtCode = MainApp.fc.districtCode
-        tsc.districtType = MainApp.fc.districtType
-        tsc.tehsilCode = MainApp.fc.tehsilCode
-        tsc.ucCode = MainApp.fc.ucCode
-        tsc.hfCode = MainApp.fc.hfCode
+        tsc._UUID = MainApp.form.uid
+        tsc.districtCode = MainApp.form.districtCode
+        tsc.districtType = MainApp.form.districtType
+        tsc.tehsilCode = MainApp.form.tehsilCode
+        tsc.ucCode = MainApp.form.ucCode
+        tsc.hfCode = MainApp.form.hfCode
         tsc.serialno = serial.toString()
         tsc.status = "1"
 

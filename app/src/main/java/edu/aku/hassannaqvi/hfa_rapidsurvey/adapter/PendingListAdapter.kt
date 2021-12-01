@@ -9,8 +9,9 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import edu.aku.hassannaqvi.hfa_rapidsurvey.R
 import edu.aku.hassannaqvi.hfa_rapidsurvey.databinding.PendingformLayoutBinding
+import edu.aku.hassannaqvi.hfa_rapidsurvey.models.Forms
 
-class PendingListAdapter(private val mContext: Context, private var mList: List<FormsContract>) :
+class PendingListAdapter(private val mContext: Context, private var mList: List<Forms>) :
     RecyclerView.Adapter<PendingListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
@@ -37,7 +38,7 @@ class PendingListAdapter(private val mContext: Context, private var mList: List<
         return mList.size
     }
 
-    fun setMList(members: List<FormsContract>) {
+    fun setMList(members: List<Forms>) {
         mList = members
         notifyDataSetChanged()
     }

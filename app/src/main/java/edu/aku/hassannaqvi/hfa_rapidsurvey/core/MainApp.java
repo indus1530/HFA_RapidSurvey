@@ -74,7 +74,6 @@ public class MainApp extends Application {
     public static OnItemClick countItemClick;
     public static AppInfo appInfo;
     public static Boolean admin = false;
-    public static FormsContract fc;
     public static Forms form;
     public static PatientsContract psc;
     public static String userName = "0000";
@@ -135,11 +134,11 @@ public class MainApp extends Application {
 
             String date = DateFormat.format("dd-MM-yyyy HH:mm", Long.parseLong(GPSPref.getString("Time", "0"))).toString();
 
-            MainApp.fc.setGpsLat(GPSPref.getString("Latitude", "0"));
-            MainApp.fc.setGpsLng(GPSPref.getString("Longitude", "0"));
-            MainApp.fc.setGpsAcc(GPSPref.getString("Accuracy", "0"));
+           /* form.setGpsLat(GPSPref.getString("Latitude", "0"));
+            form.setGpsLng(GPSPref.getString("Longitude", "0"));
+            form.setGpsAcc(GPSPref.getString("Accuracy", "0"));
 //            MainApp.fc.setGpsTime(GPSPref.getString(date, "0")); // Timestamp is converted to date above
-            MainApp.fc.setGpsDT(date); // Timestamp is converted to date above
+            form.setGpsDT(date); // Timestamp is converted to date above*/
 
         } catch (Exception e) {
             Log.e("GPS", "setGPS: " + e.getMessage());
