@@ -97,16 +97,16 @@ fun openSectionMainActivity(activity: Activity, item: String) {
     dialog.findViewById<View>(R.id.btnOk).setOnClickListener { view: View? ->
 
         when (item) {
-            "B" -> MainApp.fc.setsB("")
-            "C" -> MainApp.fc.setsC("")
-            "D" -> MainApp.fc.setsD("")
-            "E" -> MainApp.fc.setsE("")
-            "F" -> MainApp.fc.setsF("")
-            "G" -> MainApp.fc.setsG("")
-            "H" -> MainApp.fc.setsH("")
-            "I" -> MainApp.fc.setsI("")
-            "J" -> MainApp.fc.setsJ("")
-            "K" -> MainApp.fc.setsK("")
+            /*"B" -> MainApp.form.setsB("")*/
+            /*"C" -> MainApp.form.setsC("")*/
+            /*"D" -> MainApp.form.setsD("")*/
+            /*"E" -> MainApp.form.setsE("")*/
+            /*"F" -> MainApp.form.setsF("")*/
+            /*"G" -> MainApp.form.setsG("")*/
+            /*"H" -> MainApp.form.setsH("")*/
+            /*"I" -> MainApp.form.setsI("")*/
+            /*"J" -> MainApp.form.setsJ("")*/
+            /*"K" -> MainApp.form.setsK("")*/
         }
 
         activity.finish()
@@ -131,7 +131,7 @@ fun openSectionMainActivityI(activity: Activity) {
     dialog.window!!.attributes = params
     dialog.findViewById<View>(R.id.btnOk).setOnClickListener { view: View? ->
 
-        if (!MainApp.fc.getsI().equals("")) MainApp.fc.setsI("")
+        //if (!MainApp.form.get.equals("")) MainApp.form.setsI("")
         if (!MainApp.psc.getsI1().equals("")) MainApp.psc.setsI1("")
         if (!MainApp.psc.getsI2().equals("")) MainApp.psc.setsI2("")
         if (!MainApp.psc.getsI3().equals("")) MainApp.psc.setsI3("")

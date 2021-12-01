@@ -15,6 +15,7 @@ import java.util.List;
 
 import edu.aku.hassannaqvi.hfa_rapidsurvey.R;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.core.DatabaseHelper;
+import edu.aku.hassannaqvi.hfa_rapidsurvey.models.Forms;
 
 
 /**
@@ -23,10 +24,10 @@ import edu.aku.hassannaqvi.hfa_rapidsurvey.core.DatabaseHelper;
 public class FormsAdapter extends RecyclerView.Adapter<FormsAdapter.ViewHolder> {
     Context c;
     DatabaseHelper db;
-    private List<FormsContract> fc = Collections.emptyList();
+    private List<Forms> fc = Collections.emptyList();
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public FormsAdapter(List<FormsContract> fc, Context c) {
+    public FormsAdapter(List<Forms> fc, Context c) {
         this.fc = fc;
         this.c = c;
         Log.d("TAG:count", String.valueOf(getItemCount()));
@@ -52,9 +53,9 @@ public class FormsAdapter extends RecyclerView.Adapter<FormsAdapter.ViewHolder> 
         // - replace the contents of the view with that element
 
         int staffCount = 0;
-        staffCount = db.getStaffingsByUUID(fc.get(position).get_UID());
+        staffCount = db.getStaffingsByUUID(fc.get(position).getUid());
         int patientCount = 0;
-        patientCount = db.getPatientsByUUID(fc.get(position).get_UID());
+        patientCount = db.getPatientsByUUID(fc.get(position).getUid());
 
 
         String iStatus = "Status  Unknown";
