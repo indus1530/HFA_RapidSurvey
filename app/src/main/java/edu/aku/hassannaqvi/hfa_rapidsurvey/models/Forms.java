@@ -542,30 +542,27 @@ public class Forms extends BaseObservable implements Observable {
     private String f0404aaa0a = _EMPTY_;
     private String f0404aaa0f = _EMPTY_;
     //ModuleG
-    private String g01 = _EMPTY_;
-    private String g0101 = _EMPTY_;
-    private String g0102 = _EMPTY_;
-    private String g0102a = _EMPTY_;
-    private String g0102b = _EMPTY_;
-    private String g0103 = _EMPTY_;
-    private String g0104 = _EMPTY_;
-    private String g0105 = _EMPTY_;
-    private String g0106 = _EMPTY_;
-    private String g0107 = _EMPTY_;
-    private String g0108 = _EMPTY_;
-    private String g0108a = _EMPTY_;
-    private String g0108b = _EMPTY_;
-    private String g0108c = _EMPTY_;
-    private String g0109 = _EMPTY_;
-    private String g0110 = _EMPTY_;
-    private String g0111 = _EMPTY_;
-    private String g01112 = _EMPTY_;
-    private String g01113 = _EMPTY_;
-    private String g01114 = _EMPTY_;
-    private String g01115 = _EMPTY_;
-    private String g01116 = _EMPTY_;
-    private String g01117 = _EMPTY_;
-    private String g02 = _EMPTY_;
+    private String g101 = _EMPTY_;
+    private String g10196x = _EMPTY_;
+    private String g102 = _EMPTY_;
+    private String g103 = _EMPTY_;
+    private String g10396x = _EMPTY_;
+    private String g104 = _EMPTY_;
+    private String g105d = _EMPTY_;
+    private String g106 = _EMPTY_;
+    private String g107 = _EMPTY_;
+    private String g1081 = _EMPTY_;
+    private String g1082 = _EMPTY_;
+    private String g1083 = _EMPTY_;
+    private String g109 = _EMPTY_;
+    private String g110 = _EMPTY_;
+    private String g111 = _EMPTY_;
+    private String g112 = _EMPTY_;
+    private String g113 = _EMPTY_;
+    private String g114 = _EMPTY_;
+    private String g115 = _EMPTY_;
+    private String g116 = _EMPTY_;
+    private String g117 = _EMPTY_;
     private String g0201 = _EMPTY_;
     private String g0202 = _EMPTY_;
     private String g0203 = _EMPTY_;
@@ -6506,233 +6503,213 @@ public class Forms extends BaseObservable implements Observable {
     }
 
     @Bindable
-    public String getG01() {
-        return g01;
+    public String getG101() {
+        return g101;
     }
 
-    public void setG01(String g01) {
-        this.g01 = g01;
-        notifyPropertyChanged(BR.g01);
-    }
-
-    @Bindable
-    public String getG0101() {
-        return g0101;
-    }
-
-    public void setG0101(String g0101) {
-        this.g0101 = g0101;
-        notifyPropertyChanged(BR.g0101);
+    public void setG101(String g101) {
+        this.g101 = g101;
+        notifyPropertyChanged(BR.g101);
     }
 
     @Bindable
-    public String getG0102() {
-        return g0102;
+    public String getG10196x() {
+        return g10196x;
     }
 
-    public void setG0102(String g0102) {
-        this.g0102 = g0102;
-        notifyPropertyChanged(BR.g0102);
-    }
-
-    @Bindable
-    public String getG0102a() {
-        return g0102a;
-    }
-
-    public void setG0102a(String g0102a) {
-        this.g0102a = g0102a;
-        notifyPropertyChanged(BR.g0102a);
+    public void setG10196x(String g10196x) {
+        this.g10196x = g10196x;
+        notifyPropertyChanged(BR.g10196x);
     }
 
     @Bindable
-    public String getG0102b() {
-        return g0102b;
+    public String getG102() {
+        return g102;
     }
 
-    public void setG0102b(String g0102b) {
-        this.g0102b = g0102b;
-        notifyPropertyChanged(BR.g0102b);
-    }
-
-    @Bindable
-    public String getG0103() {
-        return g0103;
-    }
-
-    public void setG0103(String g0103) {
-        this.g0103 = g0103;
-        notifyPropertyChanged(BR.g0103);
+    public void setG102(String g102) {
+        this.g102 = g102;
+        notifyPropertyChanged(BR.g102);
     }
 
     @Bindable
-    public String getG0104() {
-        return g0104;
+    public String getG103() {
+        return g103;
     }
 
-    public void setG0104(String g0104) {
-        this.g0104 = g0104;
-        notifyPropertyChanged(BR.g0104);
-    }
-
-    @Bindable
-    public String getG0105() {
-        return g0105;
-    }
-
-    public void setG0105(String g0105) {
-        this.g0105 = g0105;
-        notifyPropertyChanged(BR.g0105);
+    public void setG103(String g103) {
+        this.g103 = g103;
+        notifyPropertyChanged(BR.g103);
     }
 
     @Bindable
-    public String getG0106() {
-        return g0106;
+    public String getG10396x() {
+        return g10396x;
     }
 
-    public void setG0106(String g0106) {
-        this.g0106 = g0106;
-        notifyPropertyChanged(BR.g0106);
-    }
-
-    @Bindable
-    public String getG0107() {
-        return g0107;
-    }
-
-    public void setG0107(String g0107) {
-        this.g0107 = g0107;
-        notifyPropertyChanged(BR.g0107);
+    public void setG10396x(String g10396x) {
+        this.g10396x = g10396x;
+        notifyPropertyChanged(BR.g10396x);
     }
 
     @Bindable
-    public String getG0108() {
-        return g0108;
+    public String getG104() {
+        return g104;
     }
 
-    public void setG0108(String g0108) {
-        this.g0108 = g0108;
-        notifyPropertyChanged(BR.g0108);
-    }
-
-    @Bindable
-    public String getG0108a() {
-        return g0108a;
-    }
-
-    public void setG0108a(String g0108a) {
-        this.g0108a = g0108a;
-        notifyPropertyChanged(BR.g0108a);
+    public void setG104(String g104) {
+        this.g104 = g104;
+        notifyPropertyChanged(BR.g104);
     }
 
     @Bindable
-    public String getG0108b() {
-        return g0108b;
+    public String getG105d() {
+        return g105d;
     }
 
-    public void setG0108b(String g0108b) {
-        this.g0108b = g0108b;
-        notifyPropertyChanged(BR.g0108b);
-    }
-
-    @Bindable
-    public String getG0108c() {
-        return g0108c;
-    }
-
-    public void setG0108c(String g0108c) {
-        this.g0108c = g0108c;
-        notifyPropertyChanged(BR.g0108c);
+    public void setG105d(String g105d) {
+        this.g105d = g105d;
+        notifyPropertyChanged(BR.g105);
     }
 
     @Bindable
-    public String getG0109() {
-        return g0109;
+    public String getG106() {
+        return g106;
     }
 
-    public void setG0109(String g0109) {
-        this.g0109 = g0109;
-        notifyPropertyChanged(BR.g0109);
-    }
-
-    @Bindable
-    public String getG0110() {
-        return g0110;
-    }
-
-    public void setG0110(String g0110) {
-        this.g0110 = g0110;
-        notifyPropertyChanged(BR.g0110);
+    public void setG106(String g106) {
+        this.g106 = g106;
+        notifyPropertyChanged(BR.g106);
     }
 
     @Bindable
-    public String getG0111() {
-        return g0111;
+    public String getG107() {
+        return g107;
     }
 
-    public void setG0111(String g0111) {
-        this.g0111 = g0111;
-        notifyPropertyChanged(BR.g0111);
-    }
-
-    @Bindable
-    public String getG01112() {
-        return g01112;
-    }
-
-    public void setG01112(String g01112) {
-        this.g01112 = g01112;
-        notifyPropertyChanged(BR.g01112);
+    public void setG107(String g107) {
+        this.g107 = g107;
+        notifyPropertyChanged(BR.g107);
     }
 
     @Bindable
-    public String getG01113() {
-        return g01113;
+    public String getG1081() {
+        return g1081;
     }
 
-    public void setG01113(String g01113) {
-        this.g01113 = g01113;
-        notifyPropertyChanged(BR.g01113);
-    }
-
-    @Bindable
-    public String getG01114() {
-        return g01114;
-    }
-
-    public void setG01114(String g01114) {
-        this.g01114 = g01114;
-        notifyPropertyChanged(BR.g01114);
+    public void setG1081(String g1081) {
+        this.g1081 = g1081;
+        notifyPropertyChanged(BR.g1081);
     }
 
     @Bindable
-    public String getG01115() {
-        return g01115;
+    public String getG1082() {
+        return g1082;
     }
 
-    public void setG01115(String g01115) {
-        this.g01115 = g01115;
-        notifyPropertyChanged(BR.g01115);
-    }
-
-    @Bindable
-    public String getG01116() {
-        return g01116;
-    }
-
-    public void setG01116(String g01116) {
-        this.g01116 = g01116;
-        notifyPropertyChanged(BR.g01116);
+    public void setG1082(String g1082) {
+        this.g1082 = g1082;
+        notifyPropertyChanged(BR.g1082);
     }
 
     @Bindable
-    public String getG01117() {
-        return g01117;
+    public String getG1083() {
+        return g1083;
     }
 
-    public void setG01117(String g01117) {
-        this.g01117 = g01117;
-        notifyPropertyChanged(BR.g01117);
+    public void setG1083(String g1083) {
+        this.g1083 = g1083;
+        notifyPropertyChanged(BR.g1083);
+    }
+
+    @Bindable
+    public String getG109() {
+        return g109;
+    }
+
+    public void setG109(String g109) {
+        this.g109 = g109;
+        notifyPropertyChanged(BR.g109);
+    }
+
+    @Bindable
+    public String getG110() {
+        return g110;
+    }
+
+    public void setG0110(String g110) {
+        this.g110 = g110;
+        notifyPropertyChanged(BR.g110);
+    }
+
+    @Bindable
+    public String getG111() {
+        return g111;
+    }
+
+    public void setG111(String g111) {
+        this.g111 = g111;
+        notifyPropertyChanged(BR.g111);
+    }
+
+    @Bindable
+    public String getG112() {
+        return g112;
+    }
+
+    public void setG112(String g112) {
+        this.g112 = g112;
+        notifyPropertyChanged(BR.g112);
+    }
+
+    @Bindable
+    public String getG113() {
+        return g113;
+    }
+
+    public void setG113(String g113) {
+        this.g113 = g113;
+        notifyPropertyChanged(BR.g113);
+    }
+
+    @Bindable
+    public String getG114() {
+        return g114;
+    }
+
+    public void setG114(String g114) {
+        this.g114 = g114;
+        notifyPropertyChanged(BR.g114);
+    }
+
+    @Bindable
+    public String getG115() {
+        return g115;
+    }
+
+    public void setG115(String g115) {
+        this.g115 = g115;
+        notifyPropertyChanged(BR.g115);
+    }
+
+    @Bindable
+    public String getG116() {
+        return g116;
+    }
+
+    public void setG116(String g116) {
+        this.g116 = g116;
+        notifyPropertyChanged(BR.g116);
+    }
+
+    @Bindable
+    public String getG117() {
+        return g117;
+    }
+
+    public void setG117(String g117) {
+        this.g117 = g117;
+        notifyPropertyChanged(BR.g117);
     }
 
     @Bindable
@@ -15346,27 +15323,35 @@ public class Forms extends BaseObservable implements Observable {
         this.devicetagID = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_DEVICETAGID));
         this.appversion = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_APPVERSION));
         this.istatus = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_ISTATUS));
-        this.istatus96x = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ISTATUS96x));
+        this.istatus96x = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_ISTATUS96x));
         this.synced = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_SYNCED));
         this.synced_date = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_SYNCED_DATE));
 
-        this.districtCode = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_DISTRICT_CODE));
-        this.districtType = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_DISTRICT_TYPE));
-        this.districtName = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_DISTRICT_NAME));
-        this.tehsilCode = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_TEHSIL_CODE));
-        this.tehsilName = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_TEHSIL_NAME));
-        this.ucCode = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_UC_CODE));
-        this.ucName = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_UC_NAME));
-        this.hfCode = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_HF_CODE));
-        this.hfName = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_HF_NAME));
-        this.a103d = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_A103D));
-        this.a103m = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_A103M));
-        this.a103y = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_A103Y));
-        this.a110 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_A110));
-        this.a111 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_A111));
+        this.districtCode = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_DISTRICT_CODE));
+        this.districtType = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_DISTRICT_TYPE));
+        this.districtName = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_DISTRICT_NAME));
+        this.tehsilCode = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_TEHSIL_CODE));
+        this.tehsilName = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_TEHSIL_NAME));
+        this.ucCode = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_UC_CODE));
+        this.ucName = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_UC_NAME));
+        this.hfCode = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_HF_CODE));
+        this.hfName = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_HF_NAME));
+        this.a103d = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_A103D));
+        this.a103m = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_A103M));
+        this.a103y = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_A103Y));
+        this.a110 = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_A110));
+        this.a111 = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_A111));
 
         sBHydrate(cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_SB)));
         sCHydrate(cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_SC)));
+        sDHydrate(cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_SD)));
+        sEHydrate(cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_SE)));
+        sFHydrate(cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_SF)));
+        sGHydrate(cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_SG)));
+        sHHydrate(cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_SH)));
+        sIHydrate(cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_SI)));
+        sJHydrate(cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_SJ)));
+        sKHydrate(cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_SK)));
         return this;
     }
 
@@ -15393,7 +15378,6 @@ public class Forms extends BaseObservable implements Observable {
             this.b105 = json.getString("b05");
         }
     }
-
 
     public void sCHydrate(String string) throws JSONException {
         Log.d(TAG, "sCHydrate: " + string);
@@ -15463,6 +15447,481 @@ public class Forms extends BaseObservable implements Observable {
         }
     }
 
+    public void sDHydrate(String string) throws JSONException {
+        Log.d(TAG, "sDHydrate: " + string);
+        if (string != null) {
+            JSONObject json = null;
+            json = new JSONObject(string);
+            this.d01 = json.getString("d01");
+            this.d0101 = json.getString("d0101");
+            this.d0102 = json.getString("d0102");
+            this.d02 = json.getString("d02");
+            this.d0201 = json.getString("d0201");
+            this.d0202 = json.getString("d0202");
+            this.d0203 = json.getString("d0203");
+            this.d03 = json.getString("d03");
+            this.d0301 = json.getString("d0301");
+            this.d0302 = json.getString("d0302");
+            this.d0303 = json.getString("d0303");
+            this.d0304 = json.getString("d0304");
+            this.d04 = json.getString("d04");
+            this.d0401 = json.getString("d0401");
+            this.d0402 = json.getString("d0402");
+            this.d0403 = json.getString("d0403");
+            this.d0404 = json.getString("d0404");
+            this.d05 = json.getString("d05");
+            this.d0501 = json.getString("d0501");
+            this.d0502 = json.getString("d0502");
+            this.d0502a0a = json.getString("d0502a0a");
+            this.d0502a0f = json.getString("d0502a0f");
+            this.d0502b0a = json.getString("d0502b0a");
+            this.d0502b0f = json.getString("d0502b0f");
+            this.d0502c0a = json.getString("d0502c0a");
+            this.d0502c0f = json.getString("d0502c0f");
+            this.d0502d0a = json.getString("d0502d0a");
+            this.d0502d0f = json.getString("d0502d0f");
+            this.d0503 = json.getString("d0503");
+            this.d0503a = json.getString("d0503a");
+            this.d0503b = json.getString("d0503b");
+            this.d0503c = json.getString("d0503c");
+            this.d0503d = json.getString("d0503d");
+            this.d0503e = json.getString("d0503e");
+            this.d0503f = json.getString("d0503f");
+            this.d0503g = json.getString("d0503g");
+            this.d0503h = json.getString("d0503h");
+            this.d06 = json.getString("d06");
+            this.d0601 = json.getString("d0601");
+            this.d0601a = json.getString("d0601a");
+            this.d0601b = json.getString("d0601b");
+            this.d0601c = json.getString("d0601c");
+            this.d0601d = json.getString("d0601d");
+            this.d0602 = json.getString("d0602");
+            this.d0603 = json.getString("d0603");
+            this.d0604 = json.getString("d0604");
+            this.d0605 = json.getString("d0605");
+            this.d07 = json.getString("d07");
+            this.d0701 = json.getString("d0701");
+            this.d0702 = json.getString("d0702");
+            this.d0703 = json.getString("d0703");
+            this.d0704 = json.getString("d0704");
+            this.d0704a = json.getString("d0704a");
+            this.d0704b = json.getString("d0704b");
+            this.d0704c = json.getString("d0704c");
+            this.d0704d = json.getString("d0704d");
+            this.d0704e = json.getString("d0704e");
+            this.d08 = json.getString("d08");
+            this.d0801 = json.getString("d0801");
+            this.d0801a0a = json.getString("d0801a0a");
+            this.d0801a0f = json.getString("d0801a0f");
+            this.d0801a0fq = json.getString("d0801a0fq");
+            this.d0801b0a = json.getString("d0801b0a");
+            this.d0801b0f = json.getString("d0801b0f");
+            this.d0801b0fq = json.getString("d0801b0fq");
+            this.d0801c0a = json.getString("d0801c0a");
+            this.d0801c0f = json.getString("d0801c0f");
+            this.d0801c0fq = json.getString("d0801c0fq");
+            this.d0801d0a = json.getString("d0801d0a");
+            this.d0801d0f = json.getString("d0801d0f");
+            this.d0801d0fq = json.getString("d0801d0fq");
+            this.d0801e0a = json.getString("d0801e0a");
+            this.d0801e0f = json.getString("d0801e0f");
+            this.d0801e0fq = json.getString("d0801e0fq");
+            this.d0801f0a = json.getString("d0801f0a");
+            this.d0801f0f = json.getString("d0801f0f");
+            this.d0801f0fq = json.getString("d0801f0fq");
+            this.d0801g0a = json.getString("d0801g0a");
+            this.d0801g0f = json.getString("d0801g0f");
+            this.d0801g0fq = json.getString("d0801g0fq");
+            this.d0801h0a = json.getString("d0801h0a");
+            this.d0801h0f = json.getString("d0801h0f");
+            this.d0801h0fq = json.getString("d0801h0fq");
+            this.d0801i0a = json.getString("d0801i0a");
+            this.d0801i0f = json.getString("d0801i0f");
+            this.d0801i0fq = json.getString("d0801i0fq");
+            this.d0801j0a = json.getString("d0801j0a");
+            this.d0801j0f = json.getString("d0801j0f");
+            this.d0801j0fq = json.getString("d0801j0fq");
+        }
+    }
+
+    public void sEHydrate(String string) throws JSONException {
+        Log.d(TAG, "sEHydrate: " + string);
+        if (string != null) {
+            JSONObject json = null;
+            json = new JSONObject(string);
+            this.e01 = json.getString("e01");
+            this.e0101 = json.getString("e0101");
+            this.e0102 = json.getString("e0102");
+            this.e0102a = json.getString("e0102a");
+            this.e0102b = json.getString("e0102b");
+            this.e0102c = json.getString("e0102c");
+            this.e0102d = json.getString("e0102d");
+            this.e0102e = json.getString("e0102e");
+            this.e0102f = json.getString("e0102f");
+            this.e0102g = json.getString("e0102g");
+            this.e0102h = json.getString("e0102h");
+            this.e0102i = json.getString("e0102i");
+            this.e0102j = json.getString("e0102j");
+            this.e0103 = json.getString("e0103");
+            this.e0103a = json.getString("e0103a");
+            this.e0103b = json.getString("e0103b");
+            this.e0104 = json.getString("e0104");
+            this.e0104a = json.getString("e0104a");
+            this.e0104b = json.getString("e0104b");
+            this.e0104c = json.getString("e0104c");
+            this.e0104d = json.getString("e0104d");
+            this.e0103e = json.getString("e0103e");
+            this.e02 = json.getString("e02");
+            this.e0201 = json.getString("e0201");
+            this.e0202 = json.getString("e0202");
+            this.e0202a = json.getString("e0202a");
+            this.e0202b = json.getString("e0202b");
+            this.e0202c = json.getString("e0202c");
+            this.e0202d = json.getString("e0202d");
+            this.e0202e = json.getString("e0202e");
+            this.e0202f = json.getString("e0202f");
+            this.e0203efb = json.getString("e0203efb");
+            this.e0203a = json.getString("e0203a");
+            this.e0203b = json.getString("e0203b");
+            this.e0204 = json.getString("e0204");
+            this.e0204a = json.getString("e0204a");
+            this.e0204b = json.getString("e0204b");
+            this.e0204c = json.getString("e0204c");
+            this.e0204d = json.getString("e0204d");
+            this.e03 = json.getString("e03");
+            this.e0301 = json.getString("e0301");
+            this.e0302 = json.getString("e0302");
+            this.e0302a = json.getString("e0302a");
+            this.e0302b = json.getString("e0302b");
+            this.e0302c = json.getString("e0302c");
+            this.e0302d = json.getString("e0302d");
+            this.e0302e = json.getString("e0302e");
+            this.e0303 = json.getString("e0303");
+            this.e0303a = json.getString("e0303a");
+            this.e0303b = json.getString("e0303b");
+            this.e0303c = json.getString("e0303c");
+            this.e0303d = json.getString("e0303d");
+            this.e0303e = json.getString("e0303e");
+            this.e0303f = json.getString("e0303f");
+            this.e0303g = json.getString("e0303g");
+            this.e0303h = json.getString("e0303h");
+            this.e0303i = json.getString("e0303i");
+            this.e0303j = json.getString("e0303j");
+            this.e0303k = json.getString("e0303k");
+            this.e0303l = json.getString("e0303l");
+            this.e0303m = json.getString("e0303m");
+            this.e0303n = json.getString("e0303n");
+            this.e0304 = json.getString("e0304");
+            this.e0304a = json.getString("e0304a");
+            this.e0304b = json.getString("e0304b");
+            this.e0304c = json.getString("e0304c");
+            this.e0304d = json.getString("e0304d");
+            this.e0305 = json.getString("e0305");
+            this.e0305a = json.getString("e0305a");
+            this.e0305b = json.getString("e0305b");
+            this.e0305c = json.getString("e0305c");
+            this.e0305d = json.getString("e0305d");
+            this.e0305e = json.getString("e0305e");
+            this.e0306 = json.getString("e0306");
+            this.e0306a0a = json.getString("e0306a0a");
+            this.e0306a0f = json.getString("e0306a0f");
+            this.e0306b0a = json.getString("e0306b0a");
+            this.e0306b0f = json.getString("e0306b0f");
+            this.e0306c0a = json.getString("e0306c0a");
+            this.e0306c0f = json.getString("e0306c0f");
+            this.e0306d0a = json.getString("e0306d0a");
+            this.e0306d0f = json.getString("e0306d0f");
+            this.e0306e0a = json.getString("e0306e0a");
+            this.e0306e0f = json.getString("e0306e0f");
+            this.e0306f0a = json.getString("e0306f0a");
+            this.e0306f0f = json.getString("e0306f0f");
+            this.e0306g0a = json.getString("e0306g0a");
+            this.e0306g0f = json.getString("e0306g0f");
+            this.e0306h0a = json.getString("e0306h0a");
+            this.e0306h0f = json.getString("e0306h0f");
+            this.e0306i0a = json.getString("e0306i0a");
+            this.e0306i0f = json.getString("e0306i0f");
+            this.e0306j0a = json.getString("e0306j0a");
+            this.e0306j0f = json.getString("e0306j0f");
+            this.e0306k0a = json.getString("e0306k0a");
+            this.e0306k0f = json.getString("e0306k0f");
+            this.e0306l0a = json.getString("e0306l0a");
+            this.e0306l0f = json.getString("e0306l0f");
+            this.e0306m0a = json.getString("e0306m0a");
+            this.e0306m0f = json.getString("e0306m0f");
+            this.e0306n0a = json.getString("e0306n0a");
+            this.e0306n0f = json.getString("e0306n0f");
+            this.e0306o0a = json.getString("e0306o0a");
+            this.e0306o0f = json.getString("e0306o0f");
+            this.e0306p0a = json.getString("e0306p0a");
+            this.e0306p0f = json.getString("e0306p0f");
+            this.e0306q0a = json.getString("e0306q0a");
+            this.e0306q0f = json.getString("e0306q0f");
+            this.e0306r0a = json.getString("e0306r0a");
+            this.e0306r0f = json.getString("e0306r0f");
+            this.e0307 = json.getString("e0307");
+            this.e0308 = json.getString("e0308");
+            this.e04 = json.getString("e04");
+            this.e0401 = json.getString("e0401");
+            this.e0402 = json.getString("e0402");
+            this.e0403 = json.getString("e0403");
+            this.e0403a = json.getString("e0403a");
+            this.e0403b = json.getString("e0403b");
+            this.e0403c = json.getString("e0403c");
+            this.e0404 = json.getString("e0404");
+            this.e0405 = json.getString("e0405");
+            this.e0406 = json.getString("e0406");
+            this.e0407 = json.getString("e0407");
+            this.e0407a = json.getString("e0407a");
+            this.e0407b = json.getString("e0407b");
+            this.e0407c = json.getString("e0407c");
+            this.e0407d = json.getString("e0407d");
+            this.e0408 = json.getString("e0408");
+            this.e0409 = json.getString("e0409");
+            this.e0410 = json.getString("e0410");
+            this.e0410a = json.getString("e0410a");
+            this.e0410b = json.getString("e0410b");
+            this.e0410c = json.getString("e0410c");
+            this.e0410d = json.getString("e0410d");
+            this.e0410e = json.getString("e0410e");
+            this.e0410f = json.getString("e0410f");
+            this.e0411 = json.getString("e0411");
+            this.e0412 = json.getString("e0412");
+            this.e0413 = json.getString("e0413");
+            this.e0414 = json.getString("e0414");
+            this.e0415 = json.getString("e0415");
+            this.e0416 = json.getString("e0416");
+            this.e05 = json.getString("e05");
+            this.e0501 = json.getString("e0501");
+            this.e0502 = json.getString("e0502");
+            this.e0502a = json.getString("e0502a");
+            this.e0502b = json.getString("e0502b");
+            this.e0502c = json.getString("e0502c");
+            this.e0502d = json.getString("e0502d");
+            this.e0502e = json.getString("e0502e");
+            this.e0502f = json.getString("e0502f");
+            this.e0502g = json.getString("e0502g");
+            this.e0502h = json.getString("e0502h");
+            this.e0502i = json.getString("e0502i");
+            this.e0503 = json.getString("e0503");
+            this.e0504 = json.getString("e0504");
+            this.e0505 = json.getString("e0505");
+            this.e0506 = json.getString("e0506");
+            this.e0507 = json.getString("e0507");
+            this.e0508 = json.getString("e0508");
+            this.e0509 = json.getString("e0509");
+            this.e06 = json.getString("e06");
+            this.e0601 = json.getString("e0601");
+            this.e0602 = json.getString("e0602");
+            this.e0603 = json.getString("e0603");
+            this.e0604 = json.getString("e0604");
+            this.e0605 = json.getString("e0605");
+            this.e0605a = json.getString("e0605a");
+            this.e0605b = json.getString("e0605b");
+            this.e0605c = json.getString("e0605c");
+            this.e0605d = json.getString("e0605d");
+            this.e0606 = json.getString("e0606");
+            this.e0607 = json.getString("e0607");
+            this.e0608 = json.getString("e0608");
+            this.e0609 = json.getString("e0609");
+            this.e0610 = json.getString("e0610");
+            this.e0611 = json.getString("e0611");
+            this.e07 = json.getString("e07");
+            this.e0701 = json.getString("e0701");
+            this.e0702 = json.getString("e0702");
+            this.e0702a = json.getString("e0702a");
+            this.e0702b = json.getString("e0702b");
+            this.e0702c = json.getString("e0702c");
+            this.e0702d = json.getString("e0702d");
+            this.e0702e = json.getString("e0702e");
+            this.e0702f = json.getString("e0702f");
+            this.e0702g = json.getString("e0702g");
+            this.e0702h = json.getString("e0702h");
+            this.e0702i = json.getString("e0702i");
+            this.e0702j = json.getString("e0702j");
+            this.e0702k = json.getString("e0702k");
+            this.e0702l = json.getString("e0702l");
+            this.e0703 = json.getString("e0703");
+            this.e0703a = json.getString("e0703a");
+            this.e0703b = json.getString("e0703b");
+            this.e0703c = json.getString("e0703c");
+            this.e0703d = json.getString("e0703d");
+            this.e0704 = json.getString("e0704");
+            this.e0704a = json.getString("e0704a");
+            this.e0704b = json.getString("e0704b");
+            this.e0704c = json.getString("e0704c");
+            this.e0704d = json.getString("e0704d");
+            this.e0704e = json.getString("e0704e");
+            this.e0704f = json.getString("e0704f");
+            this.e0704g = json.getString("e0704g");
+            this.e0705 = json.getString("e0705");
+            this.e0705a0a = json.getString("e0705a0a");
+            this.e0705a0f = json.getString("e0705a0f");
+            this.e0705b0a = json.getString("e0705b0a");
+            this.e0705b0f = json.getString("e0705b0f");
+            this.e0705c0a = json.getString("e0705c0a");
+            this.e0705c0f = json.getString("e0705c0f");
+            this.e0705d0a = json.getString("e0705d0a");
+            this.e0705d0f = json.getString("e0705d0f");
+            this.e0705e0a = json.getString("e0705e0a");
+            this.e0705e0f = json.getString("e0705e0f");
+            this.e08 = json.getString("e08");
+            this.e0801 = json.getString("e0801");
+            this.e0802 = json.getString("e0802");
+            this.e0803 = json.getString("e0803");
+            this.e0804 = json.getString("e0804");
+            this.e0805 = json.getString("e0805");
+            this.e0806 = json.getString("e0806");
+            this.e0807 = json.getString("e0807");
+            this.e0808 = json.getString("e0808");
+            this.e0809 = json.getString("e0809");
+            this.e0810 = json.getString("e0810");
+            this.e0811 = json.getString("e0811");
+            this.e0812 = json.getString("e0812");
+            this.e0813 = json.getString("e0813");
+            this.e0814 = json.getString("e0814");
+        }
+    }
+
+    public void sFHydrate(String string) throws JSONException {
+        Log.d(TAG, "sFHydrate: " + string);
+        if (string != null) {
+            JSONObject json = null;
+            json = new JSONObject(string);
+            this.f01 = json.getString("f01");
+            this.f0100 = json.getString("f0100");
+            this.f0101a = json.getString("f0101a");
+            this.f0101aa0a = json.getString("f0101aa0a");
+            this.f0101aa0f = json.getString("f0101aa0f");
+            this.f0101ab0a = json.getString("f0101ab0a");
+            this.f0101ab0f = json.getString("f0101ab0f");
+            this.f0102 = json.getString("f0102");
+            this.f0103 = json.getString("f0103");
+            this.f0104 = json.getString("f0104");
+            this.f0105 = json.getString("f0105");
+            this.f0105aa = json.getString("f0105aa");
+            this.f0105aaa0a = json.getString("f0105aaa0a");
+            this.f0105aaa0f = json.getString("f0105aaa0f");
+            this.f0105aab0a = json.getString("f0105aab0a");
+            this.f0105aab0f = json.getString("f0105aab0f");
+            this.f0105aac0a = json.getString("f0105aac0a");
+            this.f0105aac0f = json.getString("f0105aac0f");
+            this.f0106 = json.getString("f0106");
+            this.f0106aa = json.getString("f0106aa");
+            this.f0106aaa0a = json.getString("f0106aaa0a");
+            this.f0106aaa0f = json.getString("f0106aaa0f");
+            this.f0107 = json.getString("f0107");
+            this.f0108 = json.getString("f0108");
+            this.f0109 = json.getString("f0109");
+            this.f0110 = json.getString("f0110");
+            this.f0110aa = json.getString("f0110aa");
+            this.f0110aaa0a = json.getString("f0110aaa0a");
+            this.f0110aaa0f = json.getString("f0110aaa0f");
+            this.f0110aab0a = json.getString("f0110aab0a");
+            this.f0110aab0f = json.getString("f0110aab0f");
+            this.f0110aac0a = json.getString("f0110aac0a");
+            this.f0110aac0f = json.getString("f0110aac0f");
+            this.f0110aad0a = json.getString("f0110aad0a");
+            this.f0110aad0f = json.getString("f0110aad0f");
+            this.f0110aae0a = json.getString("f0110aae0a");
+            this.f0110aae0f = json.getString("f0110aae0f");
+            this.f02 = json.getString("f02");
+            this.f0201 = json.getString("f0201");
+            this.f0201aa = json.getString("f0201aa");
+            this.f0201aaa0a = json.getString("f0201aaa0a");
+            this.f0201aaa0f = json.getString("f0201aaa0f");
+            this.f0201aab0a = json.getString("f0201aab0a");
+            this.f0201aab0f = json.getString("f0201aab0f");
+            this.f0202 = json.getString("f0202");
+            this.f0202aa = json.getString("f0202aa");
+            this.f0202aaa0a = json.getString("f0202aaa0a");
+            this.f0202aaa0f = json.getString("f0202aaa0f");
+            this.f0202aab0a = json.getString("f0202aab0a");
+            this.f0202aab0f = json.getString("f0202aab0f");
+            this.f0203 = json.getString("f0203");
+            this.f0203aa = json.getString("f0203aa");
+            this.f0203aaa0a = json.getString("f0203aaa0a");
+            this.f0203aaa0f = json.getString("f0203aaa0f");
+            this.f0203aab0a = json.getString("f0203aab0a");
+            this.f0203aab0f = json.getString("f0203aab0f");
+            this.f03 = json.getString("f03");
+            this.f0301 = json.getString("f0301");
+            this.f0301aa = json.getString("f0301aa");
+            this.f0301aaa0a = json.getString("f0301aaa0a");
+            this.f0301aaa0f = json.getString("f0301aaa0f");
+            this.f0302 = json.getString("f0302");
+            this.f0302aa = json.getString("f0302aa");
+            this.f0302aaa0a = json.getString("f0302aaa0a");
+            this.f0302aaa0f = json.getString("f0302aaa0f");
+            this.f04 = json.getString("f04");
+            this.f0401 = json.getString("f0401");
+            this.f0401aa = json.getString("f0401aa");
+            this.f0401aaa0a = json.getString("f0401aaa0a");
+            this.f0401aaa0f = json.getString("f0401aaa0f");
+            this.f0401aab0a = json.getString("f0401aab0a");
+            this.f0401aab0f = json.getString("f0401aab0f");
+            this.f0401aac0a = json.getString("f0401aac0a");
+            this.f0401aac0f = json.getString("f0401aac0f");
+            this.f0402 = json.getString("f0402");
+            this.f0402aa = json.getString("f0402aa");
+            this.f0402aaa0a = json.getString("f0402aaa0a");
+            this.f0402aaa0f = json.getString("f0402aaa0f");
+            this.f0403 = json.getString("f0403");
+            this.f0403aa = json.getString("f0403aa");
+            this.f0403aaa0a = json.getString("f0403aaa0a");
+            this.f0403aaa0f = json.getString("f0403aaa0f");
+            this.f0404 = json.getString("f0404");
+            this.f0404aa = json.getString("f0404aa");
+            this.f0404aaa0a = json.getString("f0404aaa0a");
+            this.f0404aaa0f = json.getString("f0404aaa0f");
+        }
+    }
+
+    public void sGHydrate(String string) throws JSONException {
+        Log.d(TAG, "sGHydrate: " + string);
+        if (string != null) {
+            JSONObject json = null;
+            json = new JSONObject(string);
+            this.e01 = json.getString("e01");
+        }
+    }
+
+    public void sHHydrate(String string) throws JSONException {
+        Log.d(TAG, "sHHydrate: " + string);
+        if (string != null) {
+            JSONObject json = null;
+            json = new JSONObject(string);
+            this.e01 = json.getString("e01");
+        }
+    }
+
+    public void sIHydrate(String string) throws JSONException {
+        Log.d(TAG, "sIHydrate: " + string);
+        if (string != null) {
+            JSONObject json = null;
+            json = new JSONObject(string);
+            this.e01 = json.getString("e01");
+        }
+    }
+
+    public void sJHydrate(String string) throws JSONException {
+        Log.d(TAG, "sJHydrate: " + string);
+        if (string != null) {
+            JSONObject json = null;
+            json = new JSONObject(string);
+            this.e01 = json.getString("e01");
+        }
+    }
+
+    public void sKHydrate(String string) throws JSONException {
+        Log.d(TAG, "sKHydrate: " + string);
+        if (string != null) {
+            JSONObject json = null;
+            json = new JSONObject(string);
+            this.e01 = json.getString("e01");
+        }
+    }
+
 
     public JSONObject toJSONObject() throws JSONException {
         JSONObject json = new JSONObject();
@@ -15497,6 +15956,14 @@ public class Forms extends BaseObservable implements Observable {
 
         json.put(FormsTable.COLUMN_SB, new JSONObject(sBtoString()));
         json.put(FormsTable.COLUMN_SC, new JSONObject(sCtoString()));
+        json.put(FormsTable.COLUMN_SD, new JSONObject(sDtoString()));
+        json.put(FormsTable.COLUMN_SE, new JSONObject(sEtoString()));
+        json.put(FormsTable.COLUMN_SF, new JSONObject(sFtoString()));
+        json.put(FormsTable.COLUMN_SG, new JSONObject(sGtoString()));
+        json.put(FormsTable.COLUMN_SH, new JSONObject(sHtoString()));
+        json.put(FormsTable.COLUMN_SI, new JSONObject(sItoString()));
+        json.put(FormsTable.COLUMN_SJ, new JSONObject(sJtoString()));
+        json.put(FormsTable.COLUMN_SK, new JSONObject(sKtoString()));
         return json;
     }
 
@@ -15586,6 +16053,465 @@ public class Forms extends BaseObservable implements Observable {
                 .put("c112c", c112c)
                 .put("c112d", c112d)
                 .put("c112e", c112e);
+        return json.toString();
+    }
+
+    public String sDtoString() throws JSONException {
+        Log.d(TAG, "sDtoString: ");
+        JSONObject json = new JSONObject();
+        json.put("d01", d01)
+                .put("d0101", d0101)
+                .put("d0102", d0102)
+                .put("d02", d02)
+                .put("d0201", d0201)
+                .put("d0202", d0202)
+                .put("d0203", d0203)
+                .put("d03", d03)
+                .put("d0301", d0301)
+                .put("d0302", d0302)
+                .put("d0303", d0303)
+                .put("d0304", d0304)
+                .put("d04", d04)
+                .put("d0401", d0401)
+                .put("d0402", d0402)
+                .put("d0403", d0403)
+                .put("d0404", d0404)
+                .put("d05", d05)
+                .put("d0501", d0501)
+                .put("d0502", d0502)
+                .put("d0502a0a", d0502a0a)
+                .put("d0502a0f", d0502a0f)
+                .put("d0502b0a", d0502b0a)
+                .put("d0502b0f", d0502b0f)
+                .put("d0502c0a", d0502c0a)
+                .put("d0502c0f", d0502c0f)
+                .put("d0502d0a", d0502d0a)
+                .put("d0502d0f", d0502d0f)
+                .put("d0503", d0503)
+                .put("d0503a", d0503a)
+                .put("d0503b", d0503b)
+                .put("d0503c", d0503c)
+                .put("d0503d", d0503d)
+                .put("d0503e", d0503e)
+                .put("d0503f", d0503f)
+                .put("d0503g", d0503g)
+                .put("d0503h", d0503h)
+                .put("d06", d06)
+                .put("d0601", d0601)
+                .put("d0601a", d0601a)
+                .put("d0601b", d0601b)
+                .put("d0601c", d0601c)
+                .put("d0601d", d0601d)
+                .put("d0602", d0602)
+                .put("d0603", d0603)
+                .put("d0604", d0604)
+                .put("d0605", d0605)
+                .put("d07", d07)
+                .put("d0701", d0701)
+                .put("d0702", d0702)
+                .put("d0703", d0703)
+                .put("d0704", d0704)
+                .put("d0704a", d0704a)
+                .put("d0704b", d0704b)
+                .put("d0704c", d0704c)
+                .put("d0704d", d0704d)
+                .put("d0704e", d0704e)
+                .put("d08", d08)
+                .put("d0801", d0801)
+                .put("d0801a0a", d0801a0a)
+                .put("d0801a0f", d0801a0f)
+                .put("d0801a0fq", d0801a0fq)
+                .put("d0801b0a", d0801b0a)
+                .put("d0801b0f", d0801b0f)
+                .put("d0801b0fq", d0801b0fq)
+                .put("d0801c0a", d0801c0a)
+                .put("d0801c0f", d0801c0f)
+                .put("d0801c0fq", d0801c0fq)
+                .put("d0801d0a", d0801d0a)
+                .put("d0801d0f", d0801d0f)
+                .put("d0801d0fq", d0801d0fq)
+                .put("d0801e0a", d0801e0a)
+                .put("d0801e0f", d0801e0f)
+                .put("d0801e0fq", d0801e0fq)
+                .put("d0801f0a", d0801f0a)
+                .put("d0801f0f", d0801f0f)
+                .put("d0801f0fq", d0801f0fq)
+                .put("d0801g0a", d0801g0a)
+                .put("d0801g0f", d0801g0f)
+                .put("d0801g0fq", d0801g0fq)
+                .put("d0801h0a", d0801h0a)
+                .put("d0801h0f", d0801h0f)
+                .put("d0801h0fq", d0801h0fq)
+                .put("d0801i0a", d0801i0a)
+                .put("d0801i0f", d0801i0f)
+                .put("d0801i0fq", d0801i0fq)
+                .put("d0801j0a", d0801j0a)
+                .put("d0801j0f", d0801j0f)
+                .put("d0801j0fq", d0801j0fq);
+        return json.toString();
+    }
+
+    public String sEtoString() throws JSONException {
+        Log.d(TAG, "sEtoString: ");
+        JSONObject json = new JSONObject();
+        json.put("e01", e01)
+                .put("e0101", e0101)
+                .put("e0102", e0102)
+                .put("e0102a", e0102a)
+                .put("e0102b", e0102b)
+                .put("e0102c", e0102c)
+                .put("e0102d", e0102d)
+                .put("e0102e", e0102e)
+                .put("e0102f", e0102f)
+                .put("e0102g", e0102g)
+                .put("e0102h", e0102h)
+                .put("e0102i", e0102i)
+                .put("e0102j", e0102j)
+                .put("e0103", e0103)
+                .put("e0103a", e0103a)
+                .put("e0103b", e0103b)
+                .put("e0104", e0104)
+                .put("e0104a", e0104a)
+                .put("e0104b", e0104b)
+                .put("e0104c", e0104c)
+                .put("e0104d", e0104d)
+                .put("e0103e", e0103e)
+                .put("e02", e02)
+                .put("e0201", e0201)
+                .put("e0202", e0202)
+                .put("e0202a", e0202a)
+                .put("e0202b", e0202b)
+                .put("e0202c", e0202c)
+                .put("e0202d", e0202d)
+                .put("e0202e", e0202e)
+                .put("e0202f", e0202f)
+                .put("e0203efb", e0203efb)
+                .put("e0203a", e0203a)
+                .put("e0203b", e0203b)
+                .put("e0204", e0204)
+                .put("e0204a", e0204a)
+                .put("e0204b", e0204b)
+                .put("e0204c", e0204c)
+                .put("e0204d", e0204d)
+                .put("e03", e03)
+                .put("e0301", e0301)
+                .put("e0302", e0302)
+                .put("e0302a", e0302a)
+                .put("e0302b", e0302b)
+                .put("e0302c", e0302c)
+                .put("e0302d", e0302d)
+                .put("e0302e", e0302e)
+                .put("e0303", e0303)
+                .put("e0303a", e0303a)
+                .put("e0303b", e0303b)
+                .put("e0303c", e0303c)
+                .put("e0303d", e0303d)
+                .put("e0303e", e0303e)
+                .put("e0303f", e0303f)
+                .put("e0303g", e0303g)
+                .put("e0303h", e0303h)
+                .put("e0303i", e0303i)
+                .put("e0303j", e0303j)
+                .put("e0303k", e0303k)
+                .put("e0303l", e0303l)
+                .put("e0303m", e0303m)
+                .put("e0303n", e0303n)
+                .put("e0304", e0304)
+                .put("e0304a", e0304a)
+                .put("e0304b", e0304b)
+                .put("e0304c", e0304c)
+                .put("e0304d", e0304d)
+                .put("e0305", e0305)
+                .put("e0305a", e0305a)
+                .put("e0305b", e0305b)
+                .put("e0305c", e0305c)
+                .put("e0305d", e0305d)
+                .put("e0305e", e0305e)
+                .put("e0306", e0306)
+                .put("e0306a0a", e0306a0a)
+                .put("e0306a0f", e0306a0f)
+                .put("e0306b0a", e0306b0a)
+                .put("e0306b0f", e0306b0f)
+                .put("e0306c0a", e0306c0a)
+                .put("e0306c0f", e0306c0f)
+                .put("e0306d0a", e0306d0a)
+                .put("e0306d0f", e0306d0f)
+                .put("e0306e0a", e0306e0a)
+                .put("e0306e0f", e0306e0f)
+                .put("e0306f0a", e0306f0a)
+                .put("e0306f0f", e0306f0f)
+                .put("e0306g0a", e0306g0a)
+                .put("e0306g0f", e0306g0f)
+                .put("e0306h0a", e0306h0a)
+                .put("e0306h0f", e0306h0f)
+                .put("e0306i0a", e0306i0a)
+                .put("e0306i0f", e0306i0f)
+                .put("e0306j0a", e0306j0a)
+                .put("e0306j0f", e0306j0f)
+                .put("e0306k0a", e0306k0a)
+                .put("e0306k0f", e0306k0f)
+                .put("e0306l0a", e0306l0a)
+                .put("e0306l0f", e0306l0f)
+                .put("e0306m0a", e0306m0a)
+                .put("e0306m0f", e0306m0f)
+                .put("e0306n0a", e0306n0a)
+                .put("e0306n0f", e0306n0f)
+                .put("e0306o0a", e0306o0a)
+                .put("e0306o0f", e0306o0f)
+                .put("e0306p0a", e0306p0a)
+                .put("e0306p0f", e0306p0f)
+                .put("e0306q0a", e0306q0a)
+                .put("e0306q0f", e0306q0f)
+                .put("e0306r0a", e0306r0a)
+                .put("e0306r0f", e0306r0f)
+                .put("e0307", e0307)
+                .put("e0308", e0308)
+                .put("e04", e04)
+                .put("e0401", e0401)
+                .put("e0402", e0402)
+                .put("e0403", e0403)
+                .put("e0403a", e0403a)
+                .put("e0403b", e0403b)
+                .put("e0403c", e0403c)
+                .put("e0404", e0404)
+                .put("e0405", e0405)
+                .put("e0406", e0406)
+                .put("e0407", e0407)
+                .put("e0407a", e0407a)
+                .put("e0407b", e0407b)
+                .put("e0407c", e0407c)
+                .put("e0407d", e0407d)
+                .put("e0408", e0408)
+                .put("e0409", e0409)
+                .put("e0410", e0410)
+                .put("e0410a", e0410a)
+                .put("e0410b", e0410b)
+                .put("e0410c", e0410c)
+                .put("e0410d", e0410d)
+                .put("e0410e", e0410e)
+                .put("e0410f", e0410f)
+                .put("e0411", e0411)
+                .put("e0412", e0412)
+                .put("e0413", e0413)
+                .put("e0414", e0414)
+                .put("e0415", e0415)
+                .put("e0416", e0416)
+                .put("e05", e05)
+                .put("e0501", e0501)
+                .put("e0502", e0502)
+                .put("e0502a", e0502a)
+                .put("e0502b", e0502b)
+                .put("e0502c", e0502c)
+                .put("e0502d", e0502d)
+                .put("e0502e", e0502e)
+                .put("e0502f", e0502f)
+                .put("e0502g", e0502g)
+                .put("e0502h", e0502h)
+                .put("e0502i", e0502i)
+                .put("e0503", e0503)
+                .put("e0504", e0504)
+                .put("e0505", e0505)
+                .put("e0506", e0506)
+                .put("e0507", e0507)
+                .put("e0508", e0508)
+                .put("e0509", e0509)
+                .put("e06", e06)
+                .put("e0601", e0601)
+                .put("e0602", e0602)
+                .put("e0603", e0603)
+                .put("e0604", e0604)
+                .put("e0605", e0605)
+                .put("e0605a", e0605a)
+                .put("e0605b", e0605b)
+                .put("e0605c", e0605c)
+                .put("e0605d", e0605d)
+                .put("e0606", e0606)
+                .put("e0607", e0607)
+                .put("e0608", e0608)
+                .put("e0609", e0609)
+                .put("e0610", e0610)
+                .put("e0611", e0611)
+                .put("e07", e07)
+                .put("e0701", e0701)
+                .put("e0702", e0702)
+                .put("e0702a", e0702a)
+                .put("e0702b", e0702b)
+                .put("e0702c", e0702c)
+                .put("e0702d", e0702d)
+                .put("e0702e", e0702e)
+                .put("e0702f", e0702f)
+                .put("e0702g", e0702g)
+                .put("e0702h", e0702h)
+                .put("e0702i", e0702i)
+                .put("e0702j", e0702j)
+                .put("e0702k", e0702k)
+                .put("e0702l", e0702l)
+                .put("e0703", e0703)
+                .put("e0703a", e0703a)
+                .put("e0703b", e0703b)
+                .put("e0703c", e0703c)
+                .put("e0703d", e0703d)
+                .put("e0704", e0704)
+                .put("e0704a", e0704a)
+                .put("e0704b", e0704b)
+                .put("e0704c", e0704c)
+                .put("e0704d", e0704d)
+                .put("e0704e", e0704e)
+                .put("e0704f", e0704f)
+                .put("e0704g", e0704g)
+                .put("e0705", e0705)
+                .put("e0705a0a", e0705a0a)
+                .put("e0705a0f", e0705a0f)
+                .put("e0705b0a", e0705b0a)
+                .put("e0705b0f", e0705b0f)
+                .put("e0705c0a", e0705c0a)
+                .put("e0705c0f", e0705c0f)
+                .put("e0705d0a", e0705d0a)
+                .put("e0705d0f", e0705d0f)
+                .put("e0705e0a", e0705e0a)
+                .put("e0705e0f", e0705e0f)
+                .put("e08", e08)
+                .put("e0801", e0801)
+                .put("e0802", e0802)
+                .put("e0803", e0803)
+                .put("e0804", e0804)
+                .put("e0805", e0805)
+                .put("e0806", e0806)
+                .put("e0807", e0807)
+                .put("e0808", e0808)
+                .put("e0809", e0809)
+                .put("e0810", e0810)
+                .put("e0811", e0811)
+                .put("e0812", e0812)
+                .put("e0813", e0813)
+                .put("e0814", e0814);
+        return json.toString();
+    }
+
+    public String sFtoString() throws JSONException {
+        Log.d(TAG, "sFtoString: ");
+        JSONObject json = new JSONObject();
+        json.put("f01", f01)
+                .put("f0100", f0100)
+                .put("f0101a", f0101a)
+                .put("f0101aa0a", f0101aa0a)
+                .put("f0101aa0f", f0101aa0f)
+                .put("f0101ab0a", f0101ab0a)
+                .put("f0101ab0f", f0101ab0f)
+                .put("f0102", f0102)
+                .put("f0103", f0103)
+                .put("f0104", f0104)
+                .put("f0105", f0105)
+                .put("f0105aa", f0105aa)
+                .put("f0105aaa0a", f0105aaa0a)
+                .put("f0105aaa0f", f0105aaa0f)
+                .put("f0105aab0a", f0105aab0a)
+                .put("f0105aab0f", f0105aab0f)
+                .put("f0105aac0a", f0105aac0a)
+                .put("f0105aac0f", f0105aac0f)
+                .put("f0106", f0106)
+                .put("f0106aa", f0106aa)
+                .put("f0106aaa0a", f0106aaa0a)
+                .put("f0106aaa0f", f0106aaa0f)
+                .put("f0107", f0107)
+                .put("f0108", f0108)
+                .put("f0109", f0109)
+                .put("f0110", f0110)
+                .put("f0110aa", f0110aa)
+                .put("f0110aaa0a", f0110aaa0a)
+                .put("f0110aaa0f", f0110aaa0f)
+                .put("f0110aab0a", f0110aab0a)
+                .put("f0110aab0f", f0110aab0f)
+                .put("f0110aac0a", f0110aac0a)
+                .put("f0110aac0f", f0110aac0f)
+                .put("f0110aad0a", f0110aad0a)
+                .put("f0110aad0f", f0110aad0f)
+                .put("f0110aae0a", f0110aae0a)
+                .put("f0110aae0f", f0110aae0f)
+                .put("f02", f02)
+                .put("f0201", f0201)
+                .put("f0201aa", f0201aa)
+                .put("f0201aaa0a", f0201aaa0a)
+                .put("f0201aaa0f", f0201aaa0f)
+                .put("f0201aab0a", f0201aab0a)
+                .put("f0201aab0f", f0201aab0f)
+                .put("f0202", f0202)
+                .put("f0202aa", f0202aa)
+                .put("f0202aaa0a", f0202aaa0a)
+                .put("f0202aaa0f", f0202aaa0f)
+                .put("f0202aab0a", f0202aab0a)
+                .put("f0202aab0f", f0202aab0f)
+                .put("f0203", f0203)
+                .put("f0203aa", f0203aa)
+                .put("f0203aaa0a", f0203aaa0a)
+                .put("f0203aaa0f", f0203aaa0f)
+                .put("f0203aab0a", f0203aab0a)
+                .put("f0203aab0f", f0203aab0f)
+                .put("f03", f03)
+                .put("f0301", f0301)
+                .put("f0301aa", f0301aa)
+                .put("f0301aaa0a", f0301aaa0a)
+                .put("f0301aaa0f", f0301aaa0f)
+                .put("f0302", f0302)
+                .put("f0302aa", f0302aa)
+                .put("f0302aaa0a", f0302aaa0a)
+                .put("f0302aaa0f", f0302aaa0f)
+                .put("f04", f04)
+                .put("f0401", f0401)
+                .put("f0401aa", f0401aa)
+                .put("f0401aaa0a", f0401aaa0a)
+                .put("f0401aaa0f", f0401aaa0f)
+                .put("f0401aab0a", f0401aab0a)
+                .put("f0401aab0f", f0401aab0f)
+                .put("f0401aac0a", f0401aac0a)
+                .put("f0401aac0f", f0401aac0f)
+                .put("f0402", f0402)
+                .put("f0402aa", f0402aa)
+                .put("f0402aaa0a", f0402aaa0a)
+                .put("f0402aaa0f", f0402aaa0f)
+                .put("f0403", f0403)
+                .put("f0403aa", f0403aa)
+                .put("f0403aaa0a", f0403aaa0a)
+                .put("f0403aaa0f", f0403aaa0f)
+                .put("f0404", f0404)
+                .put("f0404aa", f0404aa)
+                .put("f0404aaa0a", f0404aaa0a)
+                .put("f0404aaa0f", f0404aaa0f);
+        return json.toString();
+    }
+
+    public String sGtoString() throws JSONException {
+        Log.d(TAG, "sGtoString: ");
+        JSONObject json = new JSONObject();
+        json.put("e01", e01);
+        return json.toString();
+    }
+
+    public String sHtoString() throws JSONException {
+        Log.d(TAG, "sHtoString: ");
+        JSONObject json = new JSONObject();
+        json.put("e01", e01);
+        return json.toString();
+    }
+
+    public String sItoString() throws JSONException {
+        Log.d(TAG, "sItoString: ");
+        JSONObject json = new JSONObject();
+        json.put("e01", e01);
+        return json.toString();
+    }
+
+    public String sJtoString() throws JSONException {
+        Log.d(TAG, "sJtoString: ");
+        JSONObject json = new JSONObject();
+        json.put("e01", e01);
+        return json.toString();
+    }
+
+    public String sKtoString() throws JSONException {
+        Log.d(TAG, "sKtoString: ");
+        JSONObject json = new JSONObject();
+        json.put("e01", e01);
         return json.toString();
     }
 

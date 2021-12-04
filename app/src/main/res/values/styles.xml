@@ -167,8 +167,8 @@
     </style>
 
     <style name="EditTextAlphaNmeric" parent="@style/textInput">
-        <item name="android:digits">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ
-            0123456789,.
+        <item name="android:digits">abcdefghijklmnopqrstuvwxyz
+            ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789,.
         </item>
     </style>
 

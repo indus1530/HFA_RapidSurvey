@@ -1795,103 +1795,113 @@
     <string name="f0701aad0fn">No</string>
     <string name="f0701aad0fq">Quantity</string>
 
-    <string name="modgtitle"> COMMODITIES &amp; SUPPLIES</string>
-    <string name="g01"> SECTION 01: \nSUPPLY CHAIN MANAGEMENT </string>
-    <string name="g0101">Who is the principal person responsible for managing the ordering of medical supplies at this facility? </string>
-    <string name="g0101a">Nurse</string>
-    <string name="g0101b">Clinical officer </string>
-    <string name="g0101c">Pharmacy technician </string>
-    <string name="g0101d">Pharmacy assistant</string>
-    <string name="g0101e">Pharmacist</string>
-    <string name="g0101f">Medical assistant</string>
-    <string name="g0101x">Other  (specify)</string>
+    <string name="modg"> COMMODITIES &amp; SUPPLIES</string>
+    <string name="g1"> SUPPLY CHAIN MANAGEMENT </string>
+    <string name="g101"> Who is the principal person responsible for managing the ordering of medical supplies at this facility ? </string>
+    <string name="g101a"> Nurse </string>
+    <string name="g101b"> Clinical Officer </string>
+    <string name="g101c"> Pharmacy Technician </string>
+    <string name="g101d"> Pharmacy Assistant </string>
+    <string name="g101e"> Pharmacist </string>
+    <string name="g101f"> Medical Assistant </string>
+    <string name="g10196"> Other </string>
+    <string name="g10196x"> Specify </string>
 
-    <string name="g0102"> Which of the following mechanisms is used to determine this facility’s resupply quantities ? </string>
-    <string name="g0102a"> The facility itself (pull distribution system) </string>
-    <string name="g0102b"> A higher-level facility (push distribution system)</string>
+    <string name="g102"> Which of the following mechanisms is used to determine this facility’s resupply quantities ? </string>
+    <string name="g102a"> The facility itself (pull distribution system) </string>
+    <string name="g102b"> A higher-level facility (push distribution system)</string>
 
-    <string name="g0103">How are the facility’s resupply quantities determined? </string>
-    <string name="g0103a">Formula (any calculation)</string>
-    <string name="g0103b"> Don’t know</string>
-    <string name="g0103x">Other (Specify)</string>
+    <string name="g103"> How are the facility’s resupply quantities determined ? </string>
+    <string name="g103a"> Formula ( Any Calculation ) </string>
+    <string name="g103b"> Don’t Know </string>
+    <string name="g10396"> Other </string>
+    <string name="g10396x"> Specify </string>
 
-    <string name="g0104"> How often does this facility replenished medicine ? </string>
-    <string name="g0104a"> Weekly </string>
-    <string name="g0104b"> Fortnightly </string>
-    <string name="g0104c"> Monthly </string>
-    <string name="g0104d"> Quarterly </string>
-    <string name="g0104e"> Bi-annual </string>
-    <string name="g0104f"> Annually </string>
-    <string name="g0104g"> On need basis </string>
+    <string name="g104"> How often does this facility replenished medicine ? </string>
+    <string name="g104a"> Weekly </string>
+    <string name="g104b"> Fortnightly </string>
+    <string name="g104c"> Monthly </string>
+    <string name="g104d"> Quarterly </string>
+    <string name="g104e"> Bi-annual </string>
+    <string name="g104f"> Annually </string>
+    <string name="g104g"> On need basis </string>
 
-    <string name="g0105"> When is the next replenishment cycle due ? </string>
-    <string name="g0105a"> Day(s) </string>
-    <string name="g0105b"> Month(s) </string>
+    <string name="g105"> When is the Next Replenishment Cycle Due ? </string>
+    <string name="g105d"> Day(s) </string>
+    <string name="g105m"> Month(s) </string>
 
-    <string name="g0106">What is the main source of your routine pharmaceutical commodity supplies? By this I mean who is the direct supplier to your facility? </string>
-    <string name="g0106a">Provincial medical stores </string>
-    <string name="g0106b"> Joint medical stores </string>
-    <string name="g0106c"> NGO / Donors </string>
-    <string name="g0106d">Private sources </string>
-    <string name="g0106x"> Other (specify) </string>
+    <string name="g106"> What is the main source of your routine pharmaceutical commodity supplies? By this I mean who is the direct supplier to your facility? </string>
+    <string name="g106a"> Provincial Medical Stores </string>
+    <string name="g106b"> Joint Medical Stores </string>
+    <string name="g106c"> NGO / Donors </string>
+    <string name="g106d"> Private Sources </string>
+    <string name="g10696"> Other </string>
+    <string name="g10696x"> Specify </string>
 
-    <string name="g0107"> How are your commodity deliver from the main supplier to this facility ? </string>
-    <string name="g0107a">Supplier delivers to facility </string>
-    <string name="g0107b">Facility must arrange delivery to Facility </string>
-    <string name="g0107c"> Local vendor deliver to facility </string>
-    <string name="g0107x">Other (specify)</string>
+    <string name="g107"> How are your commodity deliver from the main supplier to this facility ? </string>
+    <string name="g107a"> Supplier delivers to facility </string>
+    <string name="g107b"> Facility must arrange delivery to Facility </string>
+    <string name="g107c"> Local vendor deliver to facility </string>
+    <string name="g10796"> Other </string>
+    <string name="g10796x"> Specify </string>
 
-    <string name="g0108">Who is responsible for transporting products from central medical stores to your facility? </string>
-    <string name="g0108a">Local supplier delivers   </string>
-    <string name="g0108aa">Yes</string>
-    <string name="g0108ab">No</string>
-    <string name="g0108b">Higher level delivers   </string>
-    <string name="g0108ba">Yes</string>
-    <string name="g0108bb">No</string>
-    <string name="g0108c">This facility collects</string>
-    <string name="g0108ca">Yes</string>
-    <string name="g0108cb">No</string>
-    <string name="g0109">For the most recent order, how long did it take between ordering and receiving products? </string>
-    <string name="g0109a">Less than 2 weeks </string>
-    <string name="g0109b">2 weeks to 1 month </string>
-    <string name="g0109c">Between 1 and 2 months</string>
-    <string name="g0109d">More than 2 months</string>
+    <string name="g108"> Who is responsible for transporting products from central medical stores to your facility ? </string>
+    <string name="g1081"> Local Supplier Delivers </string>
+    <string name="g1081a"> Yes </string>
+    <string name="g1081b"> No </string>
 
-    <string name="g0110"> How long the medicine usually last once replenished ? </string>
-    <string name="g0110a"> Day(s) </string>
-    <string name="g0110b"> Month(s) </string>
+    <string name="g1082"> Higher Level Delivers </string>
+    <string name="g1082a"> Yes </string>
+    <string name="g1082b"> No </string>
 
-    <string name="g0111"> Are there other mechanisms for medicine supply ? </string>
-    <string name="g0111a"> Yes </string>
-    <string name="g0111b"> No </string>
+    <string name="g1083"> This Facility Collects </string>
+    <string name="g1083a"> Yes </string>
+    <string name="g1083b"> No </string>
 
-    <string name="g01112"> If yes, What are the other mechanisms for medicine supply ? </string>
-    <string name="g01112a"> NGO </string>
-    <string name="g01112b"> Donation (Philanthropist) </string>
-    <string name="g01112x"> Other(specify) </string>
+    <string name="g109"> For the most recent order, how long did it take between ordering and receiving products? </string>
+    <string name="g109a"> Less than 2 Weeks </string>
+    <string name="g109b"> 2 Weeks to 1 Month </string>
+    <string name="g109c"> Between 1 and 2 Months </string>
+    <string name="g109d"> More than 2 Months </string>
 
-    <string name="g01113"> Does this facility record equipment in a stock register ? </string>
-    <string name="g01113a"> Yes </string>
-    <string name="g01113b"> No </string>
-    \
-    <string name="g01114"> If yes, ask to see the register to check if it is maintained ? </string>
-    <string name="g01114a"> Yes Maintained Regularly </string>
-    <string name="g01114b"> Yes maintained Irregularly </string>
-    <string name="g01114c"> No the register is nor maintained </string>
+    <string name="g110"> How long the medicine usually last once replenished ? </string>
+    <string name="g110d"> Day(s) </string>
+    <string name="g110m"> Month(s) </string>
 
-    <string name="g01115">Does this facility record drug in a stock register? Ask to see the register to check if it is maintained?</string>
-    <string name="g01115a">Yes Maintained Regularly</string>
-    <string name="g01115b">Yes maintained Irregularly</string>
-    <string name="g01115c">No the register is nor maintained</string>
-    <string name="g01116">Does this facility follow essential drug list to stock/restock drugs?</string>
-    <string name="g01116a">Yes</string>
-    <string name="g01116b">No</string>
-    <string name="g01117">Are these medicines supplied to patients from this facility free of cost?</string>
-    <string name="g01117a">Yes, all of them</string>
-    <string name="g01117b">Yes, Only for Emergency patients</string>
-    <string name="g01117c">Yes, Only Emergency medicines </string>
-    <string name="g01117d">Partially  </string>
-    <string name="g01117e">No</string>
+    <string name="g111"> Are there other mechanisms for medicine supply ? </string>
+    <string name="g111a"> Yes </string>
+    <string name="g111b"> No </string>
+
+    <string name="g112"> If yes, What are the other mechanisms for medicine supply ? </string>
+    <string name="g112a"> NGO </string>
+    <string name="g112b"> Donation (Philanthropist) </string>
+    <string name="g11296"> Other </string>
+    <string name="g11296x"> Specify </string>
+
+    <string name="g113"> Does this facility record equipment in a stock register ? </string>
+    <string name="g113a"> Yes </string>
+    <string name="g113b"> No </string>
+
+    <string name="g114"> If yes, ask to see the register to check if it is maintained ? </string>
+    <string name="g114a"> Yes Maintained Regularly </string>
+    <string name="g114b"> Yes maintained Irregularly </string>
+    <string name="g114c"> No the register is nor maintained </string>
+
+    <string name="g115">Does this facility record drug in a stock register? Ask to see the register to check if it is maintained?</string>
+    <string name="g115a">Yes Maintained Regularly</string>
+    <string name="g115b">Yes maintained Irregularly</string>
+    <string name="g115c">No the register is nor maintained</string>
+
+    <string name="g116">Does this facility follow essential drug list to stock/restock drugs?</string>
+    <string name="g116a">Yes</string>
+    <string name="g116b">No</string>
+
+    <string name="g117">Are these medicines supplied to patients from this facility free of cost?</string>
+    <string name="g117a">Yes, all of them</string>
+    <string name="g117b">Yes, Only for Emergency patients</string>
+    <string name="g117c">Yes, Only Emergency medicines </string>
+    <string name="g117d">Partially  </string>
+    <string name="g117e">No</string>
 
     <string name="g02"> SECTION 02: \nPROTECTION FROM ENVIRONMENT </string>
     <string name="g0201">Are the Drugs properly Shelved? Observe</string>
