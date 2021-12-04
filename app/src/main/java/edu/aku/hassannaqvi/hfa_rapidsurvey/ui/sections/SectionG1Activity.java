@@ -1,6 +1,7 @@
 package edu.aku.hassannaqvi.hfa_rapidsurvey.ui.sections;
 
 import static edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp.fc;
+import static edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp.form;
 import static edu.aku.hassannaqvi.hfa_rapidsurvey.utils.UtilKt.openSectionMainActivity;
 
 import android.content.Intent;
@@ -33,7 +34,7 @@ public class SectionG1Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_g1);
-        bi.setCallback(this);
+        bi.setForm(form);
         setupSkips();
 
     }
@@ -99,7 +100,7 @@ public class SectionG1Activity extends AppCompatActivity {
 
     private boolean UpdateDB() {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SG, fc.getsG());
+        int updcount = db.updatesFormColumn(Tables.FormsTable.COLUMN_SG, form.sGtoString());
         if (updcount == 1) {
             return true;
         } else {
@@ -122,9 +123,9 @@ public class SectionG1Activity extends AppCompatActivity {
                 : bi.g101d.isChecked() ? "4"
                 : bi.g101e.isChecked() ? "5"
                 : bi.g101f.isChecked() ? "6"
-                : bi.g101x.isChecked() ? "96"
+                : bi.g10196.isChecked() ? "96"
                 : "-1");
-        json.put("g101xx", bi.g101xx.getText().toString().trim().isEmpty() ? "-1" : bi.g101xx.getText().toString());
+        json.put("g10196x", bi.g10196x.getText().toString().trim().isEmpty() ? "-1" : bi.g10196x.getText().toString());
 
 
         json.put("g102", bi.g102a.isChecked() ? "1"
@@ -133,9 +134,9 @@ public class SectionG1Activity extends AppCompatActivity {
 
         json.put("g103", bi.g103a.isChecked() ? "1"
                 : bi.g103b.isChecked() ? "98"
-                : bi.g103x.isChecked() ? "96"
+                : bi.g10396.isChecked() ? "96"
                 : "-1");
-        json.put("g103xx", bi.g103xx.getText().toString().trim().isEmpty() ? "-1" : bi.g103xx.getText().toString());
+        json.put("g10396x", bi.g10396x.getText().toString().trim().isEmpty() ? "-1" : bi.g10396x.getText().toString());
 
         json.put("g104", bi.g104a.isChecked() ? "1"
                 : bi.g104b.isChecked() ? "2"
@@ -146,21 +147,21 @@ public class SectionG1Activity extends AppCompatActivity {
                 : bi.g104g.isChecked() ? "7"
                 : "-1");
 
-        json.put("g105ax", bi.g105ax.getText().toString().trim().isEmpty() ? "-1" : bi.g105ax.getText().toString());
-        json.put("g105bx", bi.g105bx.getText().toString().trim().isEmpty() ? "-1" : bi.g105bx.getText().toString());
+        json.put("g105d", bi.g105d.getText().toString().trim().isEmpty() ? "-1" : bi.g105d.getText().toString());
+        json.put("g105m", bi.g105m.getText().toString().trim().isEmpty() ? "-1" : bi.g105m.getText().toString());
 
         json.put("g106", bi.g106a.isChecked() ? "1"
                 : bi.g106b.isChecked() ? "2"
                 : bi.g106c.isChecked() ? "3"
                 : bi.g106d.isChecked() ? "4"
-                : bi.g106x.isChecked() ? "96"
+                : bi.g10696.isChecked() ? "96"
                 : "-1");
-        json.put("g106xx", bi.g106xx.getText().toString().trim().isEmpty() ? "-1" : bi.g106xx.getText().toString());
+        json.put("g10696x", bi.g10696x.getText().toString().trim().isEmpty() ? "-1" : bi.g10696x.getText().toString());
 
         json.put("g107", bi.g107a.isChecked() ? "1"
                 : bi.g107b.isChecked() ? "2"
                 : bi.g107c.isChecked() ? "3"
-                : bi.g107x.isChecked() ? "96"
+                : bi.g10796.isChecked() ? "96"
                 : "-1");
         json.put("g107xx", bi.g107xx.getText().toString().trim().isEmpty() ? "-1" : bi.g107xx.getText().toString());
 

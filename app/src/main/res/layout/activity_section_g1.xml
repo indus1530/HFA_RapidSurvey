@@ -419,7 +419,7 @@
                                 android:layout_weight="1"
                                 android:gravity="center"
                                 android:inputType="number"
-                                android:text="@={form.setG105d}"
+                                android:text="@={form.d105d}"
                                 android:hint="##"
                                 android:maxLength="2"
                                 app:maxValue="31"
@@ -460,7 +460,7 @@
 
                 <!-- g106  Radio   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVg0106"
+                    android:id="@+id/fldGrpCVg106"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -488,47 +488,49 @@
                         </LinearLayout>
 
                         <RadioGroup
-                            android:id="@+id/g0106"
+                            android:id="@+id/g106"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
                             <RadioButton
-                                android:id="@+id/g0106a"
+                                android:id="@+id/g106a"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/g0106a" />
+                                android:text="@string/g106a" />
 
                             <RadioButton
-                                android:id="@+id/g0106b"
+                                android:id="@+id/g106b"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/g0106b" />
+                                android:text="@string/g106b" />
 
                             <RadioButton
-                                android:id="@+id/g0106c"
+                                android:id="@+id/g106c"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/g0106c" />
+                                android:text="@string/g106c" />
 
                             <RadioButton
-                                android:id="@+id/g0106d"
+                                android:id="@+id/g106d"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/g0106d" />
+                                android:text="@string/g106d" />
 
                             <RadioButton
-                                android:id="@+id/g0106x"
+                                android:id="@+id/g10696"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/g0106x" />
+                                android:text="@string/g10696" />
 
                             <EditText
-                                android:id="@+id/g0106xx"
-                                style="@style/EditTextAlpha"
+                                android:id="@+id/g10696x"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789,."
                                 android:hint="@string/specify"
-                                android:tag="g0106x"
-                                android:text='@{g0106x.checked? g0106xx.getText().toString() : ""}'
-                                android:visibility='@{g0106x.checked? View.VISIBLE : View.GONE}' />
+                                android:tag="g10696"
+                                android:text="@{form.g10696x}"
+                                android:visibility='@{g10696.checked? View.VISIBLE : View.GONE}' />
 
                         </RadioGroup>
 
