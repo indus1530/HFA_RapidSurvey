@@ -1,6 +1,5 @@
 package edu.aku.hassannaqvi.hfa_rapidsurvey.ui.sections;
 
-import static edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp.fc;
 import static edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp.form;
 import static edu.aku.hassannaqvi.hfa_rapidsurvey.utils.UtilKt.openSectionMainActivity;
 
@@ -12,19 +11,16 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
-import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import edu.aku.hassannaqvi.hfa_rapidsurvey.R;
+import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.Tables;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.core.DatabaseHelper;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.databinding.ActivitySectionG1Binding;
+
 
 public class SectionG1Activity extends AppCompatActivity {
 
@@ -42,13 +38,13 @@ public class SectionG1Activity extends AppCompatActivity {
 
     private void setupSkips() {
 
-        bi.g0111.setOnCheckedChangeListener(((radioGroup, i) -> {
+        /*bi.g0111.setOnCheckedChangeListener(((radioGroup, i) -> {
             Clear.clearAllFields(bi.fldGrpCVg01112);
         }));
 
         bi.g01113.setOnCheckedChangeListener(((radioGroup, i) -> {
             Clear.clearAllFields(bi.fldGrpCVg01114);
-        }));
+        }));*/
 
         /*bi.g0108a.setOnCheckedChangeListener(((radioGroup, i) -> {
 
@@ -100,131 +96,18 @@ public class SectionG1Activity extends AppCompatActivity {
 
     private boolean UpdateDB() {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(Tables.FormsTable.COLUMN_SG, form.sGtoString());
+        int updcount = 0;
+        try {
+            updcount = db.updatesFormColumn(Tables.FormsTable.COLUMN_SG, form.sGtoString());
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
         if (updcount == 1) {
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
         }
-    }
-
-
-    private void SaveDraft() throws JSONException {
-
-        JSONObject json = new JSONObject();
-
-        json.put("GDate", new SimpleDateFormat("dd-MM-yyyy").format(new Date().getTime()));
-        json.put("GTime", new SimpleDateFormat("HH:mm").format(new Date().getTime()));
-
-        json.put("g101", bi.g101a.isChecked() ? "1"
-                : bi.g101b.isChecked() ? "2"
-                : bi.g101c.isChecked() ? "3"
-                : bi.g101d.isChecked() ? "4"
-                : bi.g101e.isChecked() ? "5"
-                : bi.g101f.isChecked() ? "6"
-                : bi.g10196.isChecked() ? "96"
-                : "-1");
-        json.put("g10196x", bi.g10196x.getText().toString().trim().isEmpty() ? "-1" : bi.g10196x.getText().toString());
-
-
-        json.put("g102", bi.g102a.isChecked() ? "1"
-                : bi.g102b.isChecked() ? "2"
-                : "-1");
-
-        json.put("g103", bi.g103a.isChecked() ? "1"
-                : bi.g103b.isChecked() ? "98"
-                : bi.g10396.isChecked() ? "96"
-                : "-1");
-        json.put("g10396x", bi.g10396x.getText().toString().trim().isEmpty() ? "-1" : bi.g10396x.getText().toString());
-
-        json.put("g104", bi.g104a.isChecked() ? "1"
-                : bi.g104b.isChecked() ? "2"
-                : bi.g104c.isChecked() ? "3"
-                : bi.g104d.isChecked() ? "4"
-                : bi.g104e.isChecked() ? "5"
-                : bi.g104f.isChecked() ? "6"
-                : bi.g104g.isChecked() ? "7"
-                : "-1");
-
-        json.put("g105d", bi.g105d.getText().toString().trim().isEmpty() ? "-1" : bi.g105d.getText().toString());
-        json.put("g105m", bi.g105m.getText().toString().trim().isEmpty() ? "-1" : bi.g105m.getText().toString());
-
-        json.put("g106", bi.g106a.isChecked() ? "1"
-                : bi.g106b.isChecked() ? "2"
-                : bi.g106c.isChecked() ? "3"
-                : bi.g106d.isChecked() ? "4"
-                : bi.g10696.isChecked() ? "96"
-                : "-1");
-        json.put("g10696x", bi.g10696x.getText().toString().trim().isEmpty() ? "-1" : bi.g10696x.getText().toString());
-
-        json.put("g107", bi.g107a.isChecked() ? "1"
-                : bi.g107b.isChecked() ? "2"
-                : bi.g107c.isChecked() ? "3"
-                : bi.g10796.isChecked() ? "96"
-                : "-1");
-        json.put("g107xx", bi.g107xx.getText().toString().trim().isEmpty() ? "-1" : bi.g107xx.getText().toString());
-
-
-        /*json.put("g108a", bi.g108aa.isChecked() ? "1"
-                : bi.g108ab.isChecked() ? "2"
-                : "-1");
-
-        json.put("g108b", bi.g108ba.isChecked() ? "1"
-                : bi.g108bb.isChecked() ? "2"
-                : "-1");
-
-        json.put("g108c", bi.g108ca.isChecked() ? "1"
-                : bi.g108cb.isChecked() ? "2"
-                : "-1");*/
-
-
-        json.put("g109", bi.g109a.isChecked() ? "1"
-                : bi.g109b.isChecked() ? "2"
-                : bi.g109c.isChecked() ? "3"
-                : bi.g109d.isChecked() ? "4"
-                : "-1");
-
-        json.put("g110ax", bi.g110ax.getText().toString().trim().isEmpty() ? "-1" : bi.g110ax.getText().toString());
-        json.put("g110bx", bi.g110bx.getText().toString().trim().isEmpty() ? "-1" : bi.g110bx.getText().toString());
-
-        json.put("g111", bi.g111a.isChecked() ? "1"
-                : bi.g111b.isChecked() ? "2"
-                : "-1");
-
-        json.put("g1112", bi.g1112a.isChecked() ? "1"
-                : bi.g1112b.isChecked() ? "2"
-                : bi.g1112x.isChecked() ? "96"
-                : "-1");
-        json.put("g1112xx", bi.g1112xx.getText().toString().trim().isEmpty() ? "-1" : bi.g1112xx.getText().toString());
-
-        json.put("g1113", bi.g1113a.isChecked() ? "1"
-                : bi.g1113b.isChecked() ? "2"
-                : "-1");
-
-        json.put("g1114", bi.g1114a.isChecked() ? "1"
-                : bi.g1114b.isChecked() ? "2"
-                : bi.g1114c.isChecked() ? "3"
-                : "-1");
-
-        json.put("g1115", bi.g1115a.isChecked() ? "1"
-                : bi.g1115b.isChecked() ? "2"
-                : bi.g1115c.isChecked() ? "3"
-                : "-1");
-
-        json.put("g1116", bi.g1116a.isChecked() ? "1"
-                : bi.g1116b.isChecked() ? "2"
-                : "-1");
-
-        json.put("g1117", bi.g1117a.isChecked() ? "1"
-                : bi.g1117b.isChecked() ? "2"
-                : bi.g1117c.isChecked() ? "3"
-                : bi.g1117d.isChecked() ? "4"
-                : bi.g1117e.isChecked() ? "5"
-                : "-1");
-
-        MainApp.fc.setsG(String.valueOf(json));
-
     }
 
 
@@ -235,11 +118,6 @@ public class SectionG1Activity extends AppCompatActivity {
 
     public void btnContinue(View v) {
         if (!formValidation()) return;
-        try {
-            SaveDraft();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
         if (UpdateDB()) {
             finish();
             startActivity(new Intent(this, SectionG2Activity.class));
