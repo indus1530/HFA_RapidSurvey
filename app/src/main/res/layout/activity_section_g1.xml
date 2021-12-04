@@ -601,33 +601,43 @@
                                 android:id="@+id/g107a"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:checked="@{form.g107.equals(`1`)}"
+                                android:onClick="@{()->form.setG107(`1`)}"
                                 android:text="@string/g107a" />
 
                             <RadioButton
                                 android:id="@+id/g107b"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:checked="@{form.g107.equals(`2`)}"
+                                android:onClick="@{()->form.setG107(`2`)}"
                                 android:text="@string/g107b" />
 
                             <RadioButton
                                 android:id="@+id/g107c"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:checked="@{form.g107.equals(`3`)}"
+                                android:onClick="@{()->form.setG107(`3`)}"
                                 android:text="@string/g107c" />
 
                             <RadioButton
-                                android:id="@+id/g107x"
+                                android:id="@+id/g10796"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/g107x" />
+                                android:checked="@{form.g107.equals(`96`)}"
+                                android:onClick="@{()->form.setG107(`96`)}"
+                                android:text="@string/g10796" />
 
                             <EditText
-                                android:id="@+id/g107xx"
-                                style="@style/EditTextAlpha"
+                                android:id="@+id/g10796x"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789,."
                                 android:hint="@string/specify"
-                                android:tag="g107x"
-                                android:text='@{g107x.checked ? g107xx.getText().toString() : ""}'
-                                android:visibility='@{g107x.checked ? View.VISIBLE : View.GONE}' />
+                                android:tag="g10796"
+                                android:text="@{form.g10796x}"
+                                android:visibility="@{form.g107.equals(`96`) ? View.VISIBLE : View.GONE}" />
 
                         </RadioGroup>
 
