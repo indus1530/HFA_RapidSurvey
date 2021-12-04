@@ -549,7 +549,9 @@ public class Forms extends BaseObservable implements Observable {
     private String g10396x = _EMPTY_;
     private String g104 = _EMPTY_;
     private String g105d = _EMPTY_;
+    private String g105m = _EMPTY_;
     private String g106 = _EMPTY_;
+    private String g10696x = _EMPTY_;
     private String g107 = _EMPTY_;
     private String g1081 = _EMPTY_;
     private String g1082 = _EMPTY_;
@@ -6509,6 +6511,7 @@ public class Forms extends BaseObservable implements Observable {
 
     public void setG101(String g101) {
         this.g101 = g101;
+        setG10196x(g101.equals("96") ? this.g10196x : "");
         notifyPropertyChanged(BR.g101);
     }
 
@@ -6539,6 +6542,7 @@ public class Forms extends BaseObservable implements Observable {
 
     public void setG103(String g103) {
         this.g103 = g103;
+        setG10396x(g103.equals("96") ? this.g10396x : "");
         notifyPropertyChanged(BR.g103);
     }
 
@@ -6569,7 +6573,17 @@ public class Forms extends BaseObservable implements Observable {
 
     public void setG105d(String g105d) {
         this.g105d = g105d;
-        notifyPropertyChanged(BR.g105);
+        notifyPropertyChanged(BR.g105d);
+    }
+
+    @Bindable
+    public String getG105m() {
+        return g105m;
+    }
+
+    public void setG105m(String g105m) {
+        this.g105m = g105m;
+        notifyPropertyChanged(BR.g105m);
     }
 
     @Bindable
@@ -6579,7 +6593,18 @@ public class Forms extends BaseObservable implements Observable {
 
     public void setG106(String g106) {
         this.g106 = g106;
+        setG10696x(g106.equals("96") ? this.g10696x : "");
         notifyPropertyChanged(BR.g106);
+    }
+
+    @Bindable
+    public String getG10696x() {
+        return g10696x;
+    }
+
+    public void setG10696x(String g10696x) {
+        this.g10696x = g10696x;
+        notifyPropertyChanged(BR.g10696x);
     }
 
     @Bindable
@@ -6712,15 +6737,6 @@ public class Forms extends BaseObservable implements Observable {
         notifyPropertyChanged(BR.g117);
     }
 
-    @Bindable
-    public String getG02() {
-        return g02;
-    }
-
-    public void setG02(String g02) {
-        this.g02 = g02;
-        notifyPropertyChanged(BR.g02);
-    }
 
     @Bindable
     public String getG0201() {
