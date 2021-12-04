@@ -634,7 +634,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789,."
-                                android:hint="@string/specify"
+                                android:hint="@string/g10796x"
                                 android:tag="g10796"
                                 android:text="@{form.g10796x}"
                                 android:visibility="@{form.g107.equals(`96`) ? View.VISIBLE : View.GONE}" />
@@ -1011,35 +1011,41 @@
                         <RadioGroup
                             android:id="@+id/g112"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/g112a"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
                                 android:text="@string/g112a" />
 
                             <RadioButton
                                 android:id="@+id/g112b"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
                                 android:text="@string/g112b" />
 
                             <RadioButton
-                                android:id="@+id/g112x"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/other" />
-
-                            <EditText
-                                android:id="@+id/g112xx"
-                                style="@style/EditTextAlpha"
-                                android:hint="@string/specify"
-                                android:tag="g112x"
-                                android:text='@{g112x.checked ? g112xx.getText().toString() : ""}'
-                                android:visibility='@{g112x.checked? View.VISIBLE : View.GONE}' />
+                                android:id="@+id/g11296"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="@string/g11296" />
 
                         </RadioGroup>
+
+                        <EditText
+                            android:id="@+id/g11296x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789,."
+                            android:hint="@string/g11296x"
+                            android:tag="g11296x"
+                            android:text="@{form.g11296x}"
+                            android:visibility='@{g112x.checked? View.VISIBLE : View.GONE}' />
 
                     </LinearLayout>
 

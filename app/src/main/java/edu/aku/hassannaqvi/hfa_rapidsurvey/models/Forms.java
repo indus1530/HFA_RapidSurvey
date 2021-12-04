@@ -553,6 +553,7 @@ public class Forms extends BaseObservable implements Observable {
     private String g106 = _EMPTY_;
     private String g10696x = _EMPTY_;
     private String g107 = _EMPTY_;
+    private String g10796x = _EMPTY_;
     private String g1081 = _EMPTY_;
     private String g1082 = _EMPTY_;
     private String g1083 = _EMPTY_;
@@ -6615,6 +6616,16 @@ public class Forms extends BaseObservable implements Observable {
     public void setG107(String g107) {
         this.g107 = g107;
         notifyPropertyChanged(BR.g107);
+    }
+
+    @Bindable
+    public String getG10796x() {
+        return g10796x;
+    }
+
+    public void setG10796x(String g10796x) {
+        this.g10796x = g10796x;
+        notifyPropertyChanged(BR.g10796x);
     }
 
     @Bindable
