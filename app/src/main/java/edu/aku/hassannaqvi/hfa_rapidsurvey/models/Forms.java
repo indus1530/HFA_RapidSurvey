@@ -21,7 +21,7 @@ import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.Tables.FormsTable;
 public class Forms extends BaseObservable implements Observable {
 
     private final String TAG = "Forms";
-    private final transient PropertyChangeRegistry propertyChangeRegistry = new PropertyChangeRegistry();
+    //private final transient PropertyChangeRegistry propertyChangeRegistry = new PropertyChangeRegistry();
 
     // APP VARIABLES
     private String projectName = PROJECT_NAME;
@@ -15950,6 +15950,8 @@ public class Forms extends BaseObservable implements Observable {
     }
 
 
+
+
     public JSONObject toJSONObject() throws JSONException {
         JSONObject json = new JSONObject();
 
@@ -15993,7 +15995,6 @@ public class Forms extends BaseObservable implements Observable {
         json.put(FormsTable.COLUMN_SK, new JSONObject(sKtoString()));
         return json;
     }
-
 
     public String sBtoString() throws JSONException {
         Log.d(TAG, "sBtoString: ");
