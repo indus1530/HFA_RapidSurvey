@@ -6,7 +6,6 @@ import androidx.databinding.BaseObservable
 import androidx.databinding.Bindable
 import androidx.databinding.PropertyChangeRegistry
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.Tables.FormsTable
-import edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp
 import kotlin.properties.Delegates
 import edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp._EMPTY_
 import edu.aku.hassannaqvi.hfa_rapidsurvey.utils.CreateTable.PROJECT_NAME
