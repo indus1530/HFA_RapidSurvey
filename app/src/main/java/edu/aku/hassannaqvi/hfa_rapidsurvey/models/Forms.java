@@ -9,7 +9,6 @@ import android.util.Log;
 import androidx.databinding.BaseObservable;
 import androidx.databinding.Bindable;
 import androidx.databinding.Observable;
-import androidx.databinding.PropertyChangeRegistry;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -558,7 +557,8 @@ public class Forms extends BaseObservable implements Observable {
     private String g1082 = _EMPTY_;
     private String g1083 = _EMPTY_;
     private String g109 = _EMPTY_;
-    private String g110 = _EMPTY_;
+    private String g110d = _EMPTY_;
+    private String g110m = _EMPTY_;
     private String g111 = _EMPTY_;
     private String g112 = _EMPTY_;
     private String g113 = _EMPTY_;
@@ -6669,13 +6669,23 @@ public class Forms extends BaseObservable implements Observable {
     }
 
     @Bindable
-    public String getG110() {
-        return g110;
+    public String getG110d() {
+        return g110d;
     }
 
-    public void setG0110(String g110) {
-        this.g110 = g110;
-        notifyPropertyChanged(BR.g110);
+    public void setG110d(String g110d) {
+        this.g110d = g110d;
+        notifyPropertyChanged(BR.g110d);
+    }
+
+    @Bindable
+    public String getG110m() {
+        return g110m;
+    }
+
+    public void setG110m(String g110m) {
+        this.g110m = g110m;
+        notifyPropertyChanged(BR.g110m);
     }
 
     @Bindable

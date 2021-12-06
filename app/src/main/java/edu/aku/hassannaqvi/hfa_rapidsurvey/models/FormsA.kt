@@ -5,6 +5,7 @@ import android.util.Log
 import androidx.databinding.BaseObservable
 import androidx.databinding.Bindable
 import androidx.databinding.PropertyChangeRegistry
+import edu.aku.hassannaqvi.hfa_rapidsurvey.BR
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.Tables.FormsTable
 import edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp._EMPTY_
 import edu.aku.hassannaqvi.hfa_rapidsurvey.utils.CreateTable.PROJECT_NAME
@@ -46,8 +47,94 @@ class FormsA : BaseObservable() {
     private var a103d = _EMPTY_
     private var a103m = _EMPTY_
     private var a103y = _EMPTY_
-    private var a110 = _EMPTY_
-    private var a111 = _EMPTY_
+    var a110 = _EMPTY_
+    var a111 = _EMPTY_
+
+
+    @get:Bindable
+    var a114: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.a114)
+    }
+
+    @get:Bindable
+    var a115: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.a115)
+    }
+
+    @get:Bindable
+    var a116: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.a116)
+    }
+
+    @get:Bindable
+    var a117: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.a117)
+    }
+
+    @get:Bindable
+    var a118: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.a118)
+    }
+
+    @get:Bindable
+    var a11896x: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.a11896x)
+    }
+
+    @get:Bindable
+    var a119: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.a119)
+    }
+
+    @get:Bindable
+    var a11996x: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.a11996x)
+    }
+
+    @get:Bindable
+    var a120: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.a120)
+    }
+
+    @get:Bindable
+    var a121: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.a121)
+    }
+
+    @get:Bindable
+    var a122: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.a122)
+    }
+
+    @get:Bindable
+    var b101: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.b101)
+    }
+
+    @get:Bindable
+    var b102: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (b102.equals("2")) {
+            this.b103 = ""
+            this.b104 = ""
+            this.b105 = ""
+        }
+        notifyPropertyChanged(BR.b102)
+    }
+
+    @get:Bindable
+    var b103: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.b103)
+    }
+
+    @get:Bindable
+    var b104: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.b104)
+    }
+
+    @get:Bindable
+    var b105: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.b105)
+    }
 
 
     @get:Bindable
@@ -251,6 +338,31 @@ class FormsA : BaseObservable() {
         }
     }
 
+    @Throws(JSONException::class)
+    fun sBHydrate(string: String?) {
+        Log.d(TAG, "sBHydrate: $string")
+        if (string != null) {
+            var json: JSONObject? = null
+            json = JSONObject(string)
+            this.a114 = json.getString("a14")
+            this.a115 = json.getString("a15")
+            this.a116 = json.getString("a16")
+            this.a117 = json.getString("a17")
+            this.a118 = json.getString("a18")
+            this.a11896x = json.getString("a1896x")
+            this.a119 = json.getString("a19")
+            this.a11996x = json.getString("a1996x")
+            this.a120 = json.getString("a20")
+            this.a121 = json.getString("a21")
+            this.a122 = json.getString("a22")
+            this.b101 = json.getString("b01")
+            this.b102 = json.getString("b02")
+            this.b103 = json.getString("b03")
+            this.b104 = json.getString("b04")
+            this.b105 = json.getString("b05")
+        }
+    }
+
 
     @Throws(JSONException::class)
     fun toJSONObject(): JSONObject? {
@@ -283,6 +395,29 @@ class FormsA : BaseObservable() {
         json.put(FormsTable.COLUMN_A111, this.a111)
         json.put(FormsTable.COLUMN_SK, JSONObject(sKtoString()))
         return json
+    }
+
+    @Throws(JSONException::class)
+    fun sBtoString(): String? {
+        Log.d(TAG, "sBtoString: ")
+        val json = JSONObject()
+        json.put("a14", a114)
+            .put("a15", a115)
+            .put("a16", a116)
+            .put("a17", a117)
+            .put("a18", a118)
+            .put("a1896x", a11896x)
+            .put("a19", a119)
+            .put("a1996x", a11996x)
+            .put("a20", a120)
+            .put("a21", a121)
+            .put("a22", a122)
+            .put("b01", b101)
+            .put("b02", b102)
+            .put("b03", b103)
+            .put("b04", b104)
+            .put("b05", b105)
+        return json.toString()
     }
 
     @Throws(JSONException::class)
