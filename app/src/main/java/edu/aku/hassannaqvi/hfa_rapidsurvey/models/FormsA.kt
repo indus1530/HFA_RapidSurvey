@@ -162,6 +162,11 @@ class FormsA : BaseObservable() {
     }
 
     @get:Bindable
+    var k10496x: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.k10496x)
+    }
+
+    @get:Bindable
     var k105: String by Delegates.observable(_EMPTY_) { prop, old, new ->
         notifyPropertyChanged(BR.k105)
     }
@@ -216,7 +221,7 @@ class FormsA : BaseObservable() {
 
     @Throws(JSONException::class)
     fun sKHydrate(string: String?) {
-        Log.d(TAG, "sBHydrate: $string")
+        Log.d(TAG, "sKHydrate: $string")
         if (string != null) {
             var json: JSONObject? = null
             json = JSONObject(string)
@@ -240,10 +245,12 @@ class FormsA : BaseObservable() {
             this.k10396x = json.getString("k10396x")
             this.k10396y = json.getString("k10396y")
             this.k104 = json.getString("k104")
+            this.k10496x = json.getString("k10496x")
             this.k105 = json.getString("k105")
             this.k106 = json.getString("k106")
         }
     }
+
 
     @Throws(JSONException::class)
     fun toJSONObject(): JSONObject? {
@@ -280,7 +287,7 @@ class FormsA : BaseObservable() {
 
     @Throws(JSONException::class)
     fun sKtoString(): String? {
-        Log.d(TAG, "sBtoString: ")
+        Log.d(TAG, "sKtoString: ")
         val json = JSONObject()
         json.put("k101", k101)
             .put("k102", k102)
@@ -302,6 +309,7 @@ class FormsA : BaseObservable() {
             .put("k10396x", k10396x)
             .put("k10396y", k10396y)
             .put("k104", k104)
+            .put("k10496x", k10496x)
             .put("k105", k105)
             .put("k106", k106)
         return json.toString()
