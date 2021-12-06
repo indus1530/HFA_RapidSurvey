@@ -8,7 +8,7 @@
 
         <variable
             name="form"
-            type="edu.aku.hassannaqvi.hfa_rapidsurvey.models.Forms" />
+            type="edu.aku.hassannaqvi.hfa_rapidsurvey.models.FormsA" />
     </data>
 
 
@@ -205,8 +205,8 @@
 
 
                 <!-- c102  5-EditTexts   -->
-                <!--<androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVc01b"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVc102"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -248,31 +248,31 @@
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01ba" />
+                                    android:text="@string/c102a" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01bb" />
+                                    android:text="@string/c102b" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01bc" />
+                                    android:text="@string/c102c" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01bd" />
+                                    android:text="@string/c102d" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01be" />
+                                    android:text="@string/c102e" />
 
 
                             </LinearLayout>
@@ -284,12 +284,13 @@
                                 android:orientation="vertical">
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01ba"
+                                    android:id="@+id/c102a"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
                                     android:gravity="center"
                                     android:hint="##"
+                                    android:text="@={form.c102a}"
                                     android:inputType="number"
                                     android:maxLength="2"
                                     app:maxValue="99"
@@ -297,12 +298,13 @@
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01bb"
+                                    android:id="@+id/c102b"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
                                     android:gravity="center"
                                     android:hint="##"
+                                    android:text="@={form.c102b}"
                                     android:inputType="number"
                                     android:maxLength="2"
                                     app:maxValue="0"
@@ -310,12 +312,13 @@
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01bc"
+                                    android:id="@+id/c102c"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
                                     android:gravity="center"
                                     android:hint="##"
+                                    android:text="@={form.c102c}"
                                     android:inputType="number"
                                     android:maxLength="2"
                                     app:maxValue="0"
@@ -323,12 +326,13 @@
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01bd"
+                                    android:id="@+id/c102d"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
                                     android:gravity="center"
                                     android:hint="##"
+                                    android:text="@={form.c102d}"
                                     android:inputType="number"
                                     android:maxLength="2"
                                     app:maxValue="0"
@@ -336,12 +340,13 @@
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01be"
+                                    android:id="@+id/c102e"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
                                     android:gravity="center"
                                     android:hint="##"
+                                    android:text="@={form.c102e}"
                                     android:inputType="number"
                                     android:maxLength="2"
                                     app:maxValue="0"
@@ -357,9 +362,9 @@
                 </androidx.cardview.widget.CardView>
 
 
-                &lt;!&ndash; c01c  5-EditTexts   &ndash;&gt;
+                <!-- c103  5-EditTexts   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVc01c"
+                    android:id="@+id/fldGrpCVc103"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -377,12 +382,12 @@
                                 style="@style/quesNum"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:text="@string/Q_c01c" />
+                                android:text="@string/Q_c103" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="@string/c01c" />
+                                android:text="@string/c103" />
 
                         </LinearLayout>
 
@@ -401,31 +406,31 @@
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01ca" />
+                                    android:text="@string/c103a" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01cb" />
+                                    android:text="@string/c103b" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01cc" />
+                                    android:text="@string/c103c" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01cd" />
+                                    android:text="@string/c103d" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01ce" />
+                                    android:text="@string/c103e" />
 
 
                             </LinearLayout>
@@ -437,12 +442,13 @@
                                 android:orientation="vertical">
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01ca"
+                                    android:id="@+id/c103a"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
                                     android:gravity="center"
                                     android:hint="##"
+                                    android:text="@={form.c103a}"
                                     android:inputType="number"
                                     android:maxLength="2"
                                     app:maxValue="99"
@@ -450,12 +456,13 @@
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01cb"
+                                    android:id="@+id/c103b"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
                                     android:gravity="center"
                                     android:hint="##"
+                                    android:text="@={form.c103b}"
                                     android:inputType="number"
                                     android:maxLength="2"
                                     app:maxValue="0"
@@ -463,12 +470,13 @@
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01cc"
+                                    android:id="@+id/c103c"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
                                     android:gravity="center"
                                     android:hint="##"
+                                    android:text="@={form.c103c}"
                                     android:inputType="number"
                                     android:maxLength="2"
                                     app:maxValue="0"
@@ -476,12 +484,13 @@
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01cd"
+                                    android:id="@+id/c103d"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
                                     android:gravity="center"
                                     android:hint="##"
+                                    android:text="@={form.c103d}"
                                     android:inputType="number"
                                     android:maxLength="2"
                                     app:maxValue="0"
@@ -489,12 +498,13 @@
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01ce"
+                                    android:id="@+id/c103e"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
                                     android:gravity="center"
                                     android:hint="##"
+                                    android:text="@={form.c103e}"
                                     android:inputType="number"
                                     android:maxLength="2"
                                     app:maxValue="0"
@@ -510,9 +520,9 @@
                 </androidx.cardview.widget.CardView>
 
 
-                &lt;!&ndash; c01d  5-EditTexts   &ndash;&gt;
+                <!-- c104  5-EditTexts   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVc01d"
+                    android:id="@+id/fldGrpCVc104"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -530,12 +540,12 @@
                                 style="@style/quesNum"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:text="@string/Q_c01d" />
+                                android:text="@string/Q_c104" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="@string/c01d" />
+                                android:text="@string/c104" />
 
                         </LinearLayout>
 
@@ -554,31 +564,31 @@
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01da" />
+                                    android:text="@string/c104a" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01db" />
+                                    android:text="@string/c104b" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01dc" />
+                                    android:text="@string/c104c" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01dd" />
+                                    android:text="@string/c104d" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01de" />
+                                    android:text="@string/c104e" />
 
 
                             </LinearLayout>
@@ -590,7 +600,7 @@
                                 android:orientation="vertical">
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01da"
+                                    android:id="@+id/c104a"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -598,12 +608,13 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c104a}"
                                     app:maxValue="99"
                                     app:minValue="0"
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01db"
+                                    android:id="@+id/c104b"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -611,12 +622,13 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c104b}"
                                     app:maxValue="0"
                                     app:minValue="0"
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01dc"
+                                    android:id="@+id/c104c"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -624,12 +636,13 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c104c}"
                                     app:maxValue="0"
                                     app:minValue="0"
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01dd"
+                                    android:id="@+id/c104d"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -637,12 +650,13 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c104d}"
                                     app:maxValue="0"
                                     app:minValue="0"
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01de"
+                                    android:id="@+id/c104e"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -650,6 +664,7 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c104e}"
                                     app:maxValue="0"
                                     app:minValue="0"
                                     app:type="range" />
@@ -663,9 +678,9 @@
                 </androidx.cardview.widget.CardView>
 
 
-                &lt;!&ndash; c01e  5-EditTexts   &ndash;&gt;
+                <!-- c105  5-EditTexts   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVc01e"
+                    android:id="@+id/fldGrpCVc105"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -683,12 +698,12 @@
                                 style="@style/quesNum"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:text="@string/Q_c01e" />
+                                android:text="@string/Q_c105" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="@string/c01e" />
+                                android:text="@string/c105" />
 
                         </LinearLayout>
 
@@ -707,31 +722,31 @@
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01ea" />
+                                    android:text="@string/c105a" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01eb" />
+                                    android:text="@string/c105b" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01ec" />
+                                    android:text="@string/c105c" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01ed" />
+                                    android:text="@string/c105d" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01ee" />
+                                    android:text="@string/c105e" />
 
 
                             </LinearLayout>
@@ -743,7 +758,7 @@
                                 android:orientation="vertical">
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01ea"
+                                    android:id="@+id/c105a"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -751,12 +766,13 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c105a}"
                                     app:maxValue="99"
                                     app:minValue="0"
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01eb"
+                                    android:id="@+id/c105b"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -764,12 +780,13 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c105b}"
                                     app:maxValue="0"
                                     app:minValue="0"
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01ec"
+                                    android:id="@+id/c105c"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -777,12 +794,13 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c105c}"
                                     app:maxValue="0"
                                     app:minValue="0"
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01ed"
+                                    android:id="@+id/c105d"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -790,12 +808,13 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c105d}"
                                     app:maxValue="0"
                                     app:minValue="0"
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01ee"
+                                    android:id="@+id/c105e"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -803,6 +822,7 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c105e}"
                                     app:maxValue="0"
                                     app:minValue="0"
                                     app:type="range" />
@@ -816,9 +836,9 @@
                 </androidx.cardview.widget.CardView>
 
 
-                &lt;!&ndash; c01f  5-EditTexts   &ndash;&gt;
+                <!-- c106  5-EditTexts   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVc01f"
+                    android:id="@+id/fldGrpCVc106"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -836,12 +856,12 @@
                                 style="@style/quesNum"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:text="@string/Q_c01f" />
+                                android:text="@string/Q_c106" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="@string/c01f" />
+                                android:text="@string/c106" />
 
                         </LinearLayout>
 
@@ -860,31 +880,31 @@
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01fa" />
+                                    android:text="@string/c106a" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01fb" />
+                                    android:text="@string/c106b" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01fc" />
+                                    android:text="@string/c106c" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01fd" />
+                                    android:text="@string/c106d" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01fe" />
+                                    android:text="@string/c106e" />
 
 
                             </LinearLayout>
@@ -896,7 +916,7 @@
                                 android:orientation="vertical">
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01fa"
+                                    android:id="@+id/c106a"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -904,12 +924,13 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c106a}"
                                     app:maxValue="99"
                                     app:minValue="0"
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01fb"
+                                    android:id="@+id/c106b"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -917,12 +938,13 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c106b}"
                                     app:maxValue="0"
                                     app:minValue="0"
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01fc"
+                                    android:id="@+id/c106c"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -930,12 +952,13 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c106c}"
                                     app:maxValue="0"
                                     app:minValue="0"
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01fd"
+                                    android:id="@+id/c106d"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -943,12 +966,13 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c106d}"
                                     app:maxValue="0"
                                     app:minValue="0"
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01fe"
+                                    android:id="@+id/c106e"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -956,6 +980,7 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c106e}"
                                     app:maxValue="0"
                                     app:minValue="0"
                                     app:type="range" />
@@ -969,9 +994,9 @@
                 </androidx.cardview.widget.CardView>
 
 
-                &lt;!&ndash; c01g  5-EditTexts   &ndash;&gt;
+                <!-- c107  5-EditTexts   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVc01g"
+                    android:id="@+id/fldGrpCVc107"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -989,12 +1014,12 @@
                                 style="@style/quesNum"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:text="@string/Q_c01g" />
+                                android:text="@string/Q_c107" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="@string/c01g" />
+                                android:text="@string/c107" />
 
                         </LinearLayout>
 
@@ -1013,31 +1038,31 @@
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01ga" />
+                                    android:text="@string/c107a" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01gb" />
+                                    android:text="@string/c107b" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01gc" />
+                                    android:text="@string/c107c" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01gd" />
+                                    android:text="@string/c107d" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01ge" />
+                                    android:text="@string/c107e" />
 
 
                             </LinearLayout>
@@ -1049,7 +1074,7 @@
                                 android:orientation="vertical">
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01ga"
+                                    android:id="@+id/c107a"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -1057,12 +1082,13 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c107a}"
                                     app:maxValue="99"
                                     app:minValue="0"
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01gb"
+                                    android:id="@+id/c107b"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -1070,12 +1096,13 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c107b}"
                                     app:maxValue="0"
                                     app:minValue="0"
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01gc"
+                                    android:id="@+id/c107c"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -1083,12 +1110,13 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c107c}"
                                     app:maxValue="0"
                                     app:minValue="0"
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01gd"
+                                    android:id="@+id/c107d"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -1096,12 +1124,13 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c107d}"
                                     app:maxValue="0"
                                     app:minValue="0"
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01ge"
+                                    android:id="@+id/c107e"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -1109,6 +1138,7 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c107e}"
                                     app:maxValue="0"
                                     app:minValue="0"
                                     app:type="range" />
@@ -1122,9 +1152,9 @@
                 </androidx.cardview.widget.CardView>
 
 
-                &lt;!&ndash; c01h  5-EditTexts   &ndash;&gt;
+                <!-- c108  5-EditTexts   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVc01h"
+                    android:id="@+id/fldGrpCVc108"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -1142,12 +1172,12 @@
                                 style="@style/quesNum"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:text="@string/Q_c01h" />
+                                android:text="@string/Q_c108" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="@string/c01h" />
+                                android:text="@string/c108" />
 
                         </LinearLayout>
 
@@ -1166,31 +1196,31 @@
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01ha" />
+                                    android:text="@string/c108a" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01hb" />
+                                    android:text="@string/c108b" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01hc" />
+                                    android:text="@string/c108c" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01hd" />
+                                    android:text="@string/c108d" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01he" />
+                                    android:text="@string/c108e" />
 
 
                             </LinearLayout>
@@ -1202,7 +1232,7 @@
                                 android:orientation="vertical">
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01ha"
+                                    android:id="@+id/c108a"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -1210,12 +1240,13 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c108a}"
                                     app:maxValue="99"
                                     app:minValue="0"
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01hb"
+                                    android:id="@+id/c108b"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -1223,12 +1254,13 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c108b}"
                                     app:maxValue="0"
                                     app:minValue="0"
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01hc"
+                                    android:id="@+id/c108c"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -1236,12 +1268,13 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c108c}"
                                     app:maxValue="0"
                                     app:minValue="0"
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01hd"
+                                    android:id="@+id/c108d"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -1249,12 +1282,13 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c108d}"
                                     app:maxValue="0"
                                     app:minValue="0"
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01he"
+                                    android:id="@+id/c108e"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -1262,6 +1296,7 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c108e}"
                                     app:maxValue="0"
                                     app:minValue="0"
                                     app:type="range" />
@@ -1275,9 +1310,9 @@
                 </androidx.cardview.widget.CardView>
 
 
-                &lt;!&ndash; c01i  5-EditTexts   &ndash;&gt;
+                <!-- c109  5-EditTexts   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVc01i"
+                    android:id="@+id/fldGrpCVc109"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -1295,12 +1330,12 @@
                                 style="@style/quesNum"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:text="@string/Q_c01i" />
+                                android:text="@string/Q_c109" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="@string/c01i" />
+                                android:text="@string/c109" />
 
                         </LinearLayout>
 
@@ -1319,31 +1354,31 @@
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01ia" />
+                                    android:text="@string/c109a" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01ib" />
+                                    android:text="@string/c109b" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01ic" />
+                                    android:text="@string/c109c" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01id" />
+                                    android:text="@string/c109d" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01ie" />
+                                    android:text="@string/c109e" />
 
 
                             </LinearLayout>
@@ -1355,7 +1390,7 @@
                                 android:orientation="vertical">
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01ia"
+                                    android:id="@+id/c109a"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -1363,12 +1398,13 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c109a}"
                                     app:maxValue="99"
                                     app:minValue="0"
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01ib"
+                                    android:id="@+id/c109b"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -1376,12 +1412,13 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c109b}"
                                     app:maxValue="0"
                                     app:minValue="0"
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01ic"
+                                    android:id="@+id/c109c"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -1389,12 +1426,13 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c109c}"
                                     app:maxValue="0"
                                     app:minValue="0"
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01id"
+                                    android:id="@+id/c109d"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -1402,12 +1440,13 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c109d}"
                                     app:maxValue="0"
                                     app:minValue="0"
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01ie"
+                                    android:id="@+id/c109e"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -1415,6 +1454,7 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c109e}"
                                     app:maxValue="0"
                                     app:minValue="0"
                                     app:type="range" />
@@ -1428,9 +1468,9 @@
                 </androidx.cardview.widget.CardView>
 
 
-                &lt;!&ndash; c01j  5-EditTexts   &ndash;&gt;
+                <!-- c110  5-EditTexts   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVc01j"
+                    android:id="@+id/fldGrpCVc110"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -1448,12 +1488,12 @@
                                 style="@style/quesNum"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:text="@string/Q_c01j" />
+                                android:text="@string/Q_c110" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="@string/c01j" />
+                                android:text="@string/c110" />
 
                         </LinearLayout>
 
@@ -1472,31 +1512,31 @@
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01ja" />
+                                    android:text="@string/c110a" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01jb" />
+                                    android:text="@string/c110b" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01jc" />
+                                    android:text="@string/c110c" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01jd" />
+                                    android:text="@string/c110d" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01je" />
+                                    android:text="@string/c110e" />
 
 
                             </LinearLayout>
@@ -1508,7 +1548,7 @@
                                 android:orientation="vertical">
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01ja"
+                                    android:id="@+id/c110a"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -1516,12 +1556,13 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c110a}"
                                     app:maxValue="99"
                                     app:minValue="0"
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01jb"
+                                    android:id="@+id/c110b"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -1529,12 +1570,13 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c110b}"
                                     app:maxValue="0"
                                     app:minValue="0"
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01jc"
+                                    android:id="@+id/c110c"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -1542,12 +1584,13 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c110c}"
                                     app:maxValue="0"
                                     app:minValue="0"
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01jd"
+                                    android:id="@+id/c110d"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -1555,12 +1598,13 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c110d}"
                                     app:maxValue="0"
                                     app:minValue="0"
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01je"
+                                    android:id="@+id/c110e"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -1568,6 +1612,7 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c110e}"
                                     app:maxValue="0"
                                     app:minValue="0"
                                     app:type="range" />
@@ -1581,9 +1626,9 @@
                 </androidx.cardview.widget.CardView>
 
 
-                &lt;!&ndash; c01k  5-EditTexts   &ndash;&gt;
+                <!-- c111  5-EditTexts   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVc01k"
+                    android:id="@+id/fldGrpCVc111"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -1601,12 +1646,12 @@
                                 style="@style/quesNum"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:text="@string/Q_c01k" />
+                                android:text="@string/Q_c111" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="@string/c01k" />
+                                android:text="@string/c111" />
 
                         </LinearLayout>
 
@@ -1625,31 +1670,31 @@
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01ka" />
+                                    android:text="@string/c111a" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01kb" />
+                                    android:text="@string/c111b" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01kc" />
+                                    android:text="@string/c111c" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01kd" />
+                                    android:text="@string/c111d" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01ke" />
+                                    android:text="@string/c111e" />
 
 
                             </LinearLayout>
@@ -1661,7 +1706,7 @@
                                 android:orientation="vertical">
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01ka"
+                                    android:id="@+id/c111a"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -1669,12 +1714,13 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c111a}"
                                     app:maxValue="99"
                                     app:minValue="0"
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01kb"
+                                    android:id="@+id/c111b"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -1682,12 +1728,13 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c111b}"
                                     app:maxValue="0"
                                     app:minValue="0"
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01kc"
+                                    android:id="@+id/c111c"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -1695,12 +1742,13 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c111c}"
                                     app:maxValue="0"
                                     app:minValue="0"
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01kd"
+                                    android:id="@+id/c111d"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -1708,12 +1756,13 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c111d}"
                                     app:maxValue="0"
                                     app:minValue="0"
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01ke"
+                                    android:id="@+id/c111e"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -1721,6 +1770,7 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c111e}"
                                     app:maxValue="0"
                                     app:minValue="0"
                                     app:type="range" />
@@ -1734,9 +1784,9 @@
                 </androidx.cardview.widget.CardView>
 
 
-                &lt;!&ndash; c01l  5-EditTexts   &ndash;&gt;
+                <!-- c112  5-EditTexts   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVc01l"
+                    android:id="@+id/fldGrpCVc112"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -1754,12 +1804,12 @@
                                 style="@style/quesNum"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:text="@string/Q_c01l" />
+                                android:text="@string/Q_c112" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="@string/c01l" />
+                                android:text="@string/c112" />
 
                         </LinearLayout>
 
@@ -1778,31 +1828,31 @@
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01la" />
+                                    android:text="@string/c112a" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01lb" />
+                                    android:text="@string/c112b" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01lc" />
+                                    android:text="@string/c112c" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01ld" />
+                                    android:text="@string/c112d" />
 
                                 <TextView
                                     style="@style/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/c01le" />
+                                    android:text="@string/c112e" />
 
 
                             </LinearLayout>
@@ -1814,7 +1864,7 @@
                                 android:orientation="vertical">
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01la"
+                                    android:id="@+id/c112a"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -1822,12 +1872,13 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c112a}"
                                     app:maxValue="99"
                                     app:minValue="0"
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01lb"
+                                    android:id="@+id/c112b"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -1835,12 +1886,13 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c112b}"
                                     app:maxValue="0"
                                     app:minValue="0"
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01lc"
+                                    android:id="@+id/c112c"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -1848,12 +1900,13 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c112c}"
                                     app:maxValue="0"
                                     app:minValue="0"
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01ld"
+                                    android:id="@+id/c112d"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -1861,12 +1914,13 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c112d}"
                                     app:maxValue="0"
                                     app:minValue="0"
                                     app:type="range" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/c01le"
+                                    android:id="@+id/c112e"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -1874,6 +1928,7 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
+                                    android:text="@={form.c112e}"
                                     app:maxValue="0"
                                     app:minValue="0"
                                     app:type="range" />
@@ -1884,7 +1939,7 @@
 
                     </LinearLayout>
 
-                </androidx.cardview.widget.CardView>-->
+                </androidx.cardview.widget.CardView>
 
 
                 <!--EndButton LinearLayout-->

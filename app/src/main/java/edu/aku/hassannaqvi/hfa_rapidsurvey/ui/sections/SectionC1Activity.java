@@ -1,6 +1,7 @@
 package edu.aku.hassannaqvi.hfa_rapidsurvey.ui.sections;
 
 import static java.lang.Float.parseFloat;
+import static edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp.fma;
 import static edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp.form;
 
 import android.content.Intent;
@@ -33,24 +34,24 @@ public class SectionC1Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_c1);
-        bi.setForm(form);
+        bi.setForm(fma);
         setupTextWatchers();
     }
 
 
     private void setupTextWatchers() {
         editTextImplementation(bi.c101a, new EditTextPicker[]{bi.c101b, bi.c101d, bi.c101e}, bi.c101c);
-       /* editTextImplementation(bi.c01ba, new EditTextPicker[]{bi.c01bb, bi.c01bd, bi.c01be}, bi.c01bc);
-        editTextImplementation(bi.c01ca, new EditTextPicker[]{bi.c01cb, bi.c01cd, bi.c01ce}, bi.c01cc);
-        editTextImplementation(bi.c01da, new EditTextPicker[]{bi.c01db, bi.c01dd, bi.c01de}, bi.c01dc);
-        editTextImplementation(bi.c01ea, new EditTextPicker[]{bi.c01eb, bi.c01ed, bi.c01ee}, bi.c01ec);
-        editTextImplementation(bi.c01fa, new EditTextPicker[]{bi.c01fb, bi.c01fd, bi.c01fe}, bi.c01fc);
-        editTextImplementation(bi.c01ga, new EditTextPicker[]{bi.c01gb, bi.c01gd, bi.c01ge}, bi.c01gc);
-        editTextImplementation(bi.c01ha, new EditTextPicker[]{bi.c01hb, bi.c01hd, bi.c01he}, bi.c01hc);
-        editTextImplementation(bi.c01ia, new EditTextPicker[]{bi.c01ib, bi.c01id, bi.c01ie}, bi.c01ic);
-        editTextImplementation(bi.c01ja, new EditTextPicker[]{bi.c01jb, bi.c01jd, bi.c01je}, bi.c01jc);
-        editTextImplementation(bi.c01ka, new EditTextPicker[]{bi.c01kb, bi.c01kd, bi.c01ke}, bi.c01kc);
-        editTextImplementation(bi.c01la, new EditTextPicker[]{bi.c01lb, bi.c01ld, bi.c01le}, bi.c01lc);*/
+        editTextImplementation(bi.c102a, new EditTextPicker[]{bi.c102b, bi.c102d, bi.c102e}, bi.c102c);
+        editTextImplementation(bi.c103a, new EditTextPicker[]{bi.c103b, bi.c103d, bi.c103e}, bi.c103c);
+        editTextImplementation(bi.c104a, new EditTextPicker[]{bi.c104b, bi.c104d, bi.c104e}, bi.c104c);
+        editTextImplementation(bi.c105a, new EditTextPicker[]{bi.c105b, bi.c105d, bi.c105e}, bi.c105c);
+        editTextImplementation(bi.c106a, new EditTextPicker[]{bi.c106b, bi.c106d, bi.c106e}, bi.c106c);
+        editTextImplementation(bi.c107a, new EditTextPicker[]{bi.c107b, bi.c107d, bi.c107e}, bi.c107c);
+        editTextImplementation(bi.c108a, new EditTextPicker[]{bi.c108b, bi.c108d, bi.c108e}, bi.c108c);
+        editTextImplementation(bi.c109a, new EditTextPicker[]{bi.c109b, bi.c109d, bi.c109e}, bi.c109c);
+        editTextImplementation(bi.c110a, new EditTextPicker[]{bi.c110b, bi.c110d, bi.c110e}, bi.c110c);
+        editTextImplementation(bi.c111a, new EditTextPicker[]{bi.c111b, bi.c111d, bi.c111e}, bi.c111c);
+        editTextImplementation(bi.c112a, new EditTextPicker[]{bi.c112b, bi.c112d, bi.c112e}, bi.c112c);
     }
 
 
@@ -135,7 +136,10 @@ public class SectionC1Activity extends AppCompatActivity {
         }
     }
 
+
     public void btnEnd(View v) {
         //openSectionMainActivity(this, "C");
     }
+
+
 }
