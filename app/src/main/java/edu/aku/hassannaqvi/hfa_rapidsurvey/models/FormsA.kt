@@ -6,17 +6,18 @@ import androidx.databinding.BaseObservable
 import androidx.databinding.Bindable
 import androidx.databinding.PropertyChangeRegistry
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.Tables.FormsTable
-import kotlin.properties.Delegates
 import edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp._EMPTY_
 import edu.aku.hassannaqvi.hfa_rapidsurvey.utils.CreateTable.PROJECT_NAME
 import org.json.JSONException
 import org.json.JSONObject
+import kotlin.properties.Delegates
 
 
 class FormsA : BaseObservable() {
     private val TAG = "FormsA"
-    private @Transient
-    var propertyChangeRegistry: PropertyChangeRegistry = PropertyChangeRegistry()
+
+    @Transient
+    private var propertyChangeRegistry: PropertyChangeRegistry = PropertyChangeRegistry()
 
     private var projectName: String = PROJECT_NAME
     private var id: String = _EMPTY_
@@ -48,6 +49,7 @@ class FormsA : BaseObservable() {
     private var a110 = _EMPTY_
     private var a111 = _EMPTY_
 
+
     @get:Bindable
     var k101: String by Delegates.observable(_EMPTY_) { prop, old, new ->
         notifyPropertyChanged(BR.k101)
@@ -59,8 +61,99 @@ class FormsA : BaseObservable() {
     }
 
     @get:Bindable
-    var k103: String by Delegates.observable(_EMPTY_) { prop, old, new ->
-        notifyPropertyChanged(BR.k103)
+    var k1031: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (k1031.equals("2")) this.k1031x = ""
+        notifyPropertyChanged(BR.k1031)
+    }
+
+    @get:Bindable
+    var k1031x: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.k1031x)
+    }
+
+    @get:Bindable
+    var k1032: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (k1032.equals("2")) this.k1032x = ""
+        notifyPropertyChanged(BR.k1032)
+    }
+
+    @get:Bindable
+    var k1032x: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.k1032x)
+    }
+
+    @get:Bindable
+    var k1033: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (k1033.equals("2")) this.k1033x = ""
+        notifyPropertyChanged(BR.k1033)
+    }
+
+    @get:Bindable
+    var k1033x: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.k1033x)
+    }
+
+    @get:Bindable
+    var k1034: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (k1034.equals("2")) this.k1034x = ""
+        notifyPropertyChanged(BR.k1034)
+    }
+
+    @get:Bindable
+    var k1034x: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.k1034x)
+    }
+
+    @get:Bindable
+    var k1035: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (k1035.equals("2")) this.k1035x = ""
+        notifyPropertyChanged(BR.k1035)
+    }
+
+    @get:Bindable
+    var k1035x: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.k1035x)
+    }
+
+    @get:Bindable
+    var k1036: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (k1036.equals("2")) this.k1036x = ""
+        notifyPropertyChanged(BR.k1036)
+    }
+
+    @get:Bindable
+    var k1036x: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.k1036x)
+    }
+
+    @get:Bindable
+    var k1037: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (k1037.equals("2")) this.k1037x = ""
+        notifyPropertyChanged(BR.k1037)
+    }
+
+    @get:Bindable
+    var k1037x: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.k1031x)
+    }
+
+    @get:Bindable
+    var k10396: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (k10396.equals("2")) {
+            this.k10396x = ""
+            this.k10396y = ""
+        }
+        notifyPropertyChanged(BR.k10396)
+    }
+
+    @get:Bindable
+    var k10396x: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.k10396x)
+    }
+
+    @get:Bindable
+    var k10396y: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.k10396y)
     }
 
     @get:Bindable
@@ -129,7 +222,23 @@ class FormsA : BaseObservable() {
             json = JSONObject(string)
             this.k101 = json.getString("k101")
             this.k102 = json.getString("k102")
-            this.k103 = json.getString("k103")
+            this.k1031 = json.getString("k1031")
+            this.k1031x = json.getString("k1031x")
+            this.k1032 = json.getString("k10312")
+            this.k1032x = json.getString("k1032x")
+            this.k1033 = json.getString("k1033")
+            this.k1033x = json.getString("k1033x")
+            this.k1034 = json.getString("k1034")
+            this.k1034x = json.getString("k1034x")
+            this.k1035 = json.getString("k1035")
+            this.k1035x = json.getString("k1035x")
+            this.k1036 = json.getString("k1036")
+            this.k1036x = json.getString("k1036x")
+            this.k1037 = json.getString("k1037")
+            this.k1037x = json.getString("k1037x")
+            this.k10396 = json.getString("k10396")
+            this.k10396x = json.getString("k10396x")
+            this.k10396y = json.getString("k10396y")
             this.k104 = json.getString("k104")
             this.k105 = json.getString("k105")
             this.k106 = json.getString("k106")
@@ -175,7 +284,23 @@ class FormsA : BaseObservable() {
         val json = JSONObject()
         json.put("k101", k101)
             .put("k102", k102)
-            .put("k103", k103)
+            .put("k1031", k1031)
+            .put("k1031x", k1031x)
+            .put("k1032", k1032)
+            .put("k1032x", k1032x)
+            .put("k1033", k1033)
+            .put("k1033x", k1033x)
+            .put("k1034", k1034)
+            .put("k1034x", k1034x)
+            .put("k1035", k1035)
+            .put("k1035x", k1035x)
+            .put("k1036", k1036)
+            .put("k1036x", k1036x)
+            .put("k1037", k1037)
+            .put("k1037x", k1037x)
+            .put("k10396", k10396)
+            .put("k10396x", k10396x)
+            .put("k10396y", k10396y)
             .put("k104", k104)
             .put("k105", k105)
             .put("k106", k106)
