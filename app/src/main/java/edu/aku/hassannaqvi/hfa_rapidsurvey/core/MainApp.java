@@ -28,6 +28,7 @@ import java.util.List;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.PatientsContract;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.models.Forms;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.models.FormsA;
+import edu.aku.hassannaqvi.hfa_rapidsurvey.models.ModuleD;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.ui.other.EndingActivity;
 import kotlin.Pair;
 
@@ -76,6 +77,7 @@ public class MainApp extends Application {
     public static AppInfo appInfo;
     public static Boolean admin = false;
     public static Forms form;
+    public static ModuleD modd;
     public static FormsA fma;
     public static PatientsContract psc;
     public static String userName = "0000";
