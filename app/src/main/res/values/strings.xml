@@ -451,45 +451,45 @@
     <string name="d5038b">No</string>
 
     <string name="d6"> D6: HEALTH CARE WASTE MANAGEMENT </string>
-    <string name="d601">The health facility has leak proof, covered, labeled waste bins available in every treatment areas as per main 04 categories</string>
-    <string name="d601a">Sharps</string>
-    <string name="d601aa">Yes</string>
-    <string name="d601ab">No</string>
+    <string name="d61">The health facility has leak proof, covered, labeled waste bins available in every treatment areas as per main 04 categories</string>
+    <string name="d601">Sharps</string>
+    <string name="d601a">Yes</string>
+    <string name="d601b">No</string>
 
-    <string name="d601b">Non Sharps Infectious Waste</string>
-    <string name="d601ba">Yes</string>
-    <string name="d601bb">No</string>
+    <string name="d602">Non Sharps Infectious Waste</string>
+    <string name="d602a">Yes</string>
+    <string name="d602b">No</string>
 
-    <string name="d0601c">General non-infectious waste</string>
-    <string name="d0601ca">Yes</string>
-    <string name="d0601cb">No</string>
+    <string name="d603">General non-infectious waste</string>
+    <string name="d603a">Yes</string>
+    <string name="d603b">No</string>
 
-    <string name="d0601d">Anatomical Waste/Infectious</string>
-    <string name="d0601da">Yes</string>
-    <string name="d0601db">No</string>
+    <string name="d604">Anatomical Waste/Infectious</string>
+    <string name="d604a">Yes</string>
+    <string name="d604b">No</string>
 
-    <string name="d0602">Is the Facility having Incinerator?</string>
-    <string name="d0602a">Yes</string>
-    <string name="d0602b">No </string>
+    <string name="d605">Is the Facility having Incinerator?</string>
+    <string name="d605a">Yes</string>
+    <string name="d605b">No </string>
 
-    <string name="d0603">Is the incinerator functional today?</string>
-    <string name="d0603a">Yes</string>
-    <string name="d0603b">No </string>
+    <string name="d606">Is the incinerator functional today?</string>
+    <string name="d606a">Yes</string>
+    <string name="d606b">No </string>
 
-    <string name="d0604">Is fuel for the incinerator available today?</string>
-    <string name="d0604a">Yes</string>
-    <string name="d0604b">No</string>
+    <string name="d607">Is fuel for the incinerator available today?</string>
+    <string name="d607a">Yes</string>
+    <string name="d607b">No</string>
 
-    <string name="d0605">How does this facility finally dispose all four kinds of facility waste category sharps, non-sharps infectious, general non-infectious and Anatomical waste?</string>
-    <string name="d0605a">Burn waste through Incinerator within Facility</string>
-    <string name="d0605b">Burning of waste on flat ground without protection within facility</string>
-    <string name="d0605c">Burning of waste in protected PIT within facility</string>
-    <string name="d0605d">Burning of waste in unprotected PIT within facility</string>
-    <string name="d0605e">Dumping of waste on flat ground without protection within facility</string>
-    <string name="d0605f">Dumping of waste in protected PIT within facility</string>
-    <string name="d0605g">Dumping of waste in unprotected PIT within facility</string>
-    <string name="d0605h">Facility Waste disposed outside the facility in covered container</string>
-    <string name="d0605i">Facility Waste disposed outside the facility unprotected</string>
+    <string name="d608">How does this facility finally dispose all four kinds of facility waste category sharps, non-sharps infectious, general non-infectious and Anatomical waste?</string>
+    <string name="d608a">Burn waste through Incinerator within Facility</string>
+    <string name="d608b">Burning of waste on flat ground without protection within facility</string>
+    <string name="d608c">Burning of waste in protected PIT within facility</string>
+    <string name="d608d">Burning of waste in unprotected PIT within facility</string>
+    <string name="d608e">Dumping of waste on flat ground without protection within facility</string>
+    <string name="d608f">Dumping of waste in protected PIT within facility</string>
+    <string name="d608g">Dumping of waste in unprotected PIT within facility</string>
+    <string name="d608h">Facility Waste disposed outside the facility in covered container</string>
+    <string name="d608i">Facility Waste disposed outside the facility unprotected</string>
 
     <string name="d07"> SECTION 07: \nSUPERVISION </string>
     <string name="d0701">What is that Mechanism Called?</string>
@@ -6732,15 +6732,15 @@
     <string name='Q_d5037'>d5037</string>
     <string name='Q_d5038'>d5038</string>
 
-    <string name='Q_d0601'>d0601</string>
-    <string name='Q_d0601a'>d0601a</string>
-    <string name='Q_d0601b'>d0601b</string>
-    <string name='Q_d0601c'>d0601c</string>
-    <string name='Q_d0601d'>d0601d</string>
-    <string name='Q_d0602'>d0602</string>
-    <string name='Q_d0603'>d0603</string>
-    <string name='Q_d0604'>d0604</string>
-    <string name='Q_d0605'>d0605</string>
+    <string name='Q_d601'>d601</string>
+    <string name='Q_d602'>d602</string>
+    <string name='Q_d603'>d603</string>
+    <string name='Q_d604'>d604</string>
+    <string name='Q_d605'>d605</string>
+    <string name='Q_d606'>d606</string>
+    <string name='Q_d607'>d607</string>
+    <string name='Q_d608'>d608</string>
+
     <string name='Q_d07'>d07</string>
     <string name='Q_d0701'>d0701</string>
     <string name='Q_d0702'>d0702</string>

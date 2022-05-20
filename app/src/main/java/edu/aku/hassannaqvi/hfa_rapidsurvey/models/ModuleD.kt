@@ -139,8 +139,11 @@ class ModuleD : BaseObservable() {
 
     @get:Bindable
     var d50211: String by Delegates.observable(_EMPTY_) { prop, old, new ->
-        setD50211c(when d50211 . equals ("1") -> this.d50211c else "")
-        setD50212(when d50211 . equals ("1") -> this.d50212 else "")
+        if (d50211.equals("2")) {
+            this.d50211c = ""
+            this.d50212 = ""
+            this.d50212c = ""
+        }
         notifyPropertyChanged(BR.d50211)
     }
 
@@ -151,7 +154,7 @@ class ModuleD : BaseObservable() {
 
     @get:Bindable
     var d50212: String by Delegates.observable(_EMPTY_) { prop, old, new ->
-        setD50212c(when d50212 . equals ("1") -> this.d50212c else "")
+        if (d50212.equals("2")) this.d50212c = ""
         notifyPropertyChanged(BR.d50212)
     }
 
@@ -162,8 +165,11 @@ class ModuleD : BaseObservable() {
 
     @get:Bindable
     var d50221: String by Delegates.observable(_EMPTY_) { prop, old, new ->
-        setd50221c(when d50221 . equals ("1") -> this.d50221c else "")
-        setd50222(when d50221 . equals ("1") -> this.d50222 else "")
+        if (d50221.equals("2")) {
+            this.d50221c = ""
+            this.d50222 = ""
+            this.d50222c = ""
+        }
         notifyPropertyChanged(BR.d50221)
     }
 
@@ -269,16 +275,96 @@ class ModuleD : BaseObservable() {
         notifyPropertyChanged(BR.d5038)
     }
 
+    @get:Bindable
+    var d601: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.d601)
+    }
 
-    private val d0601 = _EMPTY_
-    private val d0601a = _EMPTY_
-    private val d0601b = _EMPTY_
-    private val d0601c = _EMPTY_
-    private val d0601d = _EMPTY_
-    private val d0602 = _EMPTY_
-    private val d0603 = _EMPTY_
-    private val d0604 = _EMPTY_
-    private val d0605 = _EMPTY_
+    @get:Bindable
+    var d602: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.d602)
+    }
+
+    @get:Bindable
+    var d603: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.d603)
+    }
+
+    @get:Bindable
+    var d604: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.d604)
+    }
+
+    @get:Bindable
+    var d605: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.d605)
+    }
+
+    @get:Bindable
+    var d606: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.d606)
+    }
+
+    @get:Bindable
+    var d607: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.d607)
+    }
+
+    @get:Bindable
+    var d608a: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (this.d608a.equals(d608a)) return@observable
+        notifyPropertyChanged(BR.d608a)
+    }
+
+    @get:Bindable
+    var d608b: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (this.d608b.equals(d608b)) return@observable
+        notifyPropertyChanged(BR.d608b)
+    }
+
+    @get:Bindable
+    var d608c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (this.d608c.equals(d608c)) return@observable
+        notifyPropertyChanged(BR.d608c)
+    }
+
+    @get:Bindable
+    var d608d: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (this.d608d.equals(d608d)) return@observable
+        notifyPropertyChanged(BR.d608d)
+    }
+
+    @get:Bindable
+    var d608e: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (this.d608e.equals(d608e)) return@observable
+        notifyPropertyChanged(BR.d608e)
+    }
+
+    @get:Bindable
+    var d608f: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (this.d608f.equals(d608f)) return@observable
+        notifyPropertyChanged(BR.d608f)
+    }
+
+    @get:Bindable
+    var d608g: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (this.d608g.equals(d608g)) return@observable
+        notifyPropertyChanged(BR.d608g)
+    }
+
+    @get:Bindable
+    var d608h: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (this.d608h.equals(d608h)) return@observable
+        notifyPropertyChanged(BR.d608h)
+    }
+
+
+    @get:Bindable
+    var d608i: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (this.d608i.equals(d608i)) return@observable
+        notifyPropertyChanged(BR.d608i)
+    }
+
 
     private val d07 = _EMPTY_
     private val d0701 = _EMPTY_
@@ -394,107 +480,6 @@ class ModuleD : BaseObservable() {
         }
     }
 
-    @Throws(JSONException::class)
-    fun sCHydrate(string: String?) {
-        Log.d(TAG, "sCHydrate: $string")
-        if (string != null) {
-            var json: JSONObject? = null
-            json = JSONObject(string)
-            c101a = json.getString("c101a")
-            c101b = json.getString("c101b")
-            c101c = json.getString("c101c")
-            c101d = json.getString("c101d")
-            c101e = json.getString("c101e")
-            c102a = json.getString("c102a")
-            c102b = json.getString("c102b")
-            c102c = json.getString("c102c")
-            c102d = json.getString("c102d")
-            c102e = json.getString("c102e")
-            c103a = json.getString("c103a")
-            c103b = json.getString("c103b")
-            c103c = json.getString("c103c")
-            c103d = json.getString("c103d")
-            c103e = json.getString("c103e")
-            c104a = json.getString("c104a")
-            c104b = json.getString("c104b")
-            c104c = json.getString("c104c")
-            c104d = json.getString("c104d")
-            c104e = json.getString("c104e")
-            c105a = json.getString("c105a")
-            c105b = json.getString("c105b")
-            c105c = json.getString("c105c")
-            c105d = json.getString("c105d")
-            c105e = json.getString("c105e")
-            c106a = json.getString("c106a")
-            c106b = json.getString("c106b")
-            c106c = json.getString("c106c")
-            c106d = json.getString("c106d")
-            c106e = json.getString("c106e")
-            c107a = json.getString("c107a")
-            c107b = json.getString("c107b")
-            c107c = json.getString("c107c")
-            c107d = json.getString("c107d")
-            c107e = json.getString("c107e")
-            c108a = json.getString("c108a")
-            c108b = json.getString("c108b")
-            c108c = json.getString("c108c")
-            c108d = json.getString("c108d")
-            c108e = json.getString("c108e")
-            c109a = json.getString("c109a")
-            c109b = json.getString("c109b")
-            c109c = json.getString("c109c")
-            c109d = json.getString("c109d")
-            c109e = json.getString("c109e")
-            c110a = json.getString("c110a")
-            c110b = json.getString("c110b")
-            c110c = json.getString("c110c")
-            c110d = json.getString("c110d")
-            c110e = json.getString("c110e")
-            c111a = json.getString("c111a")
-            c111b = json.getString("c111b")
-            c111c = json.getString("c111c")
-            c111d = json.getString("c111d")
-            c111e = json.getString("c111e")
-            c112a = json.getString("c112a")
-            c112b = json.getString("c112b")
-            c112c = json.getString("c112c")
-            c112d = json.getString("c112d")
-            c112e = json.getString("c112e")
-        }
-    }
-
-    @Throws(JSONException::class)
-    fun sKHydrate(string: String?) {
-        Log.d(TAG, "sKHydrate: $string")
-        if (string != null) {
-            var json: JSONObject? = null
-            json = JSONObject(string)
-            this.k101 = json.getString("k101")
-            this.k102 = json.getString("k102")
-            this.k1031 = json.getString("k1031")
-            this.k1031x = json.getString("k1031x")
-            this.k1032 = json.getString("k10312")
-            this.k1032x = json.getString("k1032x")
-            this.k1033 = json.getString("k1033")
-            this.k1033x = json.getString("k1033x")
-            this.k1034 = json.getString("k1034")
-            this.k1034x = json.getString("k1034x")
-            this.k1035 = json.getString("k1035")
-            this.k1035x = json.getString("k1035x")
-            this.k1036 = json.getString("k1036")
-            this.k1036x = json.getString("k1036x")
-            this.k1037 = json.getString("k1037")
-            this.k1037x = json.getString("k1037x")
-            this.k10396 = json.getString("k10396")
-            this.k10396x = json.getString("k10396x")
-            this.k10396y = json.getString("k10396y")
-            this.k104 = json.getString("k104")
-            this.k10496x = json.getString("k10496x")
-            this.k105 = json.getString("k105")
-            this.k106 = json.getString("k106")
-        }
-    }
-
 
     @Throws(JSONException::class)
     fun toJSONObject(): JSONObject? {
@@ -551,103 +536,6 @@ class ModuleD : BaseObservable() {
             .put("b03", b103)
             .put("b04", b104)
             .put("b05", b105)
-        return json.toString()
-    }
-
-    @Throws(JSONException::class)
-    fun sCtoString(): String? {
-        Log.d(TAG, "sCtoString: ")
-        val json = JSONObject()
-        json.put("c101a", c101a)
-            .put("c101b", c101b)
-            .put("c101c", c101c)
-            .put("c101d", c101d)
-            .put("c101e", c101e)
-            .put("c102a", c102a)
-            .put("c102b", c102b)
-            .put("c102c", c102c)
-            .put("c102d", c102d)
-            .put("c102e", c102e)
-            .put("c103a", c103a)
-            .put("c103b", c103b)
-            .put("c103c", c103c)
-            .put("c103d", c103d)
-            .put("c103e", c103e)
-            .put("c104a", c104a)
-            .put("c104b", c104b)
-            .put("c104c", c104c)
-            .put("c104d", c104d)
-            .put("c104e", c104e)
-            .put("c105a", c105a)
-            .put("c105b", c105b)
-            .put("c105c", c105c)
-            .put("c105d", c105d)
-            .put("c105e", c105e)
-            .put("c106a", c106a)
-            .put("c106b", c106b)
-            .put("c106c", c106c)
-            .put("c106d", c106d)
-            .put("c106e", c106e)
-            .put("c107a", c107a)
-            .put("c107b", c107b)
-            .put("c107c", c107c)
-            .put("c107d", c107d)
-            .put("c107e", c107e)
-            .put("c108a", c108a)
-            .put("c108b", c108b)
-            .put("c108c", c108c)
-            .put("c108d", c108d)
-            .put("c108e", c108e)
-            .put("c109a", c109a)
-            .put("c109b", c109b)
-            .put("c109c", c109c)
-            .put("c109d", c109d)
-            .put("c109e", c109e)
-            .put("c110a", c110a)
-            .put("c110b", c110b)
-            .put("c110c", c110c)
-            .put("c110d", c110d)
-            .put("c110e", c110e)
-            .put("c111a", c111a)
-            .put("c111b", c111b)
-            .put("c111c", c111c)
-            .put("c111d", c111d)
-            .put("c111e", c111e)
-            .put("c112a", c112a)
-            .put("c112b", c112b)
-            .put("c112c", c112c)
-            .put("c112d", c112d)
-            .put("c112e", c112e)
-        return json.toString()
-    }
-
-    @Throws(JSONException::class)
-    fun sKtoString(): String? {
-        Log.d(TAG, "sKtoString: ")
-        val json = JSONObject()
-        json.put("k101", k101)
-            .put("k102", k102)
-            .put("k1031", k1031)
-            .put("k1031x", k1031x)
-            .put("k1032", k1032)
-            .put("k1032x", k1032x)
-            .put("k1033", k1033)
-            .put("k1033x", k1033x)
-            .put("k1034", k1034)
-            .put("k1034x", k1034x)
-            .put("k1035", k1035)
-            .put("k1035x", k1035x)
-            .put("k1036", k1036)
-            .put("k1036x", k1036x)
-            .put("k1037", k1037)
-            .put("k1037x", k1037x)
-            .put("k10396", k10396)
-            .put("k10396x", k10396x)
-            .put("k10396y", k10396y)
-            .put("k104", k104)
-            .put("k10496x", k10496x)
-            .put("k105", k105)
-            .put("k106", k106)
         return json.toString()
     }
 }
