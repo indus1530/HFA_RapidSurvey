@@ -1,6 +1,5 @@
 package edu.aku.hassannaqvi.hfa_rapidsurvey.ui.sections;
 
-import static edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp.fc;
 import static edu.aku.hassannaqvi.hfa_rapidsurvey.utils.UtilKt.openSectionMainActivity;
 
 import android.content.Intent;

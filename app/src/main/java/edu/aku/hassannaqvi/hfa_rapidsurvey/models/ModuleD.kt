@@ -229,16 +229,47 @@ class ModuleD : BaseObservable() {
         notifyPropertyChanged(BR.d50242c)
     }
 
-    private val d0503 = _EMPTY_
-    private val d0503a = _EMPTY_
-    private val d0503b = _EMPTY_
-    private val d0503c = _EMPTY_
-    private val d0503d = _EMPTY_
-    private val d0503e = _EMPTY_
-    private val d0503f = _EMPTY_
-    private val d0503g = _EMPTY_
-    private val d0503h = _EMPTY_
-    private val d06 = _EMPTY_
+    @get:Bindable
+    var d5031: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.d5031)
+    }
+
+    @get:Bindable
+    var d5032: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.d5032)
+    }
+
+    @get:Bindable
+    var d5033: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.d5033)
+    }
+
+    @get:Bindable
+    var d5034: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.d5034)
+    }
+
+    @get:Bindable
+    var d5035: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.d5035)
+    }
+
+    @get:Bindable
+    var d5036: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.d5036)
+    }
+
+    @get:Bindable
+    var d5037: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.d5037)
+    }
+
+    @get:Bindable
+    var d5038: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.d5038)
+    }
+
+
     private val d0601 = _EMPTY_
     private val d0601a = _EMPTY_
     private val d0601b = _EMPTY_
@@ -248,6 +279,7 @@ class ModuleD : BaseObservable() {
     private val d0603 = _EMPTY_
     private val d0604 = _EMPTY_
     private val d0605 = _EMPTY_
+
     private val d07 = _EMPTY_
     private val d0701 = _EMPTY_
     private val d0702 = _EMPTY_
@@ -258,6 +290,7 @@ class ModuleD : BaseObservable() {
     private val d0704c = _EMPTY_
     private val d0704d = _EMPTY_
     private val d0704e = _EMPTY_
+
     private val d08 = _EMPTY_
     private val d0801 = _EMPTY_
     private val d0801a0a = _EMPTY_
