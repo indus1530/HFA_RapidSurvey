@@ -1,9 +1,12 @@
 package edu.aku.hassannaqvi.hfa_rapidsurvey.ui.sections;
 
+import static edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp.appInfo;
+import static edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp.modd;
 import static edu.aku.hassannaqvi.hfa_rapidsurvey.utils.UtilKt.openSectionMainActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -25,27 +28,59 @@ import edu.aku.hassannaqvi.hfa_rapidsurvey.databinding.ActivitySectionD1Binding;
 
 public class SectionD1Activity extends AppCompatActivity {
 
+    private static final String TAG = "SectionD1Activity";
     ActivitySectionD1Binding bi;
+    private DatabaseHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_d1);
-        bi.setForm(MainApp.modd);
-        setupSkips();
+        db = appInfo.getDbHelper();
+        bi.setForm(modd);
 
     }
 
-    private void setupSkips() {
-    }
 
-    private boolean UpdateDB() {
-        DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(Tables.FormsTable.COLUMN_SD, MainApp.fc.getsD());
-        if (updcount == 1) {
+    private boolean insertNewRecord() {
+        if (!modd.getUid().equals("") || MainApp.superuser) return true;
+        modd.populateMeta();
+
+        long rowId = 0;
+        try {
+            rowId = db.addModuleD(modd);
+        } catch (JSONException e) {
+            e.printStackTrace();
+            Toast.makeText(this, R.string.db_excp_error, Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        modd.setId(String.valueOf(rowId));
+        if (rowId > 0) {
+            modd.setUid(modd.getDeviceID() + modd.getId());
+            db.updatesModuleDColumn(Tables.ModuleDTable.COLUMN_UID, modd.getUid());
             return true;
         } else {
-            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.upd_db_error, Toast.LENGTH_SHORT).show();
+            return false;
+        }
+    }
+
+
+    private boolean updateDB() {
+        if (MainApp.superuser) return true;
+
+        db = MainApp.appInfo.getDbHelper();
+        long updcount = 0;
+        try {
+            updcount = db.updatesModuleDColumn(Tables.ModuleDTable.COLUMN_SD1, modd.sD1toString());
+        } catch (JSONException e) {
+            e.printStackTrace();
+            Log.d(TAG, R.string.upd_db + e.getMessage());
+            Toast.makeText(this, R.string.upd_db + e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+        if (updcount > 0) return true;
+        else {
+            Toast.makeText(this, R.string.upd_db_error, Toast.LENGTH_SHORT).show();
             return false;
         }
     }
@@ -53,12 +88,7 @@ public class SectionD1Activity extends AppCompatActivity {
 
     public void btnContinue(View v) {
         if (!formValidation()) return;
-        try {
-            SaveDraft();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        if (UpdateDB()) {
+        if (updateDB()) {
             finish();
             startActivity(new Intent(this, SectionD2Activity.class));
         } else {
