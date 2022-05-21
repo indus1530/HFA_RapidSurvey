@@ -1,6 +1,7 @@
 package edu.aku.hassannaqvi.hfa_rapidsurvey.ui.sections;
 
-import static edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp.fc;
+
+import static edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp.modd;
 import static edu.aku.hassannaqvi.hfa_rapidsurvey.utils.UtilKt.openSectionMainActivity;
 
 import android.content.Intent;
@@ -19,6 +20,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.hfa_rapidsurvey.R;
+import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.Tables;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.core.DatabaseHelper;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.databinding.ActivitySectionD7Binding;
@@ -32,7 +34,7 @@ public class SectionD7Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_d7);
-        bi.setCallback(this);
+        bi.setForm(modd);
         setupSkips();
 
     }
@@ -40,8 +42,8 @@ public class SectionD7Activity extends AppCompatActivity {
 
     private void setupSkips() {
 
-        if (MainApp.fc.getA10().equals("1")) {
-            bi.lld0704.setVisibility(View.VISIBLE);
+        if (MainApp.form.getA10().equals("1")) {
+            bi.lld704.setVisibility(View.VISIBLE);
         }
 
     }
@@ -49,7 +51,7 @@ public class SectionD7Activity extends AppCompatActivity {
 
     private boolean UpdateDB() {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SD, fc.getsD());
+        int updcount = db.updatesFormColumn(Tables.FormsTable.COLUMN_SD, modd.getsD());
         if (updcount == 1) {
             return true;
         } else {

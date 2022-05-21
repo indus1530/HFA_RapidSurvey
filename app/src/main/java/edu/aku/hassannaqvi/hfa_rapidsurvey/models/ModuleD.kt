@@ -180,7 +180,7 @@ class ModuleD : BaseObservable() {
 
     @get:Bindable
     var d50222: String by Delegates.observable(_EMPTY_) { prop, old, new ->
-        setd50222c(when d50222 . equals ("1") -> this.d50222c else "")
+        if (d50222.equals("2")) this.d50222c = ""
         notifyPropertyChanged(BR.d50222)
     }
 
@@ -191,8 +191,11 @@ class ModuleD : BaseObservable() {
 
     @get:Bindable
     var d50231: String by Delegates.observable(_EMPTY_) { prop, old, new ->
-        setd50231c(when d50231 . equals ("1") -> this.d50231c else "")
-        setd50232(when d50231 . equals ("1") -> this.d50232 else "")
+        if (d50231.equals("2")) {
+            this.d50231c = ""
+            this.d50232 = ""
+            this.d50232c = ""
+        }
         notifyPropertyChanged(BR.d50231)
     }
 
@@ -203,7 +206,7 @@ class ModuleD : BaseObservable() {
 
     @get:Bindable
     var d50232: String by Delegates.observable(_EMPTY_) { prop, old, new ->
-        setd50232c(when d50232 . equals ("1") -> this.d50232c else "")
+        if (d50232.equals("2")) this.d50232c = ""
         notifyPropertyChanged(BR.d50232)
     }
 
@@ -214,8 +217,11 @@ class ModuleD : BaseObservable() {
 
     @get:Bindable
     var d50241: String by Delegates.observable(_EMPTY_) { prop, old, new ->
-        setd50241c(when d50241 . equals ("1") -> this.d50241c else "")
-        setd50242(when d50241 . equals ("1") -> this.d50242 else "")
+        if (d50241.equals("2")) {
+            this.d50241c = ""
+            this.d50242 = ""
+            this.d50242c = ""
+        }
         notifyPropertyChanged(BR.d50241)
     }
 
@@ -226,7 +232,7 @@ class ModuleD : BaseObservable() {
 
     @get:Bindable
     var d50242: String by Delegates.observable(_EMPTY_) { prop, old, new ->
-        setd50242c(when d50242 . equals ("1") -> this.d50242c else "")
+        if (d50242.equals("2")) this.d50242c = ""
         notifyPropertyChanged(BR.d50242)
     }
 
@@ -297,6 +303,10 @@ class ModuleD : BaseObservable() {
 
     @get:Bindable
     var d605: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (d605.equals("2")) {
+            this.d606 = ""
+            this.d607 = ""
+        }
         notifyPropertyChanged(BR.d605)
     }
 
@@ -366,16 +376,60 @@ class ModuleD : BaseObservable() {
     }
 
 
-    private val d07 = _EMPTY_
-    private val d0701 = _EMPTY_
-    private val d0702 = _EMPTY_
-    private val d0703 = _EMPTY_
-    private val d0704 = _EMPTY_
-    private val d0704a = _EMPTY_
-    private val d0704b = _EMPTY_
-    private val d0704c = _EMPTY_
-    private val d0704d = _EMPTY_
-    private val d0704e = _EMPTY_
+    @get:Bindable
+    var d701: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        this.d70196x = if (d701.equals("96")) this.d70196x else ""
+        notifyPropertyChanged(BR.d701)
+    }
+
+    @get:Bindable
+    var d70196x: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.d70196x)
+    }
+
+
+    @get:Bindable
+    var d702: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        this.d70296x = if (d702.equals("96")) this.d70296x else ""
+        notifyPropertyChanged(BR.d702)
+    }
+
+    @get:Bindable
+    var d70296x: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.d70296x)
+    }
+
+
+    @get:Bindable
+    var d703: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.d703)
+    }
+
+    @get:Bindable
+    var d7041: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.d7041)
+    }
+
+    @get:Bindable
+    var d7042: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.d7042)
+    }
+
+    @get:Bindable
+    var d7043: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.d7043)
+    }
+
+    @get:Bindable
+    var d7044: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.d7044)
+    }
+
+    @get:Bindable
+    var d7045: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.d7045)
+    }
+
 
     private val d08 = _EMPTY_
     private val d0801 = _EMPTY_
