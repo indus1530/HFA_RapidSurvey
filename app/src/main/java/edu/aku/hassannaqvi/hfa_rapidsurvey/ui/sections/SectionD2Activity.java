@@ -29,7 +29,7 @@ import edu.aku.hassannaqvi.hfa_rapidsurvey.databinding.ActivitySectionD2Binding;
 
 public class SectionD2Activity extends AppCompatActivity {
 
-    private static final String TAG = "SectionD1Activity";
+    private static final String TAG = "SectionD2Activity";
     ActivitySectionD2Binding bi;
     private DatabaseHelper db;
 
