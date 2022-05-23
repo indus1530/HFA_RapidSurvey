@@ -105,7 +105,7 @@ public class SectionD5Activity extends AppCompatActivity {
         if (!formValidation()) return;
         if (updateDB()) {
             finish();
-            startActivity(new Intent(this, SectionD5Activity.class));
+            startActivity(new Intent(this, SectionD6Activity.class));
         } else {
             Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
         }
