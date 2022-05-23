@@ -49,6 +49,7 @@ public class MainApp extends Application {
     public static final String _SERVER_GET_URL = "getData.php";
     public static final String _PHOTO_UPLOAD_URL = _HOST_URL + "uploads.php";
     public static final String _UPDATE_URL = MainApp._IP + "/uen_hfa/app/";
+    public static String IBAHC = "";
 
     public static final Integer MONTHS_LIMIT = 11;
     public static final Integer DAYS_LIMIT = 29;
@@ -85,6 +86,7 @@ public class MainApp extends Application {
     public static String DeviceURL = "devices.php";
     public static String Mon1;
     public static String Mon2;
+    public static boolean superuser;
 
     public static String IMEI;
     public static String Mon3;

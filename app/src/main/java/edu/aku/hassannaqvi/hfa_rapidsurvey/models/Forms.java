@@ -15362,7 +15362,7 @@ public class Forms extends BaseObservable implements Observable {
         this.istatus = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_ISTATUS));
         this.istatus96x = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_ISTATUS96x));
         this.synced = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_SYNCED));
-        this.synced_date = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_SYNCED_DATE));
+        this.synced_date = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_SYNCDATE));
 
         this.districtCode = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_DISTRICT_CODE));
         this.districtType = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_DISTRICT_TYPE));
@@ -15975,7 +15975,7 @@ public class Forms extends BaseObservable implements Observable {
         json.put(FormsTable.COLUMN_ISTATUS, this.istatus);
         json.put(FormsTable.COLUMN_ISTATUS96x, this.istatus96x);
         json.put(FormsTable.COLUMN_SYNCED, this.synced);
-        json.put(FormsTable.COLUMN_SYNCED_DATE, this.synced_date);
+        json.put(FormsTable.COLUMN_SYNCDATE, this.synced_date);
         json.put(FormsTable.COLUMN_APPVERSION, this.appversion);
 
         json.put(FormsTable.COLUMN_DISTRICT_CODE, this.districtCode);

@@ -1,12 +1,14 @@
 package edu.aku.hassannaqvi.hfa_rapidsurvey.core;
 
 import static edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.StaffingContract.StaffingTable;
+import static edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp.IBAHC;
 import static edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp.form;
-import static edu.aku.hassannaqvi.hfa_rapidsurvey.utils.CreateTable.DATABASE_NAME;
-import static edu.aku.hassannaqvi.hfa_rapidsurvey.utils.CreateTable.DATABASE_VERSION;
+import static edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp.modd;
+import static edu.aku.hassannaqvi.hfa_rapidsurvey.utils.CreateTable.PROJECT_NAME;
 import static edu.aku.hassannaqvi.hfa_rapidsurvey.utils.CreateTable.SQL_CREATE_DISTRICTS;
 import static edu.aku.hassannaqvi.hfa_rapidsurvey.utils.CreateTable.SQL_CREATE_FORMS;
 import static edu.aku.hassannaqvi.hfa_rapidsurvey.utils.CreateTable.SQL_CREATE_HF;
+import static edu.aku.hassannaqvi.hfa_rapidsurvey.utils.CreateTable.SQL_CREATE_MODULED;
 import static edu.aku.hassannaqvi.hfa_rapidsurvey.utils.CreateTable.SQL_CREATE_PSCONTRACT;
 import static edu.aku.hassannaqvi.hfa_rapidsurvey.utils.CreateTable.SQL_CREATE_TEHSILS;
 import static edu.aku.hassannaqvi.hfa_rapidsurvey.utils.CreateTable.SQL_CREATE_TSCONTRACT;
@@ -37,12 +39,14 @@ import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.HFContract;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.PatientsContract;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.PatientsContract.PatientsTable;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.StaffingContract;
+import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.Tables;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.Tables.FormsTable;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.TehsilsContract;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.UCsContract;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.UsersContract;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.VersionAppContract;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.models.Forms;
+import edu.aku.hassannaqvi.hfa_rapidsurvey.models.ModuleD;
 
 
 /**
@@ -54,7 +58,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String SQL_DELETE_DISTRICTS = "DROP TABLE IF EXISTS " + DistrictContract.singleDistrict.TABLE_NAME;
     private static final String SQL_DELETE_TALUKAS = "DROP TABLE IF EXISTS " + TehsilsContract.singleTehsil.TABLE_NAME;
     private static final String SQL_DELETE_UCS = "DROP TABLE IF EXISTS " + UCsContract.singleUCs.TABLE_NAME;
-
+    public static final String DATABASE_NAME = PROJECT_NAME + ".db";
+    public static final String DATABASE_COPY = PROJECT_NAME + "_copy.db";
+    private static final int DATABASE_VERSION = 1;
+    private static final String DATABASE_PASSWORD = IBAHC;
     private final String TAG = "DatabaseHelper";
 
     public String spDateT = new SimpleDateFormat("dd-MM-yy").format(new Date().getTime());
@@ -68,6 +75,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         db.execSQL(SQL_CREATE_USERS);
         db.execSQL(SQL_CREATE_FORMS);
+        db.execSQL(SQL_CREATE_MODULED);
         db.execSQL(SQL_CREATE_TSCONTRACT);
         db.execSQL(SQL_CREATE_PSCONTRACT);
         db.execSQL(SQL_CREATE_VERSIONAPP);
@@ -80,6 +88,327 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
 
+    }
+
+
+    //ADDITION in DB
+    public Long addForms(Forms form) throws JSONException {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(FormsTable.COLUMN_PROJECT_NAME, form.getProjectName());
+        values.put(FormsTable.COLUMN_UID, form.getUid());
+        values.put(FormsTable.COLUMN_USERNAME, form.getUserName());
+        values.put(FormsTable.COLUMN_SYSDATE, form.getSysdate());
+        values.put(FormsTable.COLUMN_DISTRICT_CODE, form.getDistrictCode());
+        values.put(FormsTable.COLUMN_DISTRICT_TYPE, form.getDistrictType());
+        values.put(FormsTable.COLUMN_DISTRICT_NAME, form.getDistrictName());
+        values.put(FormsTable.COLUMN_TEHSIL_CODE, form.getTehsilCode());
+        values.put(FormsTable.COLUMN_TEHSIL_NAME, form.getTehsilName());
+        values.put(FormsTable.COLUMN_UC_CODE, form.getUcCode());
+        values.put(FormsTable.COLUMN_UC_NAME, form.getUcName());
+        values.put(FormsTable.COLUMN_HF_CODE, form.getHfCode());
+        values.put(FormsTable.COLUMN_HF_NAME, form.getHfName());
+        values.put(FormsTable.COLUMN_A103D, form.getA103d());
+        values.put(FormsTable.COLUMN_A103M, form.getA103m());
+        values.put(FormsTable.COLUMN_A103Y, form.getA103y());
+        values.put(FormsTable.COLUMN_A110, form.getA110());
+        values.put(FormsTable.COLUMN_A111, form.getA111());
+        values.put(FormsTable.COLUMN_SB, form.sBtoString());
+        values.put(FormsTable.COLUMN_SC, form.sCtoString());
+        /*values.put(FormTable.COLUMN_SD, form.getsD());
+        values.put(FormTable.COLUMN_SE, form.getsE());
+        values.put(FormTable.COLUMN_SF, form.getsF());
+        values.put(FormTable.COLUMN_SG, form.getsG());
+        values.put(FormTable.COLUMN_SH, form.getsH());
+        values.put(FormTable.COLUMN_SI, form.getsI());
+        values.put(FormTable.COLUMN_SJ, form.getsJ());
+        values.put(FormTable.COLUMN_SK, form.getsK());*/
+        values.put(FormsTable.COLUMN_ISTATUS, form.getIstatus());
+        values.put(FormsTable.COLUMN_ISTATUS96x, form.getIstatus96x());
+        values.put(FormsTable.COLUMN_ENDINGDATETIME, form.getEndingdatetime());
+        values.put(FormsTable.COLUMN_DEVICETAGID, form.getDevicetagID());
+        values.put(FormsTable.COLUMN_DEVICEID, form.getDeviceID());
+        values.put(FormsTable.COLUMN_APPVERSION, form.getAppversion());
+        long newRowId;
+        newRowId = db.insert(
+                FormsTable.TABLE_NAME,
+                FormsTable.COLUMN_NAME_NULLABLE,
+                values);
+        return newRowId;
+    }
+
+    public Long addModuleD(ModuleD modd) throws JSONException {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(Tables.ModuleDTable.COLUMN_PROJECT_NAME, modd.getProjectName());
+        values.put(Tables.ModuleDTable.COLUMN_UID, modd.getUid());
+        values.put(Tables.ModuleDTable.COLUMN_UUID, modd.getUuid());
+        values.put(Tables.ModuleDTable.COLUMN_USERNAME, modd.getUserName());
+        values.put(Tables.ModuleDTable.COLUMN_SYSDATE, modd.getSysdate());
+        values.put(Tables.ModuleDTable.COLUMN_DISTRICT_CODE, modd.getDistrictCode());
+        values.put(Tables.ModuleDTable.COLUMN_DISTRICT_TYPE, modd.getDistrictType());
+        values.put(Tables.ModuleDTable.COLUMN_DISTRICT_NAME, modd.getDistrictName());
+        values.put(Tables.ModuleDTable.COLUMN_TEHSIL_CODE, modd.getTehsilCode());
+        values.put(Tables.ModuleDTable.COLUMN_TEHSIL_NAME, modd.getTehsilName());
+        values.put(Tables.ModuleDTable.COLUMN_UC_CODE, modd.getUcCode());
+        values.put(Tables.ModuleDTable.COLUMN_UC_NAME, modd.getUcName());
+        values.put(Tables.ModuleDTable.COLUMN_HF_CODE, modd.getHfCode());
+        values.put(Tables.ModuleDTable.COLUMN_HF_NAME, modd.getHfName());
+        values.put(Tables.ModuleDTable.COLUMN_SD1, modd.sD1toString());
+        values.put(Tables.ModuleDTable.COLUMN_SD2, modd.sD2toString());
+        values.put(Tables.ModuleDTable.COLUMN_SD3, modd.sD3toString());
+        values.put(Tables.ModuleDTable.COLUMN_SD4, modd.sD4toString());
+        values.put(Tables.ModuleDTable.COLUMN_SD5, modd.sD5toString());
+        values.put(Tables.ModuleDTable.COLUMN_SD6, modd.sD6toString());
+        values.put(Tables.ModuleDTable.COLUMN_SD7, modd.sD7toString());
+        values.put(Tables.ModuleDTable.COLUMN_SD8, modd.sD8toString());
+        values.put(Tables.ModuleDTable.COLUMN_ISTATUS, modd.getIstatus());
+        values.put(Tables.ModuleDTable.COLUMN_ISTATUS96x, modd.getIstatus96x());
+        values.put(Tables.ModuleDTable.COLUMN_ENDINGDATETIME, modd.getEndingTime());
+        values.put(Tables.ModuleDTable.COLUMN_DEVICETAG, modd.getDeviceTag());
+        values.put(Tables.ModuleDTable.COLUMN_DEVICEID, modd.getDeviceID());
+        values.put(Tables.ModuleDTable.COLUMN_APPVERSION, modd.getAppversion());
+        long newRowId;
+        newRowId = db.insert(
+                Tables.ModuleDTable.TABLE_NAME,
+                Tables.ModuleDTable.COLUMN_NAME_NULLABLE,
+                values);
+        return newRowId;
+    }
+
+    public Long addTSC(StaffingContract tsc) {
+
+        // Gets the data repository in write mode
+        SQLiteDatabase db = this.getWritableDatabase();
+
+// Create a new map of values, where column names are the keys
+        ContentValues values = new ContentValues();
+        values.put(StaffingTable.COLUMN_UID, tsc.get_UID());
+        values.put(StaffingTable.COLUMN_UUID, tsc.get_UUID());
+        values.put(StaffingTable.COLUMN_SYSDATE, tsc.getSysdate());
+        values.put(StaffingTable.COLUMN_USERNAME, tsc.getUserName());
+        values.put(StaffingTable.COLUMN_SERIALNO, tsc.getSerialno());
+        values.put(StaffingTable.COLUMN_DISTRICT_CODE, tsc.getDistrictCode());
+        values.put(StaffingTable.COLUMN_DISTRICT_TYPE, tsc.getDistrictType());
+        values.put(StaffingTable.COLUMN_TEHSIL_CODE, tsc.getTehsilCode());
+        values.put(StaffingTable.COLUMN_UC_CODE, tsc.getUcCode());
+        values.put(StaffingTable.COLUMN_HF_CODE, tsc.getHfCode());
+        values.put(StaffingTable.COLUMN_SC2, tsc.getsC2());
+        values.put(StaffingTable.COLUMN_DEVICEID, tsc.getDeviceID());
+        values.put(StaffingTable.COLUMN_DEVICETAGID, tsc.getDevicetagID());
+        values.put(StaffingTable.COLUMN_STATUS, tsc.getStatus());
+        values.put(StaffingTable.COLUMN_SYNCED, tsc.getSynced());
+        values.put(StaffingTable.COLUMN_SYNCED_DATE, tsc.getSynced_date());
+        values.put(StaffingTable.COLUMN_APPVERSION, tsc.getAppversion());
+
+        // Insert the new row, returning the primary key value of the new row
+        long newRowId;
+        newRowId = db.insert(
+                StaffingContract.StaffingTable.TABLE_NAME,
+                StaffingContract.StaffingTable.COLUMN_NAME_NULLABLE,
+                values);
+        return newRowId;
+    }
+
+    public Long addPSC(PatientsContract psc) {
+
+        // Gets the data repository in write mode
+        SQLiteDatabase db = this.getWritableDatabase();
+
+// Create a new map of values, where column names are the keys
+        ContentValues values = new ContentValues();
+        values.put(PatientsTable.COLUMN_UID, psc.get_UID());
+        values.put(PatientsTable.COLUMN_UUID, psc.get_UUID());
+        values.put(PatientsTable.COLUMN_SYSDATE, psc.getSysdate());
+        values.put(PatientsTable.COLUMN_USERNAME, psc.getUserName());
+        values.put(PatientsTable.COLUMN_SERIALNO, psc.getSerialno());
+        values.put(PatientsTable.COLUMN_DISTRICT_CODE, psc.getDistrictCode());
+        values.put(PatientsTable.COLUMN_DISTRICT_TYPE, psc.getDistrictType());
+        values.put(PatientsTable.COLUMN_TEHSIL_CODE, psc.getTehsilCode());
+        values.put(PatientsTable.COLUMN_UC_CODE, psc.getUcCode());
+        values.put(PatientsTable.COLUMN_HF_CODE, psc.getHfCode());
+        values.put(PatientsTable.COLUMN_SI1, psc.getsI1());
+        values.put(PatientsTable.COLUMN_SI2, psc.getsI2());
+        values.put(PatientsTable.COLUMN_SI3, psc.getsI3());
+        values.put(PatientsTable.COLUMN_SI4, psc.getsI4());
+        values.put(PatientsTable.COLUMN_DEVICEID, psc.getDeviceID());
+        values.put(PatientsTable.COLUMN_DEVICETAGID, psc.getDevicetagID());
+        values.put(PatientsTable.COLUMN_STATUS, psc.getStatus());
+        values.put(PatientsTable.COLUMN_SYNCED, psc.getSynced());
+        values.put(PatientsTable.COLUMN_SYNCED_DATE, psc.getSynced_date());
+        values.put(PatientsTable.COLUMN_APPVERSION, psc.getAppversion());
+
+        // Insert the new row, returning the primary key value of the new row
+        long newRowId;
+        newRowId = db.insert(
+                PatientsContract.PatientsTable.TABLE_NAME,
+                PatientsContract.PatientsTable.COLUMN_NAME_NULLABLE,
+                values);
+        return newRowId;
+    }
+
+
+    //UPDATE in DB
+    public int updatesFormsColumn(String column, String value) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(column, value);
+
+        String selection = FormsTable._ID + " =? ";
+        String[] selectionArgs = {String.valueOf(form.getId())};
+
+        return db.update(FormsTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+    }
+
+    public int updatesModuleDColumn(String column, String value) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(column, value);
+
+        String selection = Tables.ModuleDTable._ID + " =? ";
+        String[] selectionArgs = {modd.getId()};
+
+        return db.update(Tables.ModuleDTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+    }
+
+    public int updatesTSCColumn(StaffingContract tsc, String column, String value) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(column, value);
+
+        String selection = StaffingContract.StaffingTable._ID + " =? ";
+        String[] selectionArgs = {String.valueOf(tsc.get_ID())};
+
+        return db.update(StaffingContract.StaffingTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+    }
+
+    public int updatesPSCColumn(String column, String value) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(column, value);
+
+        String selection = PatientsContract.PatientsTable._ID + " =? ";
+        String[] selectionArgs = {String.valueOf(MainApp.psc.get_ID())};
+
+        return db.update(PatientsContract.PatientsTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+    }
+
+
+    //get UnSyncedTables
+    public JSONArray getUnsyncedForms() throws JSONException {
+        SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
+        Cursor c = null;
+        String[] columns = null;
+        String whereClause;
+        whereClause = FormsTable.COLUMN_SYNCED + " = '' AND " + FormsTable.COLUMN_ISTATUS + "!= ''";
+        String[] whereArgs = null;
+        String groupBy = null;
+        String having = null;
+        String orderBy = FormsTable.COLUMN_ID + " ASC";
+        JSONArray jsonArray = new JSONArray();
+        c = db.query(
+                FormsTable.TABLE_NAME,  // The table to query
+                columns,                   // The columns to return
+                whereClause,               // The columns for the WHERE clause
+                whereArgs,                 // The values for the WHERE clause
+                groupBy,                   // don't group the rows
+                having,                    // don't filter by row groups
+                orderBy                    // The sort order
+        );
+        while (c.moveToNext()) {
+            /** WorkManager Upload
+             /*Form fc = new Form();
+             allFC.add(fc.Hydrate(c));*/
+            Log.d(TAG, "getUnsyncedForms: " + c.getCount());
+            Forms form = new Forms();
+            jsonArray.put(form.Hydrate(c).toJSONObject());
+        }
+        c.close();
+        db.close();
+        Log.d(TAG, "getUnsyncedForms: " + jsonArray.toString().length());
+        Log.d(TAG, "getUnsyncedForms: " + jsonArray);
+        return jsonArray;
+    }
+
+    public JSONArray getUnsyncedModuleD() throws JSONException {
+        SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
+        Cursor c = null;
+        String[] columns = null;
+        String whereClause;
+        whereClause = Tables.ModuleDTable.COLUMN_SYNCED + " = '' AND " + Tables.ModuleDTable.COLUMN_ISTATUS + "!= ''";
+        String[] whereArgs = null;
+        String groupBy = null;
+        String having = null;
+        String orderBy = Tables.ModuleDTable.COLUMN_ID + " ASC";
+        JSONArray jsonArray = new JSONArray();
+        c = db.query(
+                Tables.ModuleDTable.TABLE_NAME,  // The table to query
+                columns,                   // The columns to return
+                whereClause,               // The columns for the WHERE clause
+                whereArgs,                 // The values for the WHERE clause
+                groupBy,                   // don't group the rows
+                having,                    // don't filter by row groups
+                orderBy                    // The sort order
+        );
+        while (c.moveToNext()) {
+            /** WorkManager Upload
+             /*Form fc = new Form();
+             allFC.add(fc.Hydrate(c));*/
+            Log.d(TAG, "getUnsyncedModuleD: " + c.getCount());
+            ModuleD moduleD = new ModuleD();
+            jsonArray.put(moduleD.Hydrate(c).toJSONObject());
+        }
+        c.close();
+        db.close();
+        Log.d(TAG, "getUnsyncedModuleD: " + jsonArray.toString().length());
+        Log.d(TAG, "getUnsyncedModuleD: " + jsonArray);
+        return jsonArray;
+    }
+
+
+    //update SyncedTables
+    public void updateSyncedForms(String id) {
+        SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
+        ContentValues values = new ContentValues();
+        values.put(Tables.FormsTable.COLUMN_SYNCED, true);
+        values.put(FormsTable.COLUMN_SYNCDATE, new Date().toString());
+        String where = Tables.FormsTable.COLUMN_ID + " = ?";
+        String[] whereArgs = {id};
+        int count = db.update(
+                Tables.FormsTable.TABLE_NAME,
+                values,
+                where,
+                whereArgs);
+    }
+
+    public void updateSyncedModuleD(String id) {
+        SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
+        ContentValues values = new ContentValues();
+        values.put(Tables.ModuleDTable.COLUMN_SYNCED, true);
+        values.put(Tables.ModuleDTable.COLUMN_SYNCDATE, new Date().toString());
+        String where = Tables.ModuleDTable.COLUMN_ID + " = ?";
+        String[] whereArgs = {id};
+        int count = db.update(
+                Tables.ModuleDTable.TABLE_NAME,
+                values,
+                where,
+                whereArgs);
     }
 
 
@@ -599,171 +928,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public Long addForm(Forms form) throws JSONException {
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues values = new ContentValues();
-        values.put(FormsTable.COLUMN_PROJECT_NAME, form.getProjectName());
-        values.put(FormsTable.COLUMN_UID, form.getUid());
-        values.put(FormsTable.COLUMN_USERNAME, form.getUserName());
-        values.put(FormsTable.COLUMN_SYSDATE, form.getSysdate());
-        values.put(FormsTable.COLUMN_DISTRICT_CODE, form.getDistrictCode());
-        values.put(FormsTable.COLUMN_DISTRICT_TYPE, form.getDistrictType());
-        values.put(FormsTable.COLUMN_DISTRICT_NAME, form.getDistrictName());
-        values.put(FormsTable.COLUMN_TEHSIL_CODE, form.getTehsilCode());
-        values.put(FormsTable.COLUMN_TEHSIL_NAME, form.getTehsilName());
-        values.put(FormsTable.COLUMN_UC_CODE, form.getUcCode());
-        values.put(FormsTable.COLUMN_UC_NAME, form.getUcName());
-        values.put(FormsTable.COLUMN_HF_CODE, form.getHfCode());
-        values.put(FormsTable.COLUMN_HF_NAME, form.getHfName());
-        values.put(FormsTable.COLUMN_A103D, form.getA103d());
-        values.put(FormsTable.COLUMN_A103M, form.getA103m());
-        values.put(FormsTable.COLUMN_A103Y, form.getA103y());
-        values.put(FormsTable.COLUMN_A110, form.getA110());
-        values.put(FormsTable.COLUMN_A111, form.getA111());
-        values.put(FormsTable.COLUMN_SB, form.sBtoString());
-        values.put(FormsTable.COLUMN_SC, form.sCtoString());
-        values.put(FormsTable.COLUMN_SD, form.sCtoString());
-        values.put(FormsTable.COLUMN_SE, form.sCtoString());
-        values.put(FormsTable.COLUMN_SF, form.sCtoString());
-        values.put(FormsTable.COLUMN_SG, form.sCtoString());
-        values.put(FormsTable.COLUMN_SH, form.sCtoString());
-        values.put(FormsTable.COLUMN_SI, form.sCtoString());
-        values.put(FormsTable.COLUMN_SJ, form.sCtoString());
-        values.put(FormsTable.COLUMN_SK, form.sCtoString());
-        values.put(FormsTable.COLUMN_ISTATUS, form.getIstatus());
-        values.put(FormsTable.COLUMN_ISTATUS96x, form.getIstatus96x());
-        values.put(FormsTable.COLUMN_ENDINGDATETIME, form.getEndingdatetime());
-        values.put(FormsTable.COLUMN_DEVICETAGID, form.getDevicetagID());
-        values.put(FormsTable.COLUMN_DEVICEID, form.getDeviceID());
-        values.put(FormsTable.COLUMN_APPVERSION, form.getAppversion());
-        long newRowId;
-        newRowId = db.insert(
-                FormsTable.TABLE_NAME,
-                FormsTable.COLUMN_NAME_NULLABLE,
-                values);
-        return newRowId;
-    }
-
-
-    public Long addForms(Forms form) throws JSONException {
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues values = new ContentValues();
-        values.put(FormsTable.COLUMN_PROJECT_NAME, form.getProjectName());
-        values.put(FormsTable.COLUMN_UID, form.getUid());
-        values.put(FormsTable.COLUMN_USERNAME, form.getUserName());
-        values.put(FormsTable.COLUMN_SYSDATE, form.getSysdate());
-        values.put(FormsTable.COLUMN_DISTRICT_CODE, form.getDistrictCode());
-        values.put(FormsTable.COLUMN_DISTRICT_TYPE, form.getDistrictType());
-        values.put(FormsTable.COLUMN_DISTRICT_NAME, form.getDistrictName());
-        values.put(FormsTable.COLUMN_TEHSIL_CODE, form.getTehsilCode());
-        values.put(FormsTable.COLUMN_TEHSIL_NAME, form.getTehsilName());
-        values.put(FormsTable.COLUMN_UC_CODE, form.getUcCode());
-        values.put(FormsTable.COLUMN_UC_NAME, form.getUcName());
-        values.put(FormsTable.COLUMN_HF_CODE, form.getHfCode());
-        values.put(FormsTable.COLUMN_HF_NAME, form.getHfName());
-        values.put(FormsTable.COLUMN_A103D, form.getA103d());
-        values.put(FormsTable.COLUMN_A103M, form.getA103m());
-        values.put(FormsTable.COLUMN_A103Y, form.getA103y());
-        values.put(FormsTable.COLUMN_A110, form.getA110());
-        values.put(FormsTable.COLUMN_A111, form.getA111());
-        values.put(FormsTable.COLUMN_SB, form.sBtoString());
-        values.put(FormsTable.COLUMN_SC, form.sCtoString());
-        /*values.put(FormTable.COLUMN_SD, form.getsD());
-        values.put(FormTable.COLUMN_SE, form.getsE());
-        values.put(FormTable.COLUMN_SF, form.getsF());
-        values.put(FormTable.COLUMN_SG, form.getsG());
-        values.put(FormTable.COLUMN_SH, form.getsH());
-        values.put(FormTable.COLUMN_SI, form.getsI());
-        values.put(FormTable.COLUMN_SJ, form.getsJ());
-        values.put(FormTable.COLUMN_SK, form.getsK());*/
-        values.put(FormsTable.COLUMN_ISTATUS, form.getIstatus());
-        values.put(FormsTable.COLUMN_ISTATUS96x, form.getIstatus96x());
-        values.put(FormsTable.COLUMN_ENDINGDATETIME, form.getEndingdatetime());
-        values.put(FormsTable.COLUMN_DEVICETAGID, form.getDevicetagID());
-        values.put(FormsTable.COLUMN_DEVICEID, form.getDeviceID());
-        values.put(FormsTable.COLUMN_APPVERSION, form.getAppversion());
-        long newRowId;
-        newRowId = db.insert(
-                FormsTable.TABLE_NAME,
-                FormsTable.COLUMN_NAME_NULLABLE,
-                values);
-        return newRowId;
-    }
-
-
-    public Long addTSC(StaffingContract tsc) {
-
-        // Gets the data repository in write mode
-        SQLiteDatabase db = this.getWritableDatabase();
-
-// Create a new map of values, where column names are the keys
-        ContentValues values = new ContentValues();
-        values.put(StaffingTable.COLUMN_UID, tsc.get_UID());
-        values.put(StaffingTable.COLUMN_UUID, tsc.get_UUID());
-        values.put(StaffingTable.COLUMN_SYSDATE, tsc.getSysdate());
-        values.put(StaffingTable.COLUMN_USERNAME, tsc.getUserName());
-        values.put(StaffingTable.COLUMN_SERIALNO, tsc.getSerialno());
-        values.put(StaffingTable.COLUMN_DISTRICT_CODE, tsc.getDistrictCode());
-        values.put(StaffingTable.COLUMN_DISTRICT_TYPE, tsc.getDistrictType());
-        values.put(StaffingTable.COLUMN_TEHSIL_CODE, tsc.getTehsilCode());
-        values.put(StaffingTable.COLUMN_UC_CODE, tsc.getUcCode());
-        values.put(StaffingTable.COLUMN_HF_CODE, tsc.getHfCode());
-        values.put(StaffingTable.COLUMN_SC2, tsc.getsC2());
-        values.put(StaffingTable.COLUMN_DEVICEID, tsc.getDeviceID());
-        values.put(StaffingTable.COLUMN_DEVICETAGID, tsc.getDevicetagID());
-        values.put(StaffingTable.COLUMN_STATUS, tsc.getStatus());
-        values.put(StaffingTable.COLUMN_SYNCED, tsc.getSynced());
-        values.put(StaffingTable.COLUMN_SYNCED_DATE, tsc.getSynced_date());
-        values.put(StaffingTable.COLUMN_APPVERSION, tsc.getAppversion());
-
-        // Insert the new row, returning the primary key value of the new row
-        long newRowId;
-        newRowId = db.insert(
-                StaffingContract.StaffingTable.TABLE_NAME,
-                StaffingContract.StaffingTable.COLUMN_NAME_NULLABLE,
-                values);
-        return newRowId;
-    }
-
-
-    public Long addPSC(PatientsContract psc) {
-
-        // Gets the data repository in write mode
-        SQLiteDatabase db = this.getWritableDatabase();
-
-// Create a new map of values, where column names are the keys
-        ContentValues values = new ContentValues();
-        values.put(PatientsTable.COLUMN_UID, psc.get_UID());
-        values.put(PatientsTable.COLUMN_UUID, psc.get_UUID());
-        values.put(PatientsTable.COLUMN_SYSDATE, psc.getSysdate());
-        values.put(PatientsTable.COLUMN_USERNAME, psc.getUserName());
-        values.put(PatientsTable.COLUMN_SERIALNO, psc.getSerialno());
-        values.put(PatientsTable.COLUMN_DISTRICT_CODE, psc.getDistrictCode());
-        values.put(PatientsTable.COLUMN_DISTRICT_TYPE, psc.getDistrictType());
-        values.put(PatientsTable.COLUMN_TEHSIL_CODE, psc.getTehsilCode());
-        values.put(PatientsTable.COLUMN_UC_CODE, psc.getUcCode());
-        values.put(PatientsTable.COLUMN_HF_CODE, psc.getHfCode());
-        values.put(PatientsTable.COLUMN_SI1, psc.getsI1());
-        values.put(PatientsTable.COLUMN_SI2, psc.getsI2());
-        values.put(PatientsTable.COLUMN_SI3, psc.getsI3());
-        values.put(PatientsTable.COLUMN_SI4, psc.getsI4());
-        values.put(PatientsTable.COLUMN_DEVICEID, psc.getDeviceID());
-        values.put(PatientsTable.COLUMN_DEVICETAGID, psc.getDevicetagID());
-        values.put(PatientsTable.COLUMN_STATUS, psc.getStatus());
-        values.put(PatientsTable.COLUMN_SYNCED, psc.getSynced());
-        values.put(PatientsTable.COLUMN_SYNCED_DATE, psc.getSynced_date());
-        values.put(PatientsTable.COLUMN_APPVERSION, psc.getAppversion());
-
-        // Insert the new row, returning the primary key value of the new row
-        long newRowId;
-        newRowId = db.insert(
-                PatientsContract.PatientsTable.TABLE_NAME,
-                PatientsContract.PatientsTable.COLUMN_NAME_NULLABLE,
-                values);
-        return newRowId;
-    }
-
-
     public Forms isDataExists(String studyId) {
         SQLiteDatabase db = getReadableDatabase();
         Cursor c = null;
@@ -812,47 +976,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 // New value for one column
         ContentValues values = new ContentValues();
         values.put(FormsTable.COLUMN_SYNCED, true);
-        values.put(FormsTable.COLUMN_SYNCED_DATE, new Date().toString());
-
-// Which row to update, based on the title
-        String where = FormsTable.COLUMN_ID + " = ?";
-        String[] whereArgs = {id};
-
-        int count = db.update(
-                FormsTable.TABLE_NAME,
-                values,
-                where,
-                whereArgs);
-    }
-
-
-    public void updateSyncedForms02(String id) {
-        SQLiteDatabase db = this.getReadableDatabase();
-
-// New value for one column
-        ContentValues values = new ContentValues();
-        values.put(FormsTable.COLUMN_SYNCED_02, true);
-        values.put(FormsTable.COLUMN_SYNCED_DATE_02, new Date().toString());
-
-// Which row to update, based on the title
-        String where = FormsTable.COLUMN_ID + " = ?";
-        String[] whereArgs = {id};
-
-        int count = db.update(
-                FormsTable.TABLE_NAME,
-                values,
-                where,
-                whereArgs);
-    }
-
-
-    public void updateSyncedForms03(String id) {
-        SQLiteDatabase db = this.getReadableDatabase();
-
-// New value for one column
-        ContentValues values = new ContentValues();
-        values.put(FormsTable.COLUMN_SYNCED_03, true);
-        values.put(FormsTable.COLUMN_SYNCED_DATE_03, new Date().toString());
+        values.put(FormsTable.COLUMN_SYNCDATE, new Date().toString());
 
 // Which row to update, based on the title
         String where = FormsTable.COLUMN_ID + " = ?";
@@ -1458,69 +1582,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 selection,
                 selectionArgs);
         return count;
-    }
-
-
-    //Generic update FormColumn
-    public int updatesFormColumn(String column, String value) {
-        SQLiteDatabase db = this.getReadableDatabase();
-        ContentValues values = new ContentValues();
-        values.put(column, value);
-        String selection = FormsTable._ID + " =? ";
-        String[] selectionArgs = {String.valueOf(form.getId())};
-        return db.update(FormsTable.TABLE_NAME,
-                values,
-                selection,
-                selectionArgs);
-    }
-
-    public int updatesFormsColumn(String column, String value) {
-        SQLiteDatabase db = this.getReadableDatabase();
-
-        ContentValues values = new ContentValues();
-        values.put(column, value);
-
-        String selection = FormsTable._ID + " =? ";
-        String[] selectionArgs = {String.valueOf(form.getId())};
-
-        return db.update(FormsTable.TABLE_NAME,
-                values,
-                selection,
-                selectionArgs);
-    }
-
-
-    //Generic update TSCColumn
-    public int updatesTSCColumn(StaffingContract tsc, String column, String value) {
-        SQLiteDatabase db = this.getReadableDatabase();
-
-        ContentValues values = new ContentValues();
-        values.put(column, value);
-
-        String selection = StaffingContract.StaffingTable._ID + " =? ";
-        String[] selectionArgs = {String.valueOf(tsc.get_ID())};
-
-        return db.update(StaffingContract.StaffingTable.TABLE_NAME,
-                values,
-                selection,
-                selectionArgs);
-    }
-
-
-    //Generic update PSCColumn
-    public int updatesPSCColumn(String column, String value) {
-        SQLiteDatabase db = this.getReadableDatabase();
-
-        ContentValues values = new ContentValues();
-        values.put(column, value);
-
-        String selection = PatientsContract.PatientsTable._ID + " =? ";
-        String[] selectionArgs = {String.valueOf(MainApp.psc.get_ID())};
-
-        return db.update(PatientsContract.PatientsTable.TABLE_NAME,
-                values,
-                selection,
-                selectionArgs);
     }
 
     public int getStaffingsByUUID(String UUID) {

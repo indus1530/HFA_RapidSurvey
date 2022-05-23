@@ -43,11 +43,7 @@ public class Tables {
         public static final String COLUMN_DEVICEID = "deviceid";
         public static final String COLUMN_DEVICETAGID = "tagid";
         public static final String COLUMN_SYNCED = "synced";
-        public static final String COLUMN_SYNCED_DATE = "synced_date";
-        public static final String COLUMN_SYNCED_02 = "synced_02";
-        public static final String COLUMN_SYNCED_DATE_02 = "synced_date_02";
-        public static final String COLUMN_SYNCED_03 = "synced_03";
-        public static final String COLUMN_SYNCED_DATE_03 = "synced_date_03";
+        public static final String COLUMN_SYNCDATE = "syncDate";
         public static final String COLUMN_APPVERSION = "appversion";
     }
 
@@ -58,6 +54,7 @@ public class Tables {
         public static final String COLUMN_PROJECT_NAME = "projectName";
         public static final String COLUMN_ID = "_id";
         public static final String COLUMN_UID = "_uid";
+        public static final String COLUMN_UUID = "_uuid";
         public static final String COLUMN_USERNAME = "userName";
         public static final String COLUMN_SYSDATE = "sysdate";
         public static final String COLUMN_DISTRICT_CODE = "districtCode";

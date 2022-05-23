@@ -6,6 +6,7 @@ import static edu.aku.hassannaqvi.hfa_rapidsurvey.utils.UtilKt.openSectionMainAc
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
@@ -36,8 +37,9 @@ public class SectionD1Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_d1);
-        db = appInfo.getDbHelper();
         bi.setForm(modd);
+        db = appInfo.getDbHelper();
+        setSupportActionBar(bi.toolbar);
 
     }
 
@@ -87,7 +89,10 @@ public class SectionD1Activity extends AppCompatActivity {
 
 
     public void btnContinue(View v) {
+        bi.llbtn.setVisibility(View.GONE);
+        new Handler().postDelayed(() -> bi.llbtn.setVisibility(View.VISIBLE), 5000);
         if (!formValidation()) return;
+        if (!insertNewRecord()) return;
         if (updateDB()) {
             finish();
             startActivity(new Intent(this, SectionD2Activity.class));

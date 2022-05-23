@@ -4,6 +4,7 @@ import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.DistrictContract;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.HFContract;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.PatientsContract;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.StaffingContract;
+import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.Tables;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.Tables.FormsTable;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.TehsilsContract;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.UCsContract;
@@ -52,18 +53,48 @@ public final class CreateTable {
             + FormsTable.COLUMN_ISTATUS + " TEXT,"
             + FormsTable.COLUMN_ISTATUS96x + " TEXT,"
             + FormsTable.COLUMN_ENDINGDATETIME + " TEXT,"
-            + FormsTable.COLUMN_GPSLAT + " TEXT,"
-            + FormsTable.COLUMN_GPSLNG + " TEXT,"
-            + FormsTable.COLUMN_GPSDATE + " TEXT,"
-            + FormsTable.COLUMN_GPSACC + " TEXT,"
             + FormsTable.COLUMN_DEVICEID + " TEXT,"
             + FormsTable.COLUMN_DEVICETAGID + " TEXT,"
             + FormsTable.COLUMN_SYNCED + " TEXT,"
-            + FormsTable.COLUMN_SYNCED_DATE + " TEXT,"
+            + FormsTable.COLUMN_SYNCDATE + " TEXT,"
             + FormsTable.COLUMN_SYNCED_02 + " TEXT,"
             + FormsTable.COLUMN_SYNCED_DATE_02 + " TEXT,"
             + FormsTable.COLUMN_SYNCED_03 + " TEXT,"
             + FormsTable.COLUMN_SYNCED_DATE_03 + " TEXT"
+            + " );";
+
+    public static final String SQL_CREATE_MODULED = "CREATE TABLE "
+            + Tables.ModuleDTable.TABLE_NAME + "("
+            + Tables.ModuleDTable.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + Tables.ModuleDTable.COLUMN_PROJECT_NAME + " TEXT,"
+            + Tables.ModuleDTable.COLUMN_UID + " TEXT,"
+            + Tables.ModuleDTable.COLUMN_USERNAME + " TEXT,"
+            + Tables.ModuleDTable.COLUMN_SYSDATE + " TEXT,"
+            + Tables.ModuleDTable.COLUMN_DISTRICT_CODE + " TEXT,"
+            + Tables.ModuleDTable.COLUMN_DISTRICT_TYPE + " TEXT,"
+            + Tables.ModuleDTable.COLUMN_DISTRICT_NAME + " TEXT,"
+            + Tables.ModuleDTable.COLUMN_TEHSIL_CODE + " TEXT,"
+            + Tables.ModuleDTable.COLUMN_TEHSIL_NAME + " TEXT,"
+            + Tables.ModuleDTable.COLUMN_UC_CODE + " TEXT,"
+            + Tables.ModuleDTable.COLUMN_UC_NAME + " TEXT,"
+            + Tables.ModuleDTable.COLUMN_HF_CODE + " TEXT,"
+            + Tables.ModuleDTable.COLUMN_HF_NAME + " TEXT,"
+            + Tables.ModuleDTable.COLUMN_SD1 + " TEXT,"
+            + Tables.ModuleDTable.COLUMN_SD2 + " TEXT,"
+            + Tables.ModuleDTable.COLUMN_SD3 + " TEXT,"
+            + Tables.ModuleDTable.COLUMN_SD4 + " TEXT,"
+            + Tables.ModuleDTable.COLUMN_SD5 + " TEXT,"
+            + Tables.ModuleDTable.COLUMN_SD6 + " TEXT,"
+            + Tables.ModuleDTable.COLUMN_SD7 + " TEXT,"
+            + Tables.ModuleDTable.COLUMN_SD8 + " TEXT,"
+            + Tables.ModuleDTable.COLUMN_APPVERSION + " TEXT,"
+            + Tables.ModuleDTable.COLUMN_ISTATUS + " TEXT,"
+            + Tables.ModuleDTable.COLUMN_ISTATUS96x + " TEXT,"
+            + Tables.ModuleDTable.COLUMN_ENDINGDATETIME + " TEXT,"
+            + Tables.ModuleDTable.COLUMN_DEVICEID + " TEXT,"
+            + Tables.ModuleDTable.COLUMN_DEVICETAG + " TEXT,"
+            + Tables.ModuleDTable.COLUMN_SYNCED + " TEXT,"
+            + Tables.ModuleDTable.COLUMN_SYNCDATE + " TEXT"
             + " );";
 
 

@@ -1,11 +1,13 @@
 package edu.aku.hassannaqvi.hfa_rapidsurvey.ui.sections;
 
-import static edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp.fc;
+import static edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp.appInfo;
 import static edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp.modd;
 import static edu.aku.hassannaqvi.hfa_rapidsurvey.utils.UtilKt.openSectionMainActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -17,85 +19,66 @@ import com.validatorcrawler.aliazaz.Validator;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.hfa_rapidsurvey.R;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.Tables;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.core.DatabaseHelper;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.databinding.ActivitySectionD2Binding;
-import edu.aku.hassannaqvi.hfa_rapidsurvey.utils.JSONUtils;
+
 
 public class SectionD2Activity extends AppCompatActivity {
 
+    private static final String TAG = "SectionD1Activity";
     ActivitySectionD2Binding bi;
+    private DatabaseHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_d2);
         bi.setForm(modd);
+        db = appInfo.getDbHelper();
+        setSupportActionBar(bi.toolbar);
 
     }
 
 
-    private boolean UpdateDB() {
-        DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(Tables.FormsTable.COLUMN_SD, modd.getsD());
-        if (updcount == 1) {
-            return true;
-        } else {
-            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+    private boolean updateDB() {
+        if (MainApp.superuser) return true;
+
+        db = MainApp.appInfo.getDbHelper();
+        long updcount = 0;
+        try {
+            updcount = db.updatesModuleDColumn(Tables.ModuleDTable.COLUMN_SD2, modd.sD2toString());
+        } catch (JSONException e) {
+            e.printStackTrace();
+            Log.d(TAG, R.string.upd_db + e.getMessage());
+            Toast.makeText(this, R.string.upd_db + e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+        if (updcount > 0) return true;
+        else {
+            Toast.makeText(this, R.string.upd_db_error, Toast.LENGTH_SHORT).show();
             return false;
         }
     }
 
 
-    private void SaveDraft() throws JSONException {
-
-        JSONObject json = new JSONObject();
-
-        json.put("d0201", bi.d0201a.isChecked() ? "1"
-                : bi.d0201b.isChecked() ? "2"
-                : "-1");
-
-        json.put("d0202", bi.d0202a.isChecked() ? "1"
-                : bi.d0202b.isChecked() ? "2"
-                : "-1");
-
-        json.put("d0203", bi.d0203a.isChecked() ? "1"
-                : bi.d0203b.isChecked() ? "2"
-                : "-1");
-
-        try {
-            JSONObject json_merge = JSONUtils.mergeJSONObjects(new JSONObject(fc.getsD()), json);
-
-            fc.setsD(String.valueOf(json_merge));
-
-        } catch (JSONException e) {
-            e.printStackTrace();
+    public void btnContinue(View v) {
+        bi.llbtn.setVisibility(View.GONE);
+        new Handler().postDelayed(() -> bi.llbtn.setVisibility(View.VISIBLE), 5000);
+        if (!formValidation()) return;
+        if (updateDB()) {
+            finish();
+            startActivity(new Intent(this, SectionD3Activity.class));
+        } else {
+            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
         }
     }
 
 
     private boolean formValidation() {
         return Validator.emptyCheckingContainer(this, bi.GrpName);
-    }
-
-
-    public void btnContinue(View v) {
-        if (!formValidation()) return;
-        try {
-            SaveDraft();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        if (UpdateDB()) {
-            finish();
-            startActivity(new Intent(this, SectionD3Activity.class));
-        } else {
-            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
-        }
     }
 
 

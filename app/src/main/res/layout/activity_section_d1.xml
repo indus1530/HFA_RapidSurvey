@@ -166,6 +166,7 @@
 
                 <!--EndButton LinearLayout-->
                 <LinearLayout
+                    android:id="@+id/llbtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
@@ -179,12 +180,12 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@android:color/transparent"
+                        android:gravity="center"
                         android:onClick="btnEnd"
                         android:text="Cancel"
                         android:textColor="@color/colorPrimary"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:visibility="invisible" />
+                        android:textStyle="bold" />
 
                     <Button
                         android:id="@+id/btn_Continue"
@@ -194,6 +195,7 @@
                         android:background="@drawable/capsule"
                         android:backgroundTint="@color/colorAccent"
                         android:backgroundTintMode="src_atop"
+                        android:gravity="center"
                         android:onClick="btnContinue"
                         android:text="Save"
                         android:textColor="@color/white"

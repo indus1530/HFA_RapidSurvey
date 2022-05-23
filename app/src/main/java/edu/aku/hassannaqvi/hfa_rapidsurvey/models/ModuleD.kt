@@ -7,6 +7,7 @@ import androidx.databinding.Bindable
 import androidx.databinding.PropertyChangeRegistry
 import edu.aku.hassannaqvi.hfa_rapidsurvey.BR
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.Tables.ModuleDTable
+import edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp
 import edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp._EMPTY_
 import edu.aku.hassannaqvi.hfa_rapidsurvey.utils.CreateTable.PROJECT_NAME
 import org.json.JSONException
@@ -23,6 +24,7 @@ class ModuleD : BaseObservable() {
     var projectName: String = PROJECT_NAME
     var id: String = _EMPTY_
     var uid: String = _EMPTY_
+    var uuid: String = _EMPTY_
     var userName = _EMPTY_
     var sysdate = _EMPTY_
     var istatus = _EMPTY_
@@ -45,18 +47,12 @@ class ModuleD : BaseObservable() {
 
 
     fun populateMeta() {
-        setSysDate(MainApp.form.getSysDate())
-        setUserName(MainApp.user.getUserName())
-        setDeviceId(MainApp.deviceid)
-        setUuid(MainApp.form.getUid()) // not applicable in Form table
-        setFmuid(MainApp.familyMember.getUid()) //// not applicable in Form table
-        if (!selectedMWRA.equals("97")) {
-            setMuid(
-                MainApp.familyList.get(selectedMWRA.toInt()).getUid()
-            ) // not applicable in Form table
-        }
-        setAppver(MainApp.appInfo.getAppVersion())
-        setProjectName(PROJECT_NAME)
+        sysdate = MainApp.form.sysdate
+        userName = MainApp.userName
+        deviceID = MainApp.deviceId
+        uuid = MainApp.form.uid
+        appversion = MainApp.appInfo.appVersion
+        projectName = PROJECT_NAME
         setVillageCode(MainApp.villageCode)
         setHhid(MainApp.selectedHHID)
     }
@@ -563,6 +559,7 @@ class ModuleD : BaseObservable() {
     fun Hydrate(cursor: Cursor): ModuleD? {
         this.id = cursor.getString(cursor.getColumnIndexOrThrow(ModuleDTable.COLUMN_ID))
         this.uid = cursor.getString(cursor.getColumnIndexOrThrow(ModuleDTable.COLUMN_UID))
+        this.uuid = cursor.getString(cursor.getColumnIndexOrThrow(ModuleDTable.COLUMN_UUID))
         this.projectName =
             cursor.getString(cursor.getColumnIndexOrThrow(ModuleDTable.COLUMN_PROJECT_NAME))
         this.userName = cursor.getString(cursor.getColumnIndexOrThrow(ModuleDTable.COLUMN_USERNAME))

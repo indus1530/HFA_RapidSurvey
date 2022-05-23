@@ -642,7 +642,7 @@ class FormsA : BaseObservable() {
             cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_ISTATUS96x))
         this.synced = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_SYNCED))
         this.synced_date =
-            cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_SYNCED_DATE))
+            cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_SYNCDATE))
         this.districtCode =
             cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_DISTRICT_CODE))
         this.districtType =
@@ -808,7 +808,7 @@ class FormsA : BaseObservable() {
         json.put(FormsTable.COLUMN_ISTATUS, this.istatus)
         json.put(FormsTable.COLUMN_ISTATUS96x, this.istatus96x)
         json.put(FormsTable.COLUMN_SYNCED, this.synced)
-        json.put(FormsTable.COLUMN_SYNCED_DATE, this.synced_date)
+        json.put(FormsTable.COLUMN_SYNCDATE, this.synced_date)
         json.put(FormsTable.COLUMN_APPVERSION, this.appversion)
         json.put(FormsTable.COLUMN_DISTRICT_CODE, this.districtCode)
         json.put(FormsTable.COLUMN_DISTRICT_TYPE, this.districtType)
