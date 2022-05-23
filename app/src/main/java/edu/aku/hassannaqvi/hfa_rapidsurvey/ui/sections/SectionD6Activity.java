@@ -47,7 +47,7 @@ public class SectionD6Activity extends AppCompatActivity {
         db = MainApp.appInfo.getDbHelper();
         long updcount = 0;
         try {
-            updcount = db.updatesModuleDColumn(Tables.ModuleDTable.COLUMN_SD4, modd.sD4toString());
+            updcount = db.updatesModuleDColumn(Tables.ModuleDTable.COLUMN_SD6, modd.sD6toString());
         } catch (JSONException e) {
             e.printStackTrace();
             Log.d(TAG, R.string.upd_db + e.getMessage());
