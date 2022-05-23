@@ -1,11 +1,14 @@
 package edu.aku.hassannaqvi.hfa_rapidsurvey.ui.sections;
 
 
+import static edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp.appInfo;
 import static edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp.modd;
 import static edu.aku.hassannaqvi.hfa_rapidsurvey.utils.UtilKt.openSectionMainActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -17,126 +20,66 @@ import com.validatorcrawler.aliazaz.Validator;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.hfa_rapidsurvey.R;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.Tables;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.core.DatabaseHelper;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.databinding.ActivitySectionD7Binding;
-import edu.aku.hassannaqvi.hfa_rapidsurvey.utils.JSONUtils;
+
 
 public class SectionD7Activity extends AppCompatActivity {
 
+    private static final String TAG = "SectionD7Activity";
     ActivitySectionD7Binding bi;
+    private DatabaseHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_d7);
         bi.setForm(modd);
-        setupSkips();
+        db = appInfo.getDbHelper();
+        setSupportActionBar(bi.toolbar);
 
     }
 
 
-    private void setupSkips() {
+    private boolean updateDB() {
+        if (MainApp.superuser) return true;
 
-        if (MainApp.fma.getA10().equals("1")) {
-            bi.lld704.setVisibility(View.VISIBLE);
+        db = MainApp.appInfo.getDbHelper();
+        long updcount = 0;
+        try {
+            updcount = db.updatesModuleDColumn(Tables.ModuleDTable.COLUMN_SD4, modd.sD4toString());
+        } catch (JSONException e) {
+            e.printStackTrace();
+            Log.d(TAG, R.string.upd_db + e.getMessage());
+            Toast.makeText(this, R.string.upd_db + e.getMessage(), Toast.LENGTH_SHORT).show();
         }
-
-    }
-
-
-    private boolean UpdateDB() {
-        DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(Tables.FormsTable.COLUMN_SD, modd.getsD());
-        if (updcount == 1) {
-            return true;
-        } else {
-            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+        if (updcount > 0) return true;
+        else {
+            Toast.makeText(this, R.string.upd_db_error, Toast.LENGTH_SHORT).show();
             return false;
         }
     }
 
 
-    private void SaveDraft() throws JSONException {
-
-        JSONObject json = new JSONObject();
-
-        json.put("d0701", bi.d0701a.isChecked() ? "1"
-                : bi.d0701b.isChecked() ? "2"
-                : bi.d0701c.isChecked() ? "3"
-                : bi.d0701x.isChecked() ? "96"
-                : "-1");
-        json.put("d0701xx", bi.d0701xx.getText().toString().trim().isEmpty() ? "-1" : bi.d0701xx.getText().toString());
-
-        json.put("d0702", bi.d0702a.isChecked() ? "1"
-                : bi.d0702b.isChecked() ? "2"
-                : bi.d0702c.isChecked() ? "3"
-                : bi.d0702d.isChecked() ? "4"
-                : bi.d0702e.isChecked() ? "5"
-                : bi.d0702x.isChecked() ? "96"
-                : "-1");
-        json.put("d0702xx", bi.d0702xx.getText().toString().trim().isEmpty() ? "-1" : bi.d0702xx.getText().toString());
-
-        json.put("d0703", bi.d0703a.isChecked() ? "1"
-                : bi.d0703b.isChecked() ? "2"
-                : bi.d0703c.isChecked() ? "3"
-                : bi.d0703x.isChecked() ? "98"
-                : "-1");
-
-        json.put("d0704a", bi.d0704aa.isChecked() ? "1"
-                : bi.d0704ab.isChecked() ? "2"
-                : "-1");
-
-        json.put("d0704b", bi.d0704ba.isChecked() ? "1"
-                : bi.d0704bb.isChecked() ? "2"
-                : "-1");
-
-        json.put("d0704c", bi.d0704ca.isChecked() ? "1"
-                : bi.d0704cb.isChecked() ? "2"
-                : "-1");
-
-        json.put("d0704d", bi.d0704da.isChecked() ? "1"
-                : bi.d0704db.isChecked() ? "2"
-                : "-1");
-
-        json.put("d0704e", bi.d0704ea.isChecked() ? "1"
-                : bi.d0704eb.isChecked() ? "2"
-                : "-1");
-
-        try {
-            JSONObject json_merge = JSONUtils.mergeJSONObjects(new JSONObject(fc.getsD()), json);
-
-            fc.setsD(String.valueOf(json_merge));
-
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-
-    }
-
-
-    private boolean formValidation() {
-        return Validator.emptyCheckingContainer(this, bi.GrpName);
-    }
-
-
     public void btnContinue(View v) {
+        bi.llbtn.setVisibility(View.GONE);
+        new Handler().postDelayed(() -> bi.llbtn.setVisibility(View.VISIBLE), 5000);
         if (!formValidation()) return;
-        try {
-            SaveDraft();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        if (UpdateDB()) {
+        if (updateDB()) {
             finish();
             startActivity(new Intent(this, SectionD8Activity.class));
         } else {
             Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
         }
+    }
+
+
+    private boolean formValidation() {
+        return Validator.emptyCheckingContainer(this, bi.GrpName);
     }
 
 
