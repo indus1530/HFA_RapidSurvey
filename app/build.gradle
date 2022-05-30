@@ -58,7 +58,7 @@ android {
             versionCode versionBuild
             versionName "${versionNumber}.${versionPatch}${versionType}"
             minSdkVersion 22
-            targetSdkVersion 22
+            targetSdk 31
         }
 
         applicationVariants.all { variant ->
@@ -144,5 +144,10 @@ dependencies {
 
     //PopUp Sheet
     implementation 'com.github.whalemare:sheetmenu:2.0.1'
+
+    // Sqlcipher
+    implementation 'net.zetetic:android-database-sqlcipher:4.5.0'
+    implementation 'androidx.sqlite:sqlite-ktx:2.2.0'
+    implementation 'androidx.sqlite:sqlite:2.2.0'
 
 }

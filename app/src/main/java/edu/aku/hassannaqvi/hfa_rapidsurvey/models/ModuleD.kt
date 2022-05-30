@@ -4,6 +4,7 @@ import android.database.Cursor
 import android.util.Log
 import androidx.databinding.BaseObservable
 import androidx.databinding.Bindable
+import androidx.databinding.Observable
 import androidx.databinding.PropertyChangeRegistry
 import edu.aku.hassannaqvi.hfa_rapidsurvey.BR
 import edu.aku.hassannaqvi.hfa_rapidsurvey.contracts.Tables.ModuleDTable
@@ -15,7 +16,7 @@ import org.json.JSONObject
 import kotlin.properties.Delegates
 
 
-class ModuleD : BaseObservable() {
+class ModuleD : BaseObservable(), Observable {
     private val TAG = "ModuleD"
 
     @Transient
