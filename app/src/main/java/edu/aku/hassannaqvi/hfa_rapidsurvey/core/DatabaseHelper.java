@@ -970,19 +970,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public Forms isDataExists(String studyId) {
         SQLiteDatabase db = getReadableDatabase(DATABASE_PASSWORD);
         Cursor c = null;
-
-// New value for one column
         String[] columns = {
                 FormsTable.COLUMN_UID,
-                FormsTable.COLUMN_ISTATUS,
-
+                FormsTable.COLUMN_ISTATUS
         };
-
-// Which row to update, based on the ID
-        String selection = FormsTable.COLUMN_UID + " = ? AND "
-                + FormsTable.COLUMN_ISTATUS + " = ?";
+        String selection = FormsTable.COLUMN_UID + " = ? AND " + FormsTable.COLUMN_ISTATUS + " = ?";
         String[] selectionArgs = new String[]{studyId, "1"};
-
         Forms all = new Forms();
         try {
             c = db.query(FormsTable.TABLE_NAME, //Table to query
@@ -998,12 +991,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 all.setIstatus(c.getString(c.getColumnIndex(FormsTable.COLUMN_ISTATUS)));
             }
         } finally {
-            if (c != null) {
-                c.close();
-            }
-            if (db != null) {
-                db.close();
-            }
+            if (c != null) c.close();
+            if (db != null) db.close();
         }
         return all;
     }

@@ -46,7 +46,7 @@
 
                 <!-- d101  Radio   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVd101"
+                    android:id="@+id/cvd101"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -106,7 +106,7 @@
 
                 <!-- d102  Radio   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVd102"
+                    android:id="@+id/cvd102"
                     style="@style/cardView">
 
                     <LinearLayout
