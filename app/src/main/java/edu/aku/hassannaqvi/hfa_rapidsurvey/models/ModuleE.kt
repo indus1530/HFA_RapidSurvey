@@ -151,25 +151,80 @@ class ModuleE : BaseObservable(), Observable {
         notifyPropertyChanged(BR.e104e96x)
     }
 
+    @get:Bindable
+    var e201 String by Delegates.observable(_EMPTY_)
+    {
+        prop, old, new ->
+        notifyPropertyChanged(BR.e201)
+    }
+
+    @get:Bindable
+    var e202a: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e202a)
+    }
+
+    @get:Bindable
+    var e202b: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e202b)
+    }
+
+    @get:Bindable
+    var e202c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e202c)
+    }
+
+    @get:Bindable
+    var e202d: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e202d)
+    }
+
+    @get:Bindable
+    var e202e: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e202e)
+    }
+
+    @get:Bindable
+    var e202f: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e202f)
+    }
+
+    @get:Bindable
+    var e203a: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e203a)
+    }
+
+    @get:Bindable
+    var e203b: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e203b)
+    }
+
+    @get:Bindable
+    var e204a: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e204a)
+    }
+
+    @get:Bindable
+    var e204b: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e204b)
+    }
+
+    @get:Bindable
+    var e204c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e204c)
+    }
+
+    @get:Bindable
+    var e204d: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e204d)
+    }
+
+    @get:Bindable
+    var e204d96x: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e204d96x)
+    }
+
 
     //ModuleE
-    private val e201 = _EMPTY_
-    private val e202 = _EMPTY_
-    private val e202a = _EMPTY_
-    private val e202b = _EMPTY_
-    private val e202c = _EMPTY_
-    private val e202d = _EMPTY_
-    private val e202e = _EMPTY_
-    private val e202f = _EMPTY_
-    private val e203efb = _EMPTY_
-    private val e203a = _EMPTY_
-    private val e203b = _EMPTY_
-    private val e204 = _EMPTY_
-    private val e204a = _EMPTY_
-    private val e204b = _EMPTY_
-    private val e204c = _EMPTY_
-    private val e204d = _EMPTY_
-    private val e3 = _EMPTY_
     private val e301 = _EMPTY_
     private val e302 = _EMPTY_
     private val e302a = _EMPTY_

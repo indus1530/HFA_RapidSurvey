@@ -1028,6 +1028,7 @@
                                     android:id="@+id/e104c"
                                     style="@style/EditTextAlpha"
                                     android:hint="@string/name"
+                                    android:text="@={form.e104c}"
                                     android:maxLength="50" />
 
                             </LinearLayout>
@@ -1085,11 +1086,12 @@
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
                                         android:id="@+id/e104d"
-                                        style="@style/EditTextNum"
                                         android:layout_width="0dp"
+                                        android:layout_height="52dp"
                                         android:layout_weight="1"
                                         android:gravity="center"
                                         android:hint="##"
+                                        android:text="@={form.e104d}"
                                         android:maxLength="2"
                                         app:maxValue="20"
                                         app:minValue="1"

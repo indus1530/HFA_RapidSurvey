@@ -721,7 +721,7 @@
     <string name="e202f">Offers diagnostic laboratory tests as per FANC package</string>
     <string name="e202fa">Yes</string>
     <string name="e202fb">No</string>
-    <string name="e203efb">Please tell me if the following documents are available in the facility today: If available, ask to see the document</string>
+    <string name="e203">Please tell me if the following documents are available in the facility today: If available, ask to see the document</string>
     <string name="e203a">Any ANC check-lists and/or job-aids</string>
     <string name="e203aa">Yes, Observed</string>
     <string name="e203ab">Yes, Reported not Seen</string>
@@ -739,7 +739,7 @@
     <string name="e204c_info"> Recorded in days and limit should be 20 days </string>
     <string name="e204d">What was the Organization Name Who Conduct those Training?</string>
     <string name="e204da">AKU</string>
-    <string name="e204dx">Others (Specify)</string>
+    <string name="e204d96">Others (Specify)</string>
 
     <string name="e3"> SECTION 03: \nOBSTETRIC AND NEWBORN CARE SERVICES </string>
     <string name="e301">Does this facility offer delivery (including normal delivery, basic emergency obstetric care) and/or newborn care services?</string>

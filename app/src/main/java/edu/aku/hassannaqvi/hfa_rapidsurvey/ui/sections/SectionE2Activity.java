@@ -1,6 +1,7 @@
 package edu.aku.hassannaqvi.hfa_rapidsurvey.ui.sections;
 
 import static edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp.fc;
+import static edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp.mode;
 import static edu.aku.hassannaqvi.hfa_rapidsurvey.utils.UtilKt.openSectionMainActivity;
 
 import android.content.Intent;
@@ -33,7 +34,7 @@ public class SectionE2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_e2);
-        bi.setCallback(this);
+        bi.setForm(mode);
         setupSkips();
     }
 
@@ -54,7 +55,7 @@ public class SectionE2Activity extends AppCompatActivity {
 
     private boolean UpdateDB() {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SE, fc.getsE());
+        int updcount = db.updatesModuleDColumn(FormsContract.FormsTable.COLUMN_SE, fc.getsE());
         if (updcount == 1) {
             return true;
         } else {
