@@ -1,6 +1,7 @@
 package edu.aku.hassannaqvi.hfa_rapidsurvey.ui.sections;
 
 import static edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp.fc;
+import static edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp.mode;
 import static edu.aku.hassannaqvi.hfa_rapidsurvey.utils.UtilKt.openSectionMainActivity;
 
 import android.content.Intent;
@@ -31,7 +32,7 @@ public class SectionE31Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_e31);
-        bi.setCallback(this);
+        bi.setForm(mode);
         setupSkips();
     }
 

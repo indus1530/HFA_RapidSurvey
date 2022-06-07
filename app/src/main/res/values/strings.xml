@@ -838,7 +838,7 @@
     <string name="e305d_info"> Recorded in days and limit should be 20 days </string>
     <string name="e305e">What was the Organization Name Who Conduct those Training?</string>
     <string name="e305ea">AKU</string>
-    <string name="e305ex">Others (Specify)</string>
+    <string name="e305e96">Others (Specify)</string>
     <string name="e306">I would like to know if the following basic equipment items are available in this service area (Labor Room) today. For each equipment or item, please tell me if it is available today and functioning.</string>
     <string name="e306a0a">Examination light (flashlight ok)-Availability</string>
     <string name="e306a0ay">Yes</string>
