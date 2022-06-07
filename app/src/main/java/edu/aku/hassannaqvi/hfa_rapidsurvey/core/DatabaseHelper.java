@@ -280,6 +280,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 selectionArgs);
     }
 
+    public int updatesModuleEColumn(String column, String value) {
+        SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
+
+        ContentValues values = new ContentValues();
+        values.put(column, value);
+
+        String selection = Tables.ModuleDTable._ID + " =? ";
+        String[] selectionArgs = {modd.getId()};
+
+        return db.update(Tables.ModuleDTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+    }
+
     public int updatesTSCColumn(StaffingContract tsc, String column, String value) {
         SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
 

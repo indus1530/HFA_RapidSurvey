@@ -12,7 +12,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
-import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -33,28 +32,12 @@ public class SectionE31Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_e31);
         bi.setForm(mode);
-        setupSkips();
-    }
-
-
-    private void setupSkips() {
-
-        bi.e0301.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.e0301b.getId()) {
-                Clear.clearAllFields(bi.fldGrpSece301);
-            }
-        }));
-
-        bi.e0305c.setOnCheckedChangeListener(((radioGroup, i) -> {
-            Clear.clearAllFields(bi.ll305c);
-        }));
-
     }
 
 
     private boolean UpdateDB() {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SE, fc.getsE());
+        int updcount = db.updatesModuleDColumn(FormsContract.FormsTable.COLUMN_SE, fc.getsE());
         if (updcount == 1) {
             return true;
         } else {

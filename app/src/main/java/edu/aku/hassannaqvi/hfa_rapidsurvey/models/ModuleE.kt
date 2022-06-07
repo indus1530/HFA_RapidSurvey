@@ -375,47 +375,503 @@ class ModuleE : BaseObservable(), Observable {
     }
 
 
+    @get:Bindable
+    var e3061: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (e3061.equals("2")) {
+            this.e3061c = ""
+            this.e3062 = ""
+            this.e3062c = ""
+        }
+        notifyPropertyChanged(BR.e3061)
+    }
+
+    @get:Bindable
+    var e3061c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e3061c)
+    }
+
+    @get:Bindable
+    var e3062: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (e3062.equals("2")) this.e3062c = ""
+        notifyPropertyChanged(BR.e3062)
+    }
+
+    @get:Bindable
+    var e3062c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e3062c)
+    }
+
+
+    @get:Bindable
+    var e3071: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (e3071.equals("2")) {
+            this.e3071c = ""
+            this.e3072 = ""
+            this.e3072c = ""
+        }
+        notifyPropertyChanged(BR.e3071)
+    }
+
+    @get:Bindable
+    var e3071c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e3071c)
+    }
+
+    @get:Bindable
+    var e3072: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (e3072.equals("2")) this.e3072c = ""
+        notifyPropertyChanged(BR.e3072)
+    }
+
+    @get:Bindable
+    var e3072c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e3072c)
+    }
+
+
+    @get:Bindable
+    var e3081: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (e3081.equals("2")) {
+            this.e3081c = ""
+            this.e3082 = ""
+            this.e3082c = ""
+        }
+        notifyPropertyChanged(BR.e3081)
+    }
+
+    @get:Bindable
+    var e3081c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e3081c)
+    }
+
+    @get:Bindable
+    var e3082: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (e3082.equals("2")) this.e3082c = ""
+        notifyPropertyChanged(BR.e3082)
+    }
+
+    @get:Bindable
+    var e3082c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e3082c)
+    }
+
+
+    @get:Bindable
+    var e3091: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (e3091.equals("2")) {
+            this.e3091c = ""
+            this.e3092 = ""
+            this.e3092c = ""
+        }
+        notifyPropertyChanged(BR.e3091)
+    }
+
+    @get:Bindable
+    var e3091c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e3091c)
+    }
+
+    @get:Bindable
+    var e3092: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (e3092.equals("2")) this.e3092c = ""
+        notifyPropertyChanged(BR.e3092)
+    }
+
+    @get:Bindable
+    var e3092c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e3092c)
+    }
+
+
+    @get:Bindable
+    var e3101: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (e3101.equals("2")) {
+            this.e3101c = ""
+            this.e3102 = ""
+            this.e3102c = ""
+        }
+        notifyPropertyChanged(BR.e3101)
+    }
+
+    @get:Bindable
+    var e3101c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e3101c)
+    }
+
+    @get:Bindable
+    var e3102: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (e3102.equals("2")) this.e3102c = ""
+        notifyPropertyChanged(BR.e3102)
+    }
+
+    @get:Bindable
+    var e3102c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e3102c)
+    }
+
+
+    @get:Bindable
+    var e3111: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (e3111.equals("2")) {
+            this.e3111c = ""
+            this.e3112 = ""
+            this.e3112c = ""
+        }
+        notifyPropertyChanged(BR.e3111)
+    }
+
+    @get:Bindable
+    var e3111c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e3111c)
+    }
+
+    @get:Bindable
+    var e3112: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (e3112.equals("2")) this.e3112c = ""
+        notifyPropertyChanged(BR.e3112)
+    }
+
+    @get:Bindable
+    var e3112c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e3112c)
+    }
+
+
+    @get:Bindable
+    var e3121: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (e3121.equals("2")) {
+            this.e3121c = ""
+            this.e3122 = ""
+            this.e3122c = ""
+        }
+        notifyPropertyChanged(BR.e3121)
+    }
+
+    @get:Bindable
+    var e3121c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e3121c)
+    }
+
+    @get:Bindable
+    var e3122: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (e3122.equals("2")) this.e3122c = ""
+        notifyPropertyChanged(BR.e3122)
+    }
+
+    @get:Bindable
+    var e3122c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e3122c)
+    }
+
+
+    @get:Bindable
+    var e3131: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (e3131.equals("2")) {
+            this.e3131c = ""
+            this.e3132 = ""
+            this.e3132c = ""
+        }
+        notifyPropertyChanged(BR.e3131)
+    }
+
+    @get:Bindable
+    var e3131c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e3131c)
+    }
+
+    @get:Bindable
+    var e3132: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (e3132.equals("2")) this.e3132c = ""
+        notifyPropertyChanged(BR.e3132)
+    }
+
+    @get:Bindable
+    var e3132c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e3132c)
+    }
+
+
+    @get:Bindable
+    var e3141: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (e3141.equals("2")) {
+            this.e3141c = ""
+            this.e3142 = ""
+            this.e3142c = ""
+        }
+        notifyPropertyChanged(BR.e3141)
+    }
+
+    @get:Bindable
+    var e3141c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e3141c)
+    }
+
+    @get:Bindable
+    var e3142: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (e3142.equals("2")) this.e3142c = ""
+        notifyPropertyChanged(BR.e3142)
+    }
+
+    @get:Bindable
+    var e3142c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e3142c)
+    }
+
+
+    @get:Bindable
+    var e3151: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (e3151.equals("2")) {
+            this.e3151c = ""
+            this.e3152 = ""
+            this.e3152c = ""
+        }
+        notifyPropertyChanged(BR.e3151)
+    }
+
+    @get:Bindable
+    var e3151c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e3151c)
+    }
+
+    @get:Bindable
+    var e3152: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (e3152.equals("2")) this.e3152c = ""
+        notifyPropertyChanged(BR.e3152)
+    }
+
+    @get:Bindable
+    var e3152c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e3152c)
+    }
+
+
+    @get:Bindable
+    var e3161: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (e3161.equals("2")) {
+            this.e3161c = ""
+            this.e3162 = ""
+            this.e3162c = ""
+        }
+        notifyPropertyChanged(BR.e3161)
+    }
+
+    @get:Bindable
+    var e3161c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e3161c)
+    }
+
+    @get:Bindable
+    var e3162: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (e3162.equals("2")) this.e3162c = ""
+        notifyPropertyChanged(BR.e3162)
+    }
+
+    @get:Bindable
+    var e3162c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e3162c)
+    }
+
+
+    @get:Bindable
+    var e3171: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (e3171.equals("2")) {
+            this.e3171c = ""
+            this.e3172 = ""
+            this.e3172c = ""
+        }
+        notifyPropertyChanged(BR.e3171)
+    }
+
+    @get:Bindable
+    var e3171c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e3171c)
+    }
+
+    @get:Bindable
+    var e3172: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (e3172.equals("2")) this.e3172c = ""
+        notifyPropertyChanged(BR.e3172)
+    }
+
+    @get:Bindable
+    var e3172c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e3172c)
+    }
+
+
+    @get:Bindable
+    var e3181: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (e3181.equals("2")) {
+            this.e3181c = ""
+            this.e3182 = ""
+            this.e3182c = ""
+        }
+        notifyPropertyChanged(BR.e3181)
+    }
+
+    @get:Bindable
+    var e3181c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e3181c)
+    }
+
+    @get:Bindable
+    var e3182: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (e3182.equals("2")) this.e3182c = ""
+        notifyPropertyChanged(BR.e3182)
+    }
+
+    @get:Bindable
+    var e3182c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e3182c)
+    }
+
+
+    @get:Bindable
+    var e3191: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (e3191.equals("2")) {
+            this.e3191c = ""
+            this.e3192 = ""
+            this.e3192c = ""
+        }
+        notifyPropertyChanged(BR.e3191)
+    }
+
+    @get:Bindable
+    var e3191c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e3191c)
+    }
+
+    @get:Bindable
+    var e3192: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (e3192.equals("2")) this.e3192c = ""
+        notifyPropertyChanged(BR.e3192)
+    }
+
+    @get:Bindable
+    var e3192c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e3192c)
+    }
+
+
+    @get:Bindable
+    var e3201: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (e3201.equals("2")) {
+            this.e3201c = ""
+            this.e3202 = ""
+            this.e3202c = ""
+        }
+        notifyPropertyChanged(BR.e3201)
+    }
+
+    @get:Bindable
+    var e3201c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e3201c)
+    }
+
+    @get:Bindable
+    var e3202: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (e3202.equals("2")) this.e3202c = ""
+        notifyPropertyChanged(BR.e3202)
+    }
+
+    @get:Bindable
+    var e3202c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e3202c)
+    }
+
+
+    @get:Bindable
+    var e3211: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (e3211.equals("2")) {
+            this.e3211c = ""
+            this.e3212 = ""
+            this.e3212c = ""
+        }
+        notifyPropertyChanged(BR.e3211)
+    }
+
+    @get:Bindable
+    var e3211c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e3211c)
+    }
+
+    @get:Bindable
+    var e3212: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (e3212.equals("2")) this.e3212c = ""
+        notifyPropertyChanged(BR.e3212)
+    }
+
+    @get:Bindable
+    var e3212c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e3212c)
+    }
+
+
+    @get:Bindable
+    var e3221: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (e3221.equals("2")) {
+            this.e3221c = ""
+            this.e3222 = ""
+            this.e3222c = ""
+        }
+        notifyPropertyChanged(BR.e3221)
+    }
+
+    @get:Bindable
+    var e3221c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e3221c)
+    }
+
+    @get:Bindable
+    var e3222: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (e3222.equals("2")) this.e3222c = ""
+        notifyPropertyChanged(BR.e3222)
+    }
+
+    @get:Bindable
+    var e3222c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e3222c)
+    }
+
+
+    @get:Bindable
+    var e3231: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (e3231.equals("2")) {
+            this.e3231c = ""
+            this.e3232 = ""
+            this.e3232c = ""
+        }
+        notifyPropertyChanged(BR.e3231)
+    }
+
+    @get:Bindable
+    var e3231c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e3231c)
+    }
+
+    @get:Bindable
+    var e3232: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        if (e3232.equals("2")) this.e3232c = ""
+        notifyPropertyChanged(BR.e3232)
+    }
+
+    @get:Bindable
+    var e3232c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e3232c)
+    }
+
+    @get:Bindable
+    var e324: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e324)
+    }
+
+    @get:Bindable
+    var e325: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e325)
+    }
+
+
     //ModuleE
-    private val e306 = _EMPTY_
-    private val e306a0a = _EMPTY_
-    private val e306a0f = _EMPTY_
-    private val e306b0a = _EMPTY_
-    private val e306b0f = _EMPTY_
-    private val e306c0a = _EMPTY_
-    private val e306c0f = _EMPTY_
-    private val e306d0a = _EMPTY_
-    private val e306d0f = _EMPTY_
-    private val e306ea = _EMPTY_
-    private val e306ef = _EMPTY_
-    private val e306f0a = _EMPTY_
-    private val e306f0f = _EMPTY_
-    private val e306g0a = _EMPTY_
-    private val e306g0f = _EMPTY_
-    private val e306h0a = _EMPTY_
-    private val e306h0f = _EMPTY_
-    private val e306i0a = _EMPTY_
-    private val e306i0f = _EMPTY_
-    private val e306j0a = _EMPTY_
-    private val e306j0f = _EMPTY_
-    private val e306k0a = _EMPTY_
-    private val e306k0f = _EMPTY_
-    private val e306l0a = _EMPTY_
-    private val e306l0f = _EMPTY_
-    private val e306m0a = _EMPTY_
-    private val e306m0f = _EMPTY_
-    private val e306n0a = _EMPTY_
-    private val e306n0f = _EMPTY_
-    private val e306o0a = _EMPTY_
-    private val e306o0f = _EMPTY_
-    private val e306p0a = _EMPTY_
-    private val e306p0f = _EMPTY_
-    private val e306q0a = _EMPTY_
-    private val e306q0f = _EMPTY_
-    private val e306r0a = _EMPTY_
-    private val e306r0f = _EMPTY_
-    private val e307 = _EMPTY_
-    private val e308 = _EMPTY_
-    private val e4 = _EMPTY_
     private val e401 = _EMPTY_
     private val e402 = _EMPTY_
     private val e403 = _EMPTY_
@@ -445,6 +901,8 @@ class ModuleE : BaseObservable(), Observable {
     private val e414 = _EMPTY_
     private val e415 = _EMPTY_
     private val e416 = _EMPTY_
+
+
     private val e5 = _EMPTY_
     private val e501 = _EMPTY_
     private val e502 = _EMPTY_
@@ -464,6 +922,8 @@ class ModuleE : BaseObservable(), Observable {
     private val e507 = _EMPTY_
     private val e508 = _EMPTY_
     private val e509 = _EMPTY_
+
+
     private val e6 = _EMPTY_
     private val e601 = _EMPTY_
     private val e602 = _EMPTY_
@@ -480,6 +940,8 @@ class ModuleE : BaseObservable(), Observable {
     private val e609 = _EMPTY_
     private val e610 = _EMPTY_
     private val e611 = _EMPTY_
+
+
     private val e7 = _EMPTY_
     private val e701 = _EMPTY_
     private val e702 = _EMPTY_
@@ -509,6 +971,8 @@ class ModuleE : BaseObservable(), Observable {
     private val e704f = _EMPTY_
     private val e704g = _EMPTY_
     private val e705 = _EMPTY_
+
+
     private val e705a0a = _EMPTY_
     private val e705a0f = _EMPTY_
     private val e705b0a = _EMPTY_
@@ -519,6 +983,8 @@ class ModuleE : BaseObservable(), Observable {
     private val e705d0f = _EMPTY_
     private val e705ea = _EMPTY_
     private val e705ef = _EMPTY_
+
+
     private val e8 = _EMPTY_
     private val e801 = _EMPTY_
     private val e802 = _EMPTY_
