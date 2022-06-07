@@ -18,8 +18,6 @@ import androidx.databinding.DataBindingUtil;
 import com.edittextpicker.aliazaz.EditTextPicker;
 import com.validatorcrawler.aliazaz.Validator;
 
-import org.json.JSONException;
-
 import edu.aku.hassannaqvi.hfa_rapidsurvey.R;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.core.DatabaseHelper;
 import edu.aku.hassannaqvi.hfa_rapidsurvey.core.MainApp;
@@ -91,11 +89,6 @@ public class SectionE33Activity extends AppCompatActivity {
 
     public void btnContinue(View v) {
         if (!formValidation()) return;
-        try {
-            SaveDraft();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
         if (UpdateDB()) {
             finish();
             startActivity(new Intent(this, SectionE41Activity.class));

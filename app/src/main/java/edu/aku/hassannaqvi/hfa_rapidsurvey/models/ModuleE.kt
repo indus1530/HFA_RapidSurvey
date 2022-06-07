@@ -871,13 +871,33 @@ class ModuleE : BaseObservable(), Observable {
     }
 
 
+    @get:Bindable
+    var a114: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.a114)
+    }
+
+    @get:Bindable
+    var e402: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e402)
+    }
+
+    @get:Bindable
+    var e403a: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e403a)
+    }
+
+    @get:Bindable
+    var e403b: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e403b)
+    }
+
+    @get:Bindable
+    var e403c: String by Delegates.observable(_EMPTY_) { prop, old, new ->
+        notifyPropertyChanged(BR.e403c)
+    }
+
+
     //ModuleE
-    private val e401 = _EMPTY_
-    private val e402 = _EMPTY_
-    private val e403 = _EMPTY_
-    private val e403a = _EMPTY_
-    private val e403b = _EMPTY_
-    private val e403c = _EMPTY_
     private val e404 = _EMPTY_
     private val e405 = _EMPTY_
     private val e406 = _EMPTY_
